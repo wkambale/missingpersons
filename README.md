@@ -15,8 +15,8 @@ Example:
         "name": "Missing Person 1",
         "image": "img/image_of_person.jpeg",
         "last_known_location": "Kamwokya",
-        "holding_location": "Police Station, Prison, Unknown Location",
-        "security_organ": "Police, Army, Intelligence",
+        "holding_location": "Held at Police Station, Prison, Unknown Location",
+        "security_organ": "Taken by Police, Army, Intelligence",
         "twitter": "@handle_of_person",
         "sex": "male"
     }
