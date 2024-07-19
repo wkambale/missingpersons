@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "name": "Missing Person 1",
+        "image": "img/image_of_person.jpeg",
+        "last_known_location": "Kamwokya",
+        "security_organ": "Police, Army, Intelligence",
+        "twitter": "@handle_of_person",
+        "sex": "male"
+    },
+    {
+        "id": 2,
+        "name": "Missing Person 1",
+        "image": "img/image_of_person.jpeg",
+        "last_known_location": "Wandegeya",
+        "security_organ": "Police, Army, Intelligence",
+        "twitter": "@handle_of_person",
+        "sex": "female"
+    },
+    {
+        "id": 3,
+        "name": "Missing Person 1",
+        "image": "img/image_of_person.jpeg",
+        "last_known_location": "Nakawa",
+        "security_organ": "Police, Army, Intelligence",
+        "twitter": "@handle_of_person",
+        "sex": "male"
+    }
+]
