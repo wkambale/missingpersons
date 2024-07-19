@@ -11,3 +11,6 @@ Add their image to `\img` first then update `data.json` and send PR.
 Styling PRs are allowed too.
 
 #March2Parliament
+
+# License
+[MIT License](https://github.com/wkambale/missingpersons/blob/main/LICENSE)
