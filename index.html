@@ -151,7 +151,7 @@
   </head>
   <body>
     <div class="header">
-      <img src="headerimage.png" alt="Header Image" />
+      <img src="headerimage.jpg" alt="Header Image" />
       <h1>Kidnappings & Missing Persons Uganda</h1>
     </div>
 
@@ -162,26 +162,35 @@
       <h3>#March2Parliament</h3>
     </div>
 
+    "id": 1,
+    "name": "Missing Person 1",
+    "image": "img/image_of_person.jpeg",
+    "last_known_location": "Kamwokya",
+    "security_organ": "Police, Army, Intelligence",
+    "holding_location": "Police Station, Prison, Unknown Location",
+    "twitter": "@handle_of_person",
+    "sex": "male"
+
     <script>
       function createCard(card) {
         const twitterSvg = `<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>`;
-        const phoneSvg = `<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-phone"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" /></svg>`;
+        const locationSvg = `<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-phone"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" /></svg>`;
         const editSvg = `<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-edit"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" /><path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" /><path d="M16 5l3 3" /></svg>`;
 
-        const businesses = Array.isArray(card.business)
-          ? card.business
-          : [card.business];
+        const locations = Array.isArray(card.last_known_location)
+          ? card.last_known_location
+          : [card.last_known_location];
 
         const nameElm = `<h2 class='card-name' >${card.name}</h2>`;
         const imageElm = `<img class='card-img' src="${card.image}" alt="${card.name}">`;
-        const officeElm = `<p class='card-office' >${card.constituency}</p>`;
-        const businessesElm = `
-          <div class='businesses' >
-            <h4>Business to boycott</h4>
+        const securityElm = `<p class='card-office' >${card.security_organ}</p>`;
+        const locationsElm = `
+          <div class='locations' >
+            <h4>Last Known Location</h4>
             <ul>
               ${
-                card.business
-                  ? businesses.map((business) => `<li>${card.business}</li>`)
+                card.last_known_location
+                  ? locations.map((last_known_location) => `<li>${card.last_known_location}</li>`)
                   : "--"
               }
             </ul>
@@ -197,16 +206,16 @@
             </span>
           </a>
           `;
-        const phoneElm = `<a class="card-phone card-button" href="Tel:${
-          card.phonenumber
+        const locationElm = `<a class="card-location card-button" href="Tel:${
+          card.holding_location
         }">
-            ${phoneSvg}
+            ${locationSvg}
             <span>
-              ${card.phonenumber || "--"}
+              ${card.holding_location || "--"}
             </span>
           </a>`;
 
-        const contributeElm = `<a class='contribute' href='https://github.com/iamukasa/wallofshame.github.io/issues/new' target='__blank' >
+        const contributeElm = `<a class='contribute' href='https://github.com/wkambale/missingpersons/issues/new' target='__blank' >
             ${editSvg}
             <span>
               Contribute
@@ -218,10 +227,10 @@
             <div class="card-inner" >
               ${nameElm}
               ${imageElm}
-              ${officeElm}
-              ${businessesElm}
+              ${securityElm}
+              ${locationsElm}
               ${twitterElm}
-              ${phoneElm}
+              ${locationElm}
             </div>
             ${contributeElm}
           </div>
