@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Missing Person 1",
-        "image": "img/image_of_person.jpeg",
+        "image": "img/image_of_person.jpg",
         "last_known_location": "Kamwokya",
         "security_organ": "Police, Army, Intelligence",
         "holding_location": "Police Station, Prison, Unknown Location",
@@ -12,7 +12,7 @@
     {
         "id": 2,
         "name": "Missing Person 1",
-        "image": "img/image_of_person.jpeg",
+        "image": "img/image_of_person.jpg",
         "last_known_location": "Wandegeya",
         "security_organ": "Police, Army, Intelligence",
         "holding_location": "Police Station, Prison, Unknown Location",
@@ -22,7 +22,7 @@
     {
         "id": 3,
         "name": "Missing Person 1",
-        "image": "img/image_of_person.jpeg",
+        "image": "img/image_of_person.jpg",
         "last_known_location": "Nakawa",
         "holding_location": "Police Station, Prison, Unknown Location",
         "security_organ": "Police, Army, Intelligence",
