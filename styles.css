@@ -4,7 +4,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #1a1a1a;
+    background-color: #000000;
     color: white;
     height: 100%;
 }
@@ -37,6 +37,7 @@ body, html {
     padding: 10px 20px;
     margin: 0 5px;
     cursor: pointer;
+    border-radius: 24px;
 }
 
 .tabs button.active {
@@ -49,9 +50,10 @@ body, html {
 }
 
 .search-bar input {
-    padding: 10px;
+    padding: 12px;
     width: 300px;
-    border-radius: 5px;
+    height: 16px;
+    border-radius: 24px;
     border: none;
 }
 
@@ -62,11 +64,12 @@ body, html {
 }
 
 .card {
-    background-color: #333;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px;
-    width: 300px;
+    background-color: #0a0a0a;
+    border-radius: 32px;
+    padding: 24px;
+    margin: 24px;
+    width: auto;
+    height: auto;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -88,16 +91,32 @@ body, html {
 }
 
 .card-status {
+    width: 100px;
+    padding: 8px;
     font-size: 1.2em;
     margin-bottom: 10px;
+    background-color: #8e4ec6;
+    border-radius: 32px;
+    width: 100px;
+    margin: auto;
 }
 
 .card-status.missing {
-    color: orange;
+    color: white;
+    padding: 8px;
+    background-color: #ffb224;
+    border-radius: 32px;
+    width: 100px;
+    margin: auto;
 }
 
 .card-status.fallen {
-    color: red;
+    color: white;
+    padding: 8px;
+    background-color: red;
+    border-radius: 32px;
+    width: 100px;
+    margin: auto;
 }
 
 .card-office, .locations, .card-sex {
@@ -111,19 +130,26 @@ body, html {
     text-decoration: none;
     color: white;
     margin-bottom: 10px;
+    align-items: center;
+    padding: 2px;
+    
 }
 
 .card-button svg {
-    margin-right: 10px;
+    margin-right: 0px;
+    padding: 4px;
+    align-items: center;
 }
 
 .share-button {
     background-color: #007bff;
     border: none;
     color: white;
-    padding: 10px 20px;
+    padding: 12px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 24px;
+    width: auto;
+    width: 300px;
 }
 
 .footer {
