@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap");
 
-body {
+body, html {
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
     background-color: #1a1a1a;
     color: white;
-    margin: 0;
-    padding: 0;
+    height: 100%;
 }
 
 .header {
@@ -16,6 +17,7 @@ body {
 
 .header h1 {
     margin: 0;
+    font-size: 2em;
 }
 
 .content {
@@ -33,8 +35,8 @@ body {
     border: none;
     color: white;
     padding: 10px 20px;
-    cursor: pointer;
     margin: 0 5px;
+    cursor: pointer;
 }
 
 .tabs button.active {
@@ -42,64 +44,64 @@ body {
 }
 
 .search-bar {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     margin-bottom: 20px;
 }
 
-.search-bar input[type="text"] {
-    width: 50%;
+.search-bar input {
     padding: 10px;
-    border: none;
+    width: 300px;
     border-radius: 5px;
+    border: none;
 }
 
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-around;
 }
 
 .card {
     background-color: #333;
-    color: white;
     border-radius: 10px;
     padding: 20px;
-    text-align: center;
-    position: relative;
+    margin: 20px;
     width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.card img {
-    border-radius: 50%;
-    margin-bottom: 10px;
+.card-inner {
+    margin-bottom: 20px;
+}
+
+.card-img {
     width: 100px;
     height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
 }
 
-.card h2 {
+.card-name {
     font-size: 1.5em;
-    margin: 10px 0;
+    margin-bottom: 10px;
 }
 
-.card .card-status {
-    font-weight: bold;
-    margin: 10px 0;
+.card-status {
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 
-.card .card-status.missing {
+.card-status.missing {
     color: orange;
 }
 
-.card .card-status.fallen {
+.card-status.fallen {
     color: red;
 }
 
-.card .card-office, 
-.card .locations,
-.card .card-sex {
-    margin: 5px 0;
+.card-office, .locations, .card-sex {
+    margin-bottom: 10px;
 }
 
 .card-button {
@@ -107,43 +109,30 @@ body {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: #007bff;
-    margin: 5px 0;
+    color: white;
+    margin-bottom: 10px;
 }
 
 .card-button svg {
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
-.card .share-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+.share-button {
     background-color: #007bff;
-    color: white;
     border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
     cursor: pointer;
-}
-
-.card .share-button:hover {
-    background-color: #0056b3;
+    border-radius: 5px;
 }
 
 .footer {
     background-color: #333;
-    text-align: center;
     padding: 20px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    text-align: center;
+    margin-top: 20px;
 }
 
-.footer p {
-    margin: 5px 0;
-}
-
-.footer h3 {
-    margin: 5px 0;
+.footer p, .footer h3 {
+    margin: 0;
 }
