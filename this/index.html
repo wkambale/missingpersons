@@ -44,14 +44,16 @@
             const imageElm = `<img class='card-img' src="${card.image}" alt="${card.name}">`;
             const statusElm = `<p class='card-status ${card.status.toLowerCase()}'>${card.status}</p>`;
             const securityElm = `<p class='card-office'>${card.security_organ}</p>`;
-            const locationsElm = `
-                <div class='locations'>
-                    <h4>Last Known Location</h4>
-                    <ul>
-                        ${locations.map((loc) => `<li>${loc}</li>`).join('')}
-                    </ul>
-                </div>
-            `;
+            
+            const locationsElm = `<p class='locations'>Last Location: ${card.locations}</p>`;
+            // const locationsElm = `
+            //     <div class='locations'>
+            //         <h4>Last Known Location</h4>
+            //         <ul>
+            //             ${locations.map((loc) => `<li>${loc}</li>`).join('')}
+            //         </ul>
+            //     </div>
+            // `;
             const sexElm = `<p class='card-sex'>Sex: ${card.sex}</p>`;
             const twitterElm = `
                 <a class="card-twitter card-button" target='__blank' href="https://x.com/${card.twitter}">
@@ -65,12 +67,12 @@
                     <span>${card.holding_location || "--"}</span>
                 </a>
             `;
-            const contributeElm = `
-                <a class='contribute' href='https://github.com/wkambale/missingpersons/issues/new' target='__blank'>
-                    ${editSvg}
-                    <span>Contribute</span>
-                </a>
-            `;
+            // const contributeElm = `
+            //     <a class='contribute' href='https://github.com/wkambale/missingpersons/issues/new' target='__blank'>
+            //         ${editSvg}
+            //         <span>Contribute</span>
+            //     </a>
+            // `;
             const shareButton = `
                 <button class="share-button" onclick="shareCard(${card.id})">Share</button>
             `;
@@ -87,7 +89,6 @@
                         ${twitterElm}
                         ${locationElm}
                     </div>
-                    ${contributeElm}
                     ${shareButton}
                 </div>
             `;
