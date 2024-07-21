@@ -1,0 +1,157 @@
+body {
+    font-family: "Rubik", sans-serif;
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .search-bar input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #2c2c2c;
+    color: #f2f2f2;
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .tabs button {
+    background-color: #444;
+    color: #f2f2f2;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .tabs button.active {
+    background-color: #666;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .card {
+    background-color: #2c2c2c;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+
+  .card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto 10px;
+  }
+
+  .card .name {
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  .card .status {
+    text-align: center;
+    color: #e67e22;
+    margin-bottom: 10px;
+  }
+
+  .card .status.fallen {
+    color: #e74c3c;
+  }
+
+  .card .last-known-location,
+  .card .taken-by,
+  .card .handle,
+  .card .location {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .card .contribute {
+    text-align: center;
+    color: #1e90ff;
+    cursor: pointer;
+  }
+
+  .share-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #1e90ff;
+    color: #f2f2f2;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #f2f2f2;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .footer p,
+  .footer h3 {
+    margin: 5px 0;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .header h1 {
+      font-size: 20px;
+    }
+
+    .search-bar input {
+      width: 200px;
+    }
+
+    .card {
+      width: 100%;
+    }
+  }

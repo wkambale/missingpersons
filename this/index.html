@@ -1,221 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-  <title>Kidnappings & Missing Persons in Uganda</title>
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
-    body {
-      font-family: "Rubik", sans-serif;
-      position: relative;
-      padding-top: 100px;
-      padding: 0;
-      margin: 0;
-      overflow-x: hidden;
-    }
-    .header {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      top: 5px;
-      left: 0;
-      width: 100%;
-      margin-bottom: 10px;
-      height: fit-content;
-      background-color: #f2f2f2;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    .header h1 {
-      display: inline-block;
-      margin: 0;
-      z-index: 0;
-      margin-left: -50px;
-      font-size: 40px;
-      color: #333;
-    }
-    .content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 20px;
-    }
-    .card {
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      margin: 10px;
-      padding: 20px;
-      width: 250px;
-      text-align: center;
-      position: relative;
-    }
-    .card img {
-      width: 100%;
-      height: auto;
-      border-radius: 5px;
-    }
-    .card svg {
-      height: 1rem;
-      width: 1rem;
-    }
-    .locations {
-      text-align: start;
-    }
-    .locations h4 {
-      margin-bottom: 0;
-    }
-    .locations ul {
-      margin-top: 0;
-      padding-left: 16px;
-    }
-    .card-button {
-      text-decoration: none;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      border-radius: 5px;
-      display: grid;
-      grid-template-columns: 1rem auto;
-      align-items: center;
-      gap: 4px;
-      background-color: transparent;
-      color: #000;
-      border: 1px solid currentColor;
-      padding: 4px 8px;
-    }
-    .card-button:hover {
-      background-color: #000;
-      color: #fff;
-    }
-    .card-button > span {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      text-align: start;
-    }
-    .card-twitter:hover {
-      background-color: #000;
-      color: #fff;
-    }
-    .card-location:hover {
-      background-color: #c97e0de9;
-      color: #fff;
-    }
-    .card > .contribute {
-      cursor: pointer;
-      border-radius: 5px;
-      display: grid;
-      grid-template-columns: 1rem auto;
-      justify-content: center;
-      align-items: center;
-      gap: 4px;
-      bottom: 0;
-      text-decoration: none;
-      margin-top: 1rem;
-      text-transform: uppercase;
-      font-size: 0.8rem;
-      color: #0046cc;
-    }
-    .footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #f2f2f2;
-      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-      bottom: 0;
-      width: 100%;
-    }
-    @media only screen and (max-width: 768px) {
-      .header h1 {
-        font-size: 20px;
-        margin-left: -20px;
-      }
-      .footer {
-        padding: 5px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kidnappings & Missing Persons in Uganda</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="header">
-    <h1 class="centered-text">Kidnappings & Missing Persons in Uganda</h1>
-  </div>
-  <div class="content"></div>
-  <div class="footer">
-    <p>2024 &copy; Kidnappings & Missing Persons in Uganda. All rights reserved.</p>
-    <h3>#March2Parliament</h3>
-  </div>
-  <script>
-    function createCard(card) {
-      const twitterSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>`;
-      const locationSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-location"><path d="M12 2a10 10 0 0 1 10 10c0 5.5-10 12-10 12S2 17.5 2 12A10 10 0 0 1 12 2z"/><circle cx="12" cy="12" r="3"/></svg>`;
-      const editSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-edit"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1"/><path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z"/><path d="M16 5l3 3"/></svg>`;
 
-      const locations = Array.isArray(card.last_known_location)
-        ? card.last_known_location
-        : [card.last_known_location];
-
-      const nameElm = `<h2 class='card-name'>${card.name}</h2>`;
-      const imageElm = `<img class='card-img' src="${card.image}" alt="${card.name}">`;
-      const securityElm = `<p class='card-office'>${card.security_organ}</p>`;
-      const locationsElm = `
-        <div class='locations'>
-          <h4>Last Known Location</h4>
-          <ul>
-            ${
-              card.last_known_location
-                ? locations.map((loc) => `<li>${loc}</li>`).join('')
-                : "--"
-            }
-          </ul>
+    <div class="header">
+        <h1>Kidnappings & Missing Persons in Uganda</h1>
+      </div>
+  
+      <div class="content">
+        <div class="tabs">
+          <button class="active">Arrested</button>
+          <button>Missing</button>
+          <button>Kidnapped</button>
+          <button>Fallen</button>
         </div>
-      `;
-      const twitterElm = `
-        <a class="card-twitter card-button" target='__blank' href="https://x.com/${card.twitter}">
-          ${twitterSvg}
-          <span>${card.twitter || "--"}</span>
-        </a>
-      `;
-      const locationElm = `
-        <a class="card-location card-button" href="Loc:${card.holding_location}">
-          ${locationSvg}
-          <span>${card.holding_location || "--"}</span>
-        </a>
-      `;
-      const contributeElm = `
-        <a class='contribute' href='https://github.com/wkambale/missingpersons/issues/new' target='__blank'>
-          ${editSvg}
-          <span>Contribute</span>
-        </a>
-      `;
-
-      return `
-        <div class="card">
-          <div class="card-inner">
-            ${nameElm}
-            ${imageElm}
-            ${securityElm}
-            ${locationsElm}
-            ${twitterElm}
-            ${locationElm}
-          </div>
-          ${contributeElm}
+  
+        <div class="search-bar">
+          <input type="text" placeholder="Search" />
         </div>
-      `;
-    }
+    <div class="card-container"></div>
 
-    document.addEventListener("DOMContentLoaded", () => {
-      fetch("data.json")
-        .then((response) => response.json())
-        .then((data) => {
-          const container = document.querySelector(".content");
-          data.forEach((card) => {
-            container.innerHTML += createCard(card);
-          });
-        })
-        .catch((error) => console.error("Error fetching data:", error));
-    });
-  </script>
+    <div class="footer">
+        <p>2024 &copy; Kidnappings & Missing Persons in Uganda. All rights reserved.</p>
+        <h3>#March2Parliament</h3>
+      </div>
+      
+     <script>
+        function createCard(card) {
+            const twitterSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>`;
+            const locationSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-location"><path d="M12 2a10 10 0 0 1 10 10c0 5.5-10 12-10 12S2 17.5 2 12A10 10 0 0 1 12 2z"/><circle cx="12" cy="12" r="3"/></svg>`;
+            const editSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-edit"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1"/><path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z"/><path d="M16 5l3 3"/></svg>`;
+
+            const locations = Array.isArray(card.last_known_location)
+                ? card.last_known_location
+                : [card.last_known_location];
+
+            const nameElm = `<h2 class='card-name'>${card.name}</h2>`;
+            const imageElm = `<img class='card-img' src="${card.image}" alt="${card.name}">`;
+            const statusElm = `<p class='card-status ${card.status.toLowerCase()}'>${card.status}</p>`;
+            const securityElm = `<p class='card-office'>${card.security_organ}</p>`;
+            const locationsElm = `
+                <div class='locations'>
+                    <h4>Last Known Location</h4>
+                    <ul>
+                        ${locations.map((loc) => `<li>${loc}</li>`).join('')}
+                    </ul>
+                </div>
+            `;
+            const sexElm = `<p class='card-sex'>Sex: ${card.sex}</p>`;
+            const twitterElm = `
+                <a class="card-twitter card-button" target='__blank' href="https://x.com/${card.twitter}">
+                    ${twitterSvg}
+                    <span>${card.twitter || "--"}</span>
+                </a>
+            `;
+            const locationElm = `
+                <a class="card-location card-button" href="Loc:${card.holding_location}">
+                    ${locationSvg}
+                    <span>${card.holding_location || "--"}</span>
+                </a>
+            `;
+            const contributeElm = `
+                <a class='contribute' href='https://github.com/wkambale/missingpersons/issues/new' target='__blank'>
+                    ${editSvg}
+                    <span>Contribute</span>
+                </a>
+            `;
+            const shareButton = `
+                <button class="share-button" onclick="shareCard(${card.id})">Share</button>
+            `;
+
+            return `
+                <div class="card">
+                    <div class="card-inner">
+                        ${imageElm}
+                        ${nameElm}
+                        ${statusElm}
+                        ${securityElm}
+                        ${locationsElm}
+                        ${sexElm}
+                        ${twitterElm}
+                        ${locationElm}
+                    </div>
+                    ${contributeElm}
+                    ${shareButton}
+                </div>
+            `;
+        }
+
+        function shareCard(id) {
+            fetch("data.json")
+                .then((response) => response.json())
+                .then((data) => {
+                    const card = data.find((item) => item.id === id);
+                    const text = `Check out this missing person: ${card.name}, last seen at ${card.last_known_location}. #March2Parliament`;
+                    const url = `https://x.com/intent/tweet?text=${encodeURIComponent(text)}`;
+                    window.open(url, "_blank");
+                })
+                .catch((error) => console.error("Error fetching data:", error));
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("data.json")
+                .then((response) => response.json())
+                .then((data) => {
+                    const container = document.querySelector(".card-container");
+                    data.forEach((card) => {
+                        container.innerHTML += createCard(card);
+                    });
+                })
+                .catch((error) => console.error("Error fetching data:", error));
+        });
+    </script>
 </body>
 </html>
