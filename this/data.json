@@ -53,5 +53,16 @@
         "holding_location": "Detention",
         "twitter": "@x_handle_5",
         "sex": "Female"
+    },
+    {
+        "id": 6,
+        "name": "Missing Person 6",
+        "image": "img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "Nansana",
+        "security_organ": "Taken by Police",
+        "holding_location": "Detention",
+        "twitter": "@x_handle_6",
+        "sex": "Male"
     }
 ]
