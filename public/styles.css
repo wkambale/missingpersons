@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap");
-
-body, html {
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #1a1a1a;
-    color: white;
-    height: 100%;
 }
 
+/* Header */
 .header {
     background-color: #333;
     padding: 20px;
@@ -17,79 +17,80 @@ body, html {
 
 .header h1 {
     margin: 0;
-    font-size: 2em;
 }
 
+/* Content */
 .content {
     padding: 20px;
+    text-align: center;
 }
 
+/* Tabs */
 .tabs {
-    display: flex;
-    justify-content: center;
     margin-bottom: 20px;
 }
 
 .tabs button {
     background-color: #444;
     border: none;
-    color: white;
-    padding: 10px 20px;
-    margin: 0 5px;
+    color: #fff;
     cursor: pointer;
+    margin: 0 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
 }
 
 .tabs button.active {
     background-color: #007bff;
 }
 
+.tabs button:hover {
+    background-color: #555;
+}
+
+/* Search Bar */
 .search-bar {
-    text-align: center;
     margin-bottom: 20px;
 }
 
 .search-bar input {
     padding: 10px;
-    width: 300px;
-    border-radius: 5px;
-    border: none;
+    width: 80%;
 }
 
+/* Cards */
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .card {
     background-color: #333;
     border-radius: 10px;
+    margin: 10px;
     padding: 20px;
-    margin: 20px;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 200px;
 }
 
 .card-inner {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.card-img {
-    width: 100px;
-    height: 100px;
+.card img {
     border-radius: 50%;
-    margin-bottom: 20px;
+    height: 100px;
+    width: 100px;
 }
 
 .card-name {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 .card-status {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+    margin: 5px 0;
 }
 
 .card-status.missing {
@@ -100,39 +101,35 @@ body, html {
     color: red;
 }
 
-.card-office, .locations, .card-sex {
-    margin-bottom: 10px;
-}
-
+/* Buttons */
 .card-button {
-    display: flex;
     align-items: center;
-    justify-content: center;
+    display: flex;
+    margin: 5px 0;
     text-decoration: none;
-    color: white;
-    margin-bottom: 10px;
 }
 
 .card-button svg {
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .share-button {
     background-color: #007bff;
     border: none;
-    color: white;
-    padding: 10px 20px;
+    color: #fff;
     cursor: pointer;
-    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
 }
 
+.share-button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
 .footer {
     background-color: #333;
     padding: 20px;
     text-align: center;
-    margin-top: 20px;
-}
-
-.footer p, .footer h3 {
-    margin: 0;
 }

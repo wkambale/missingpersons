@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "firebase": "^10.12.4",
+    "vite-plugin-env-compatible": "^2.0.1"
+  }
+}
