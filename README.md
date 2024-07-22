@@ -8,7 +8,7 @@ This project lists Ugandans who might get arrested, detained, kidnapped, or go m
 
 To contribute, you can edit `data.json` with correct details of the person that's been reported or presumed missing, arrested, or detained, and then send a Pull Request (PR).
 
-**Fork the repository**:
+**Contributing Code**
 Click the 'Fork' button at the top right of this page to create a copy of this repository under your GitHub account.
 
 **Clone the forked repository**:
@@ -18,10 +18,15 @@ git clone https://github.com/YOUR_GITHUB_USERNAME/missingpersons.git
 cd missingpersons
 ```
 
-**Edits**
+**Create a new branch**:
+```bash
+git checkout -b your-feature-branch
+```
 
-1. Add the person's image to the `img/` directory
-2. Update the `data.json` file with the information required
+**Make your changes**:
+
+- Add the person's image to the `img/` directory
+- Update the `data.json` file with the information required
 
 Example entry in `data.json`:
 
@@ -41,11 +46,23 @@ Example entry in `data.json`:
 ]
 ```
 
-3. Commit, Push, and send a Pull Request
+**Stage your changes**:
+```bash
+git add .
+```
 
-**Styling**
+**Commit your changes**:
+```bash
+git commit -m "Description of your changes"
+```
 
-Styling PRs are also welcome to make the wall responsive and flexible
+**Push your changes to your fork**:
+```bash
+git push origin your-feature-branch
+```
+
+**Create a Pull Request**:
+Go to the original repository on GitHub and create a pull request from your fork.
 
 # License
 [MIT License](https://github.com/wkambale/missingpersons/blob/main/LICENSE)
