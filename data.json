@@ -25,7 +25,7 @@
         "id": 3,
         "name": "John Doe 2",
         "image": "img/image_of_person.jpg",
-        "status": "Missing",
+        "status": "Arrested",
         "last_known_location": "Nakawa",
         "security_organ": "CMI",
         "holding_location": "Police Station",

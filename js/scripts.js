@@ -1,3 +1,16 @@
+ // Define the shareCard function globally
+ function shareCard(id) {
+    fetch("data.json")
+        .then((response) => response.json())
+        .then((data) => {
+            const card = data.find((item) => item.id === id);
+            const text = `NOTICE! This is a missing person: ${card.name}, status: ${card.status}, last seen at ${card.last_known_location}. #March2Parliament`;
+            const url = `https://x.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(card.image)}`;
+            window.open(url, "_blank");
+        })
+        .catch((error) => console.error("Error fetching data:", error));
+}
+
 document.addEventListener("DOMContentLoaded", function() {
 
     // onkeyup event, call searchFunction
@@ -22,18 +35,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 <button class="share-button twitter" onclick="shareCard(${card.id})">Share on X (Twitter)</button>
             </div>
         `;
-    }
-
-    function shareCard(id) {
-        fetch("data.json")
-            .then((response) => response.json())
-            .then((data) => {
-                const card = data.find((item) => item.id === id);
-                const text = `Check out this missing person: ${card.name}, status: ${card.status}, last seen at ${card.last_known_location}. #March2Parliament`;
-                const url = `https://x.com/intent/tweet?text=${encodeURIComponent(text)}`;
-                window.open(url, "_blank");
-            })
-            .catch((error) => console.error("Error fetching data:", error));
     }
 
     // Function to filter persons based on search input
