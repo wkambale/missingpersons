@@ -182,14 +182,12 @@ button {
     width: 100%;
 }
 
+
 .footer {
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	left: 0;
     background-color: var(--lightgrey);
     padding: 20px;
     text-align: center;
+    margin-top: 20px;
 }
 
 .footer p, .hashtag {
