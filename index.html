@@ -12,25 +12,23 @@
     </div>
     
     <div class="content">
-        <div class="tabs">
-            <button class="active">Arrested</button>
-            <button>Missing</button>
-            <button>Kidnapped</button>
-            <button>Fallen</button>
-        </div>
-    
-        <div class="search-bar">
-            <input type="text" placeholder="Search" id="searchInput"/>
-        </div>
-        <div class="card-container"></div>
+		<span class="content__sort-by">Sort by:</span>
+		<div class="search-sort">
+			<div class="content__buttons buttons">
+				<button data-category="All" class="active">All</button>
+				<button data-category="Arrested">Arrested</button>
+				<button data-category="Fallen">Fallen</button>
+				<button data-category="Kidnapped">Kidnapped</button>
+			</div>
+			<input type="text" id="searchInput" placeholder="Search Person's Name...">
+		</div>
+        <div id="persons" class="persons"></div>
     </div>
     
     <div class="footer">
-        <p>2024 &copy; Kidnappings & Missing Persons in Uganda. All rights reserved.</p>
-        <h3>#March2Parliament</h3>
+        <p>2024 &copy; Kidnappings & Missing Persons in Uganda. All rights reserved. <span class="hashtag">#March2Parliament</span></p>
     </div>
 
     <script type="text/javascript" src="js/scripts.js" ></script>
-    <script type="text/javascript" src="js/sort-persons.js" ></script>
 </body>
 </html>

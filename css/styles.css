@@ -1,16 +1,41 @@
+:root {
+	--red       : #cb2929;
+	--blue      : #007bff;
+	--lightergrey : #444;
+	--lightgrey : #333;
+	--white     : #fff;
+	--black     : #000000;
+	--yellow    : #ffb224;
+	--purple    : #8e4ec6;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap");
 
 body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #000000;
-    color: white;
+    background-color: var(--black);
+    color: var(--white);
     height: 100%;
+	position: relative;
+}
+
+a {
+	color: var(--white);
+}
+
+a:hover {
+	color: 8e4ec6;
+}
+
+button {
+	cursor: pointer;
+	color: var(--white);
 }
 
 .header {
-    background-color: #333;
+    background-color: var(--lightgrey);
     padding: 20px;
     text-align: center;
 }
@@ -21,58 +46,73 @@ body, html {
 }
 
 .content {
+	margin: 30px auto;
+	max-width: 80vw;
     padding: 20px;
+	margin-bottom: 100px;
 }
 
-.tabs {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+.content__sort-by {
+	display: block;
+	margin-bottom: 10px;
 }
 
-.tabs button {
-    background-color: #444;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    margin: 0 5px;
-    cursor: pointer;
-    border-radius: 24px;
-}
-
-.tabs button.active {
-    background-color: #007bff;
-}
-
-.search-bar {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.search-bar input {
-    padding: 12px;
-    width: 300px;
-    height: 16px;
-    border-radius: 24px;
-    border: none;
-}
-
-.card-container {
-    display: grid;
-	grid-template-columns: repeat(4, 1fr);
+.search-sort {
+	display: flex;
+	flex-flow: row wrap;
 	gap: 20px;
+}
+
+.search-sort input {
+	padding: 10px;
+	border-radius: 10px;
+	min-width: 300px;
+}
+
+.content__buttons {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 10px;
+}
+
+.content__buttons button {
+	padding: 10px 15px;
+	font-size: 15px;
+	border-radius: 5px;
+	outline: transparent;
+	background-color: var(--lightergrey);
+	border: none;
+	color: var(--white);
+	padding: 10px 20px;
+	margin: 0 5px;
+	cursor: pointer;
+	border-radius: 24px;
+}
+
+.content__buttons button.active {
+	background-color: var(--blue);
+}
+
+.search-sort {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.persons {
+    display: grid;
+	width: 100%;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 25px;
 	justify-content: center;
 }
 
 .card {
     background-color: #0a0a0a;
-    border-radius: 32px;
-    padding: 24px;
-    margin: 24px;
-    width: auto;
-    height: auto;
+    border-radius: 20px;
+    padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(var(--black), 0.2);
 }
 
 .card-inner {
@@ -86,41 +126,33 @@ body, html {
     margin-bottom: 20px;
 }
 
-.card-name {
+.card__name {
     font-size: 1.5em;
     margin-bottom: 10px;
+	border-radius: 5px;
 }
 
 .card-status {
-    width: 100px;
-    padding: 8px;
-    font-size: 1.2em;
+	font-size: 0.9rem;
     margin-bottom: 10px;
-    background-color: #8e4ec6;
-    border-radius: 32px;
-    width: 100px;
+	color: var(--white);
+    background-color: var(--purple);
+	width: max-content;
+    border-radius: 5px;
+	padding: 5px 20px;
     margin: auto;
 }
 
 .card-status.missing {
-    color: white;
-    padding: 8px;
-    background-color: #ffb224;
-    border-radius: 32px;
-    width: 100px;
-    margin: auto;
+    color: var(--black);
+    background-color: var(--yellow);
 }
 
 .card-status.fallen {
-    color: white;
-    padding: 8px;
-    background-color: red;
-    border-radius: 32px;
-    width: 100px;
-    margin: auto;
+    background-color: var(--red);
 }
 
-.card-office, .locations, .card-sex {
+.card__office, .locations, .card__gender {
     margin-bottom: 10px;
 }
 
@@ -129,11 +161,9 @@ body, html {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: white;
     margin-bottom: 10px;
     align-items: center;
     padding: 2px;
-    
 }
 
 .card-button svg {
@@ -143,23 +173,40 @@ body, html {
 }
 
 .share-button {
-    background-color: #007bff;
+    background-color: var(--blue);
     border: none;
-    color: white;
+    color: var(--white);
     padding: 12px;
     cursor: pointer;
     border-radius: 24px;
-    width: auto;
-    width: 300px;
+    width: 100%;
 }
 
 .footer {
-    background-color: #333;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+    background-color: var(--lightgrey);
     padding: 20px;
     text-align: center;
-    margin-top: 20px;
 }
 
-.footer p, .footer h3 {
+.footer p, .hashtag {
     margin: 0;
+}
+
+.hashtag {
+	font-size: 20px;
+	margin: 0 10px;
+}
+
+@media screen and (max-width: 790px) {
+	.search-sort {
+		flex-direction: column;
+	}
+
+	.search-sort input {
+		width: 100%;
+	}
 }
