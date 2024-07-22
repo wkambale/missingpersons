@@ -1,12 +1,29 @@
 # Kidnappings & Missing Persons Uganda
 
-This is a possible list of Ugandans who might get arrested, detained, kidnapped, or go missing following the planned #March2Parliament protests on July 23, 2024
+This project lists Ugandans who might get arrested, detained, kidnapped, or go missing following the planned #March2Parliament protests on July 23, 2024.
 
-## How to contribute? 
+![Kidnappings & Missing Persons Uganda](screenshot.png)
 
-To contribute edit `data.json` with correct details of the person that's been reported or presumed missing, arrested or detained and send PR.
+## How to Contribute?
 
-Example:
+To contribute, you can edit `data.json` with correct details of the person that's been reported or presumed missing, arrested, or detained, and then send a Pull Request (PR).
+
+**Fork the repository**:
+Click the 'Fork' button at the top right of this page to create a copy of this repository under your GitHub account.
+
+**Clone the forked repository**:
+
+```bash
+git clone https://github.com/YOUR_GITHUB_USERNAME/missingpersons.git
+cd missingpersons
+```
+
+**Edits**
+
+1. Add the person's image to the `img/` directory
+2. Update the `data.json` file with the information required
+
+Example entry in `data.json`:
 
 ```json
 [
@@ -17,17 +34,18 @@ Example:
         "last_known_location": "Kamwokya",
         "holding_location": "Held at Police Station, Prison, Unknown Location",
         "security_organ": "Taken by Police, Army, Intelligence",
+        "status": "Missing",
         "twitter": "@handle_of_person",
         "sex": "male"
     }
 ]
 ```
 
-Add their image to `\img` first then update `data.json` and send PR.
+3. Commit, Push, and send a Pull Request
 
-Styling PRs are allowed too.
+**Styling**
 
-#March2Parliament
+Styling PRs are also welcome to make the wall responsive and flexible
 
 # License
 [MIT License](https://github.com/wkambale/missingpersons/blob/main/LICENSE)
