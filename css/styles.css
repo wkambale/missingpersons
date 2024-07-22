@@ -1,12 +1,14 @@
 :root {
 	--red       : #cb2929;
 	--blue      : #007bff;
+	--green     : #28a745;
 	--lightergrey : #444;
 	--lightgrey : #333;
 	--white     : #fff;
 	--black     : #000000;
 	--yellow    : #ffb224;
 	--purple    : #8e4ec6;
+
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap");
@@ -152,6 +154,16 @@ button {
     background-color: var(--red);
 }
 
+.card-status.kidnapped {
+    color: var(--black);
+    background-color: var(--purple);
+}
+
+.card-status.found {
+    color: var(--black);
+    background-color: var(--green);
+}
+
 .card__office, .locations, .card__gender {
     margin-bottom: 10px;
 }
@@ -181,7 +193,6 @@ button {
     border-radius: 24px;
     width: 100%;
 }
-
 
 .footer {
     background-color: var(--lightgrey);

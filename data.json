@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "Jane Doe 1",
+        "name": "John Doe 1",
         "image": "img/image_of_person.jpg",
         "status": "Missing",
         "last_known_location": "Kamwokya",
@@ -12,7 +12,7 @@
     },
     {
         "id": 2,
-        "name": "Jane Doe 2",
+        "name": "Jane Doe 1",
         "image": "img/image_of_person.jpg",
         "status": "Fallen",
         "last_known_location": "Wandegeya",
@@ -23,7 +23,7 @@
     },
     {
         "id": 3,
-        "name": "Jane Doe 3",
+        "name": "John Doe 2",
         "image": "img/image_of_person.jpg",
         "status": "Missing",
         "last_known_location": "Nakawa",
@@ -34,7 +34,7 @@
     },
     {
         "id": 4,
-        "name": "Jane Doe 4",
+        "name": "Jane Doe 2",
         "image": "img/image_of_person.jpg",
         "status": "Arrested",
         "last_known_location": "Banda",
@@ -45,9 +45,9 @@
     },
     {
         "id": 5,
-        "name": "Jane Doe 5",
+        "name": "Jane Doe 3",
         "image": "img/image_of_person.jpg",
-        "status": "Arrested",
+        "status": "Kidnapped",
         "last_known_location": "Nansana",
         "security_organ": "Police",
         "holding_location": "Detention",
@@ -56,9 +56,9 @@
     },
     {
         "id": 6,
-        "name": "Jane Doe 6",
+        "name": "John Doe 3",
         "image": "img/image_of_person.jpg",
-        "status": "Arrested",
+        "status": "Found",
         "last_known_location": "Nansana",
         "security_organ": "Police",
         "holding_location": "Detention",
