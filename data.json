@@ -1,68 +1,68 @@
 [
     {
         "id": 1,
-        "name": "Missing Person 1",
+        "name": "Jane Doe 1",
         "image": "img/image_of_person.jpg",
         "status": "Missing",
         "last_known_location": "Kamwokya",
-        "security_organ": "Taken by Police",
+        "security_organ": "Police",
         "holding_location": "Prison",
         "twitter": "@x_handle_1",
-        "sex": "Male"
+        "gender": "Male"
     },
     {
         "id": 2,
-        "name": "Missing Person 2",
+        "name": "Jane Doe 2",
         "image": "img/image_of_person.jpg",
         "status": "Fallen",
         "last_known_location": "Wandegeya",
-        "security_organ": "Taken by Army",
+        "security_organ": "Army",
         "holding_location": "Unknown Location",
         "twitter": "@x_handle_2",
-        "sex": "Female"
+        "gender": "Female"
     },
     {
         "id": 3,
-        "name": "Missing Person 3",
+        "name": "Jane Doe 3",
         "image": "img/image_of_person.jpg",
         "status": "Missing",
         "last_known_location": "Nakawa",
-        "security_organ": "Taken by CMI",
+        "security_organ": "CMI",
         "holding_location": "Police Station",
         "twitter": "@x_handle_3",
-        "sex": "Male"
+        "gender": "Male"
     },
     {
         "id": 4,
-        "name": "Missing Person 4",
+        "name": "Jane Doe 4",
         "image": "img/image_of_person.jpg",
         "status": "Arrested",
         "last_known_location": "Banda",
-        "security_organ": "Taken by Police",
+        "security_organ": "Police",
         "holding_location": "Detention",
         "twitter": "@x_handle_4",
-        "sex": "Female"
+        "gender": "Female"
     },
     {
         "id": 5,
-        "name": "Missing Person 5",
+        "name": "Jane Doe 5",
         "image": "img/image_of_person.jpg",
         "status": "Arrested",
         "last_known_location": "Nansana",
-        "security_organ": "Taken by Police",
+        "security_organ": "Police",
         "holding_location": "Detention",
         "twitter": "@x_handle_5",
-        "sex": "Female"
+        "gender": "Female"
     },
     {
         "id": 6,
-        "name": "Missing Person 6",
+        "name": "Jane Doe 6",
         "image": "img/image_of_person.jpg",
         "status": "Arrested",
         "last_known_location": "Nansana",
-        "security_organ": "Taken by Police",
+        "security_organ": "Police",
         "holding_location": "Detention",
         "twitter": "@x_handle_6",
-        "sex": "Male"
+        "gender": "Male"
     }
 ]
