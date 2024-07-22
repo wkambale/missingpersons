@@ -155,12 +155,10 @@ button {
 }
 
 .card-status.kidnapped {
-    color: var(--black);
-    background-color: var(--purple);
+    background-color: var(--lightergrey);
 }
 
 .card-status.found {
-    color: var(--black);
     background-color: var(--green);
 }
 
@@ -195,6 +193,7 @@ button {
 }
 
 .footer {
+	position: relative;
     background-color: var(--lightgrey);
     padding: 20px;
     text-align: center;
