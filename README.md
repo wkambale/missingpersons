@@ -9,6 +9,7 @@ This project lists Ugandans who might get arrested, detained, kidnapped, or go m
 To contribute, you can edit `data.json` with correct details of the person that's been reported or presumed missing, arrested, or detained, and then send a Pull Request (PR).
 
 **Contributing Code**
+
 Click the 'Fork' button at the top right of this page to create a copy of this repository under your GitHub account.
 
 **Clone the forked repository**:
