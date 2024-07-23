@@ -10,6 +10,7 @@
     --black: #000000;
     --yellow: #ffb224;
     --purple: #8e4ec6;
+    --darkred: #800000;
     --card-bg: #0a0a0a;
     --card-hover-bg: #1a1a1a;
 }
@@ -178,6 +179,7 @@ button:hover {
 .card-status.fallen { background-color: var(--red); }
 .card-status.kidnapped { background-color: var(--lightergrey); }
 .card-status.released { background-color: var(--green); }
+.card-status.remanded { background-color: var(--darkred); }
 
 .card__info {
     margin-bottom: 1rem;
