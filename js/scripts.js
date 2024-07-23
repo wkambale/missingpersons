@@ -5,7 +5,7 @@
         .then((data) => {
             const card = data.find((item) => item.id === id);
             const text = `NOTICE! This is a missing person: ${card.name}, status: ${card.status}, last seen at ${card.last_known_location}. #March2Parliament`;
-            const url = `https://x.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(card.image)}`;
+            const url = `https://x.com/intent/tweet?text=${encodeURIComponent(text)}`;
             window.open(url, "_blank");
         })
         .catch((error) => console.error("Error fetching data:", error));

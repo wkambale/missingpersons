@@ -1,13 +1,13 @@
 [
     {
         "id": 1,
-        "name": "John Doe 1",
-        "image": "img/image_of_person.jpg",
-        "status": "Missing",
-        "last_known_location": "Kamwokya",
+        "name": "Reign Omusoyisoyi",
+        "image": "img/reign_maulana.jpg",
+        "status": "Arrested",
+        "last_known_location": "Mutundwe, Rubaga",
         "security_organ": "Police",
-        "holding_location": "Prison",
-        "twitter": "@x_handle_1",
+        "holding_location": "Unknown Location",
+        "twitter": "@maulanareign256",
         "gender": "Male"
     },
     {
