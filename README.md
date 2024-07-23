@@ -2,7 +2,7 @@
 
 This project lists Ugandans who might get arrested, detained, kidnapped, or go missing following the planned #March2Parliament protests on July 23, 2024.
 
-![Kidnappings & Missing Persons Uganda](screenshot.png)
+![Kidnappings & Missing Persons Uganda](./src/assets/screenshot.png)
 
 Join the Slack Workspace to collaborate with other developers.
 
@@ -43,7 +43,7 @@ Example entry in `data.json`:
         "name": "Missing Person 1",
         "image": "img/image_of_person.jpeg",
         "last_known_location": "Kamwokya", 
-		"taken_time": "15:46 23-07-2024", // Format for the date "hour:minutes dd-mm-yyyy"
+		"taken_time": "15:46 23-07-2024",
         "holding_location": "Held at Police Station, Prison, Unknown Location",
         "security_organ": "Taken by Police, Army, Intelligence",
         "status": "Missing",
