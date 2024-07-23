@@ -299,5 +299,15 @@
         "holding_location": "Unknown",
         "twitter": "@OtienoGV",
         "gender": "Male"
-    }
+    },
+    {"id": 28,
+		"name": "Peter Ateenyi",
+		"image": "img/peter_ateenyi.jpeg",
+		"status": "Arrested",
+		"last_known_location": "Unknown",
+		"security_organ": "Police",
+		"holding_location": "Unknown",
+		"twitter": "@PeterAteenyi",
+		"gender": "Male"
+}
 ]
