@@ -8,7 +8,8 @@
         "security_organ": "Police",
         "holding_location": "Unknown Location",
         "twitter": "@maulanareign256",
-        "gender": "Male"
+        "gender": "Male",
+		"causes": "March To Parliament, No Corruption in Uganda",
     },
     {
         "id": 2,
@@ -19,7 +20,8 @@
         "security_organ": "Police",
         "holding_location": "Jinja Road Police",
         "twitter": "@Faizafabz",
-        "gender": "Female"
+        "gender": "Female",
+		"causes": "March To Parliament, No Corruption in Uganda",
     },
     {
         "id": 3,
@@ -30,7 +32,8 @@
         "security_organ": "Police",
         "holding_location": "Jinja Road Police",
         "twitter": "@Owishemwe",
-        "gender": "Male"
+        "gender": "Male",
+		"causes": "March To Parliament, No Corruption in Uganda",
     },
     {
         "id": 4,
@@ -41,7 +44,8 @@
         "security_organ": "Police",
         "holding_location": "Jinja Road Police",
         "twitter": "@4baronedgar8",
-        "gender": "Male"
+        "gender": "Male",
+		"causes": "March To Parliament, No Corruption in Uganda",
     },
     {
         "id": 5,
@@ -52,7 +56,8 @@
         "security_organ": "Police",
         "holding_location": "Jinja Road Police",
         "twitter": "@beewol",
-        "gender": "Male"
+        "gender": "Male",
+		"causes": "March To Parliament, No Corruption in Uganda",
     },
     {
         "id": 6,
@@ -63,7 +68,8 @@
         "security_organ": "Joint Forces",
         "holding_location": "Unknown",
         "twitter": "@Sylvia_Namutyab",
-        "gender": "Female"
+        "gender": "Female",
+		"causes": "March To Parliament, No Corruption in Uganda",
     },
     {
         "id": 7,
@@ -74,7 +80,8 @@
         "security_organ": "Joint Forces",
         "holding_location": "Unknown",
         "twitter": "@BuwemboHabib",
-        "gender": "Male"
+        "gender": "Male",
+		"causes": "March To Parliament, No Corruption  in Uganda",
     },
     {
         "id": 8,
@@ -85,7 +92,9 @@
         "security_organ": "Joint Forces",
         "holding_location": "Unknown",
         "twitter": "@Sserunkuumajb",
-        "gender": "Male"
+        "gender": "Male",
+		"causes": "March To Parliament, No Corruption  in Uganda",
+
     },
     {
         "id": 9,
@@ -96,7 +105,9 @@
         "security_organ": "Joint Forces",
         "holding_location": "MUBS Police",
         "twitter": "@AtwineLinus",
-        "gender": "Male"
+        "gender": "Male",
+		"causes": "March To Parliament, No Corruption  in Uganda",
+
     },
     {
         "id": 10,
@@ -107,7 +118,9 @@
         "security_organ": "Police",
         "holding_location": "Unknown",
         "twitter": "N/A",
-        "gender": "Male"
+        "gender": "Male",
+		"causes": "March To Parliament, No Corruption  in Uganda",
+
     },
     {
         "id":11,
@@ -118,7 +131,8 @@
         "security_organ": "Police",
         "holding_location": "Unknown",
         "twitter": "N/A",
-        "gender": "Female"
+        "gender": "Female",
+		"causes": "March To Parliament, No Corruption  in Uganda",
     },
     {
         "id": 12,
@@ -129,7 +143,8 @@
         "security_organ": "Police",
         "holding_location": "Unknown",
         "twitter": "@AtwineLinus",
-        "gender": "Male"
+        "gender": "Male",
+		"causes": "March To Parliament, No Corruption  in Uganda",
     },
     {
         "id": 13,
@@ -140,7 +155,8 @@
         "security_organ": "Police",
         "holding_location": "Unknown",
         "twitter": "N/A",
-        "gender": "Male"
+        "gender": "Male",
+		"causes": "March To Parliament, No Corruption  in Uganda",
     },
     {
         "id": 14,
@@ -151,7 +167,8 @@
         "security_organ": "Police",
         "holding_location": "Unknown",
         "twitter": "@_papawere",
-        "gender": "Male"
+        "gender": "Male",
+		"causes": "March To Parliament, No Corruption  in Uganda",
     },
     {
         "id": 15,
@@ -162,7 +179,8 @@
         "security_organ": "Police",
         "holding_location": "Kampala CPS",
         "twitter": "@GiftGrace01",
-        "gender": "Female"
+        "gender": "Female",
+		"causes": "March To Parliament, No Corruption  in Uganda",
     },
     {
         "id": 16,
@@ -173,7 +191,8 @@
         "security_organ": "Police",
         "holding_location": "Kabalagala Police",
         "twitter": "@28_ashtonn",
-        "gender": "Male"
+        "gender": "Male",
+		"causes": "March To Parliament, No Corruption  in Uganda",
     },
     {
         "id": 17,
@@ -184,7 +203,8 @@
         "security_organ": "Police",
         "holding_location": "Unknown",
         "twitter": "N/A",
-        "gender": "Female"
+        "gender": "Female",
+		"causes": "March To Parliament, No Corruption  in Uganda",
     },
     {
         "id": 18,
@@ -195,7 +215,8 @@
         "security_organ": "Police",
         "holding_location": "Unknown",
         "twitter": "@MusiriDavid",
-        "gender": "Male"
+        "gender": "Male",
+		"causes": "March To Parliament, No Corruption  in Uganda",
     },
     {
         "id": 19,
@@ -206,7 +227,8 @@
         "security_organ": "Police",
         "holding_location": "Unknown",
         "twitter": "N/A",
-        "gender": "Male"
+        "gender": "Male",
+		"causes": "March To Parliament, No Corruption  in Uganda",
     },
     {
         "id": 20,
@@ -217,7 +239,8 @@
         "security_organ": "Police",
         "holding_location": "Unknown",
         "twitter": "N/A",
-        "gender": "Male"
+        "gender": "Male",
+		"causes": "March To Parliament, No Corruption  in Uganda",
     },
     {
         "id": 21,
@@ -228,7 +251,8 @@
         "security_organ": "Police",
         "holding_location": "Kampala CPS",
         "twitter": "@melvinnasasira",
-        "gender": "Male"
+        "gender": "Male",
+		"causes": "March To Parliament, No Corruption  in Uganda",
     },
     {
         "id": 22,
@@ -239,7 +263,8 @@
         "security_organ": "Police",
         "holding_location": "Kampala CPS",
         "twitter": "@kamogabruno5",
-        "gender": "Male"
+        "gender": "Male",
+		"causes": "March To Parliament, No Corruption  in Uganda",
     },
     {
         "id": 23,
@@ -250,7 +275,8 @@
         "security_organ": "Police",
         "holding_location": "Unknown",
         "twitter": "@Makana_Kennedy",
-        "gender": "Male"
+        "gender": "Male",
+		"causes": "March To Parliament, No Corruption  in Uganda",
     },
     {
         "id": 24,
@@ -261,7 +287,8 @@
         "security_organ": "Police",
         "holding_location": "Unknown",
         "twitter": "@AloikinOpoloje",
-        "gender": "Female"
+        "gender": "Female",
+		"causes": "March To Parliament, No Corruption  in Uganda",
     },
     {
         "id": 25,
@@ -272,7 +299,8 @@
         "security_organ": "Police",
         "holding_location": "Unknown",
         "twitter": "@BakerbatteLule",
-        "gender": "Male"
+        "gender": "Male",
+		"causes": "March To Parliament, No Corruption  in Uganda",
     },
     {
         "id": 26,
@@ -283,7 +311,8 @@
         "security_organ": "Police",
         "holding_location": "Parliamentary Avenue",
         "twitter": "N/A",
-        "gender": "Male"
+        "gender": "Male",
+		"causes": "March To Parliament, No Corruption  in Uganda",
     },
     {
         "id": 27,
@@ -294,6 +323,7 @@
         "security_organ": "Police",
         "holding_location": "Unknown",
         "twitter": "@OtienoGV",
-        "gender": "Male"
+        "gender": "Male",
+		"causes": "March To Parliament, No Corruption  in Uganda",
     }
 ]
