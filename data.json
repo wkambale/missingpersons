@@ -229,6 +229,17 @@
         "holding_location": "Unknown",
         "twitter": "@melvinnasasira",
         "gender": "Male"
+    },
+    {
+        "id": 22,
+        "name": "Kamoga Bruno",
+        "image": "img/kamogabruno.jpg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "@KAMOGABRUNO5",
+        "gender": "Male"
     }
 
 ]
