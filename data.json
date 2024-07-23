@@ -7,6 +7,7 @@
         "last_known_location": "Mutundwe, Rubaga",
         "security_organ": "Police",
         "holding_location": "Unknown Location",
+		"taken_time": "09:30 23-07-2024", 
         "twitter": "@maulanareign256",
         "gender": "Male"
     },
@@ -17,7 +18,7 @@
         "status": "Arrested",
         "last_known_location": "Oasis Mall",
         "security_organ": "Police",
-		"taken_time": "10:46 23-07-2024", 
+		"taken_time": "10:19 23-07-2024", 
         "holding_location": "Jinja Road Police",
         "twitter": "@Faizafabz",
         "gender": "Female"
@@ -29,7 +30,7 @@
         "status": "Arrested",
         "last_known_location": "Oasis Mall",
         "security_organ": "Police",
-		"taken_time": "10:46 23-07-2024",
+		"taken_time": "10:19 23-07-2024",
         "holding_location": "Jinja Road Police",
         "twitter": "@Owishemwe",
         "gender": "Male"
@@ -41,7 +42,7 @@
         "status": "Arrested",
         "last_known_location": "Oasis Mall",
         "security_organ": "Police",
-		"taken_time": "10:46 23-07-2024",
+		"taken_time": "10:19 23-07-2024",
         "holding_location": "Jinja Road Police",
         "twitter": "@4baronedgar8",
         "gender": "Male"
@@ -53,7 +54,7 @@
         "status": "Arrested",
         "last_known_location": "Oasis Mall",
         "security_organ": "Police",
-		"taken_time": "10:46 23-07-2024",
+		"taken_time": "10:19 23-07-2024",
         "holding_location": "Jinja Road Police",
         "twitter": "@beewol",
         "gender": "Male"
@@ -65,6 +66,7 @@
         "status": "Arrested",
         "last_known_location": "Arua Park",
         "security_organ": "Joint Forces",
+        "taken_time": "10:08 23-07-2024",
         "holding_location": "Unknown",
         "twitter": "@Sylvia_Namutyab",
         "gender": "Female"
@@ -76,6 +78,7 @@
         "status": "Arrested",
         "last_known_location": "Arua Park",
         "security_organ": "Joint Forces",
+        "taken_time": "10:08 23-07-2024",
         "holding_location": "Unknown",
         "twitter": "@BuwemboHabib",
         "gender": "Male"
@@ -88,6 +91,7 @@
         "last_known_location": "Arua Park",
         "security_organ": "Joint Forces",
         "holding_location": "Unknown",
+        "taken_time": "10:08 23-07-2024",
         "twitter": "@Sserunkuumajb",
         "gender": "Male"
     },
@@ -97,6 +101,7 @@
         "image": "src/img/linus.jpg",
         "status": "Released",
         "last_known_location": "MUBS",
+        "taken_time": "10:42 23-07-2024",
         "security_organ": "Joint Forces",
         "holding_location": "MUBS Police",
         "twitter": "@AtwineLinus",
@@ -109,6 +114,7 @@
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
+        "taken_time": "11:24 23-07-2024",
         "holding_location": "Unknown",
         "twitter": "N/A",
         "gender": "Male"
@@ -120,6 +126,7 @@
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
+        "taken_time": "11:24 23-07-2024",
         "holding_location": "Unknown",
         "twitter": "N/A",
         "gender": "Female"
@@ -131,8 +138,9 @@
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
+        "taken_time": "11:24 23-07-2024",
         "holding_location": "Unknown",
-        "twitter": "@AtwineLinus",
+        "twitter": "@katende_ha11636",
         "gender": "Male"
     },
     {
@@ -143,6 +151,7 @@
         "last_known_location": "City Centre",
         "security_organ": "Police",
         "holding_location": "Unknown",
+        "taken_time": "12:59 23-07-2024",
         "twitter": "N/A",
         "gender": "Male"
     },
@@ -153,6 +162,7 @@
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
+        "taken_time": "11:44 23-07-2024",
         "holding_location": "Unknown",
         "twitter": "@_papawere",
         "gender": "Male"
@@ -162,8 +172,9 @@
         "name": "Grace Gift Anita",
         "image": "src/img/gift_grace.jpg",
         "status": "Arrested",
-        "last_known_location": "City Centre",
+        "last_known_location": "Buganda Road Court",
         "security_organ": "Police",
+        "taken_time": "12:07 23-07-2024",
         "holding_location": "Kampala CPS",
         "twitter": "@GiftGrace01",
         "gender": "Female"
@@ -175,6 +186,7 @@
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
+        "taken_time": "13:34 23-07-2024",
         "holding_location": "Kabalagala Police",
         "twitter": "@28_ashtonn",
         "gender": "Male"
@@ -186,6 +198,7 @@
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
+        "taken_time": "11:55 23-07-2024",
         "holding_location": "Unknown",
         "twitter": "N/A",
         "gender": "Female"
@@ -197,6 +210,7 @@
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
+        "taken_time": "11:55 23-07-2024",
         "holding_location": "Unknown",
         "twitter": "@MusiriDavid",
         "gender": "Male"
@@ -208,6 +222,7 @@
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
+        "taken_time": "11:55 23-07-2024",
         "holding_location": "Unknown",
         "twitter": "N/A",
         "gender": "Male"
@@ -219,6 +234,7 @@
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
+        "taken_time": "11:55 23-07-2024",
         "holding_location": "Unknown",
         "twitter": "N/A",
         "gender": "Male"
@@ -231,6 +247,7 @@
         "last_known_location": "City Centre",
         "security_organ": "Police",
         "holding_location": "Kampala CPS",
+        "taken_time": "11:52 23-07-2024",
         "twitter": "@melvinnasasira",
         "gender": "Male"
     },
@@ -242,6 +259,7 @@
         "last_known_location": "City Centre",
         "security_organ": "Police",
         "holding_location": "Kampala CPS",
+        "taken_time": "12:39 23-07-2024",
         "twitter": "@kamogabruno5",
         "gender": "Male"
     },
@@ -250,9 +268,10 @@
         "name": "Kennedy Makana",
         "image": "src/img/makana_ken.jpeg",
         "status": "Arrested",
-        "last_known_location": "Unknown",
+        "last_known_location": "Buganda Road Court",
         "security_organ": "Police",
         "holding_location": "Unknown",
+        "taken_time": "11:42 23-07-2024",
         "twitter": "@Makana_Kennedy",
         "gender": "Male"
     },
@@ -261,9 +280,10 @@
         "name": "Praise Aloikin",
         "image": "src/img/praise_aloikin.jpg",
         "status": "Arrested",
-        "last_known_location": "Unknown",
+        "last_known_location": "Buganda Road Court",
         "security_organ": "Police",
-        "holding_location": "Unknown",
+        "holding_location": "Kampala CPS",
+        "taken_time": "12:39 23-07-2024",
         "twitter": "@AloikinOpoloje",
         "gender": "Female"
     },
@@ -275,6 +295,7 @@
         "last_known_location": "Parliamentary Avenue",
         "security_organ": "Police",
         "holding_location": "Unknown",
+        "taken_time": "12:24 23-07-2024",
         "twitter": "@BakerbatteLule",
         "gender": "Male"
     },
@@ -283,8 +304,9 @@
         "name": "Mukwaya Innocent",
         "image": "src/img/mukwaya_inno.jpeg",
         "status": "Arrested",
-        "last_known_location": "Kooki Tower",
+        "last_known_location": "Siad Barre Avenue near Parliament",
         "security_organ": "Police",
+        "taken_time": "12:09 23-07-2024",
         "holding_location": "Parliamentary Avenue",
         "twitter": "N/A",
         "gender": "Male"
@@ -317,6 +339,7 @@
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
+        "taken_time": "14:07 23-07-2024",
         "holding_location": "Kampala CPS",
         "twitter": "@TayebwaJonatha3",
         "gender": "Male"
@@ -328,6 +351,7 @@
         "status": "Arrested",
         "last_known_location": "Kisekka Market",
         "security_organ": "Police",
+        "taken_time": "13:59 23-07-2024",
         "holding_location": "Unknown",
         "twitter": "@kirya_ug",
         "gender": "Male"
@@ -339,6 +363,7 @@
         "status": "Arrested",
         "last_known_location": "Ntinda",
         "security_organ": "Police",
+        "taken_time": "11:51 23-07-2024",
         "holding_location": "Unknown",
         "twitter": "@ShabilzsUg",
         "gender": "Male"
@@ -348,8 +373,9 @@
         "name": "Eriya Nawenuwe",
         "image": "src/img/erianuwe.jpg",
         "status": "Arrested",
-        "last_known_location": "Unknown",
+        "last_known_location": "Buganda Road Court",
         "security_organ": "Police",
+        "taken_time": "12:53 23-07-2024",
         "holding_location": "Kampala CPS",
         "twitter": "@EriyaNawenuwe",
         "gender": "Male"
@@ -359,7 +385,8 @@
         "name": "Mark Keron Wamala",
         "image": "src/img/keron.jpg",
         "status": "Arrested",
-        "last_known_location": "Unknown",
+        "last_known_location": "Buganda Road Magistrate Court",
+        "taken_time": "14:17 23-07-2024",
         "security_organ": "Police",
         "holding_location": "Unknown",
         "twitter": "@mark_keron",
@@ -372,6 +399,7 @@
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
+        "taken_time": "14:07 23-07-2024",
         "holding_location": "Kampala CPS",
         "twitter": "@byakutangazaE",
         "gender": "Male"
@@ -394,6 +422,7 @@
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
+        "taken_time": "12:38 23-07-2024",
         "holding_location": "Kampala CPS",
         "twitter": "@Jeremayakato",
         "gender": "Male"
@@ -405,7 +434,8 @@
         "status": "Kidnapped",
         "last_known_location": "Oasis Mall",
         "security_organ": "CMI/DIS",
-        "holding_location": "Unknown",
+        "taken_time": "14:07 23-07-2024",
+        "holding_location": "Kampala CPS",
         "twitter": "@KwikirizaNova",
         "gender": "Male"
     },
@@ -416,7 +446,8 @@
         "status": "Arrested",
         "last_known_location": "Unknown",
         "security_organ": "Police",
-        "holding_location": "Unknown",
+        "taken_time": "12:08 23-07-2024", 
+        "holding_location": "Kiira Road Police Station",
         "twitter": "@peel_pamper",
         "gender": "Female"
     },
