@@ -45,7 +45,7 @@
     },
     {
         "id": 5,
-        "name": "Bernard Ewalu Olupot",
+        "name": "Bernard Ewalu",
         "image": "img/beewol.jpg",
         "status": "Arrested",
         "last_known_location": "Oasis Mall",
@@ -61,7 +61,7 @@
         "status": "Arrested",
         "last_known_location": "Arua Park",
         "security_organ": "Joint Forces",
-        "holding_location": "Unknown Location",
+        "holding_location": "Unknown",
         "twitter": "@Sylvia_Namutyab",
         "gender": "Female"
     },
@@ -72,18 +72,18 @@
         "status": "Arrested",
         "last_known_location": "Arua Park",
         "security_organ": "Joint Forces",
-        "holding_location": "Unknown Location",
+        "holding_location": "Unknown",
         "twitter": "@BuwemboHabib",
         "gender": "Male"
     },
     {
         "id": 8,
-        "name": "Sserunkuma John Bosco",
+        "name": "Sserunkuma JB",
         "image": "img/john_bosco.jpeg",
         "status": "Arrested",
         "last_known_location": "Arua Park",
         "security_organ": "Joint Forces",
-        "holding_location": "Unknown Location",
+        "holding_location": "Unknown",
         "twitter": "@Sserunkuumajb",
         "gender": "Male"
     },
@@ -92,9 +92,42 @@
         "name": "Linus Atwine",
         "image": "img/linus.jpg",
         "status": "Arrested",
-        "last_known_location": "City Centre",
+        "last_known_location": "MUBS",
         "security_organ": "Joint Forces",
         "holding_location": "MUBS Police Station",
+        "twitter": "@AtwineLinus",
+        "gender": "Male"
+    },
+    {
+        "id": 10,
+        "name": "Ivan Wafula",
+        "image": "img/wafula_ivan.jpeg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id":11,
+        "name": "Hellen Namukwaya",
+        "image": "img/namukwaya.jpeg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "N/A",
+        "gender": "Female"
+    },
+    {
+        "id": 12,
+        "name": "Hassan Katende",
+        "image": "img/hassan_katende.jpg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Joint Forces",
+        "holding_location": "Unknown",
         "twitter": "@AtwineLinus",
         "gender": "Male"
     }
