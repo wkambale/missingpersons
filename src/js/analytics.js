@@ -12,18 +12,21 @@
          const genderCounter = new Counter();
          const statusCounter = new Counter();
          const holdingLocationCounter = new Counter();
+         const lastKnownLocation = new Counter();
 
          // Iterate through the records and update counters
          records.forEach(record => {
              genderCounter.increment(record.gender);
              statusCounter.increment(record.status);
              holdingLocationCounter.increment(record.holding_location);
+             lastKnownLocation.increment(record.last_known_location);
          });
 
          // Create charts with the data
          createChart('genderChart', 'pie', genderCounter.counts, 'Gender Distribution');
          createChart('statusChart', 'pie', statusCounter.counts, 'Status Distribution');
          createChart('holdingLocationChart', 'pie', holdingLocationCounter.counts, 'Holding Location Distribution');
+         createChart('lastKnownLocationChart', 'pie', lastKnownLocation.counts, 'Holding Location Distribution');
      })
      .catch(error => console.error('Error fetching JSON data:', error));
 
