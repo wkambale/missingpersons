@@ -109,6 +109,12 @@ button {
 	justify-content: center;
 }
 
+.loading {
+	text-align: center;
+	padding: 10px;
+	display: none;
+}
+
 .card {
     background-color: #0a0a0a;
     border-radius: 20px;
@@ -237,4 +243,21 @@ a:hover {
 	.search-sort input {
 		width: 100%;
 	}
+}
+
+/* spinner circle */
+
+.spinner{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid var(--black);
+    border-top: 5px solid var(--white);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
