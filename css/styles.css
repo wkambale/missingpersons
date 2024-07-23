@@ -197,7 +197,7 @@ button {
     background-color: var(--lightgrey);
     padding: 20px;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 2px;
 }
 
 .footer p, .hashtag {
