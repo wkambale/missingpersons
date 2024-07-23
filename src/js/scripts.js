@@ -44,9 +44,6 @@
  }
 
 document.addEventListener("DOMContentLoaded", function() {
-    let allData = [];
-    let currentPage = 1;
-    const itemsPerPage =12;
 
     // onkeyup event, call searchFunction
     document.getElementById('searchInput').addEventListener('keyup', searchFunction);
@@ -76,60 +73,45 @@ document.addEventListener("DOMContentLoaded", function() {
         `;
     }
 
-    // function to sort data based on taken_time
-    function sortData(data) {
-        return data.sort((a, b) => {
-            const dateA = a.taken_time ? parseCustomDateFormat(a.taken_time) : new Date(0);
-            const dateB = b.taken_time ? parseCustomDateFormat(b.taken_time) : new Date(0);
-            return dateB - dateA; // Sort in descending order (newest first)
-        });
-    }
-   
+    // Function to filter persons based on search input
     function searchFunction() {
         let input = document.getElementById('searchInput');
         let filter = input.value.toLowerCase();
-        let filteredData = allData.filter(card => 
-            card.name.toLowerCase().includes(filter) ||
-            card.status.toLowerCase().includes(filter) ||
-            card.last_known_location.toLowerCase().includes(filter)
-        );
-        displayPage(1, sortData(filteredData));
-        updatePaginationControls(filteredData.length);
+        let persons = document.getElementById('persons');
+        let blog = persons.getElementsByClassName('card');
+
+        for (let i = 0; i < blog.length; i++) {
+            let txtValue = blog[i].textContent || blog[i].innerText;
+            if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                blog[i].style.display = '';
+            } else {
+                blog[i].style.display = 'none';
+            }
+        }
     }
 
+    // Function to filter persons based on category
     function filterCategory(category) {
-        let filteredData = category === 'All' ? allData : allData.filter(card => card.status === category);
-        displayPage(1, sortData(filteredData));
-        updatePaginationControls(filteredData.length);
+        let persons = document.getElementById('persons');
+        let person = persons.getElementsByClassName('card');
+
+        for (let i = 0; i < person.length; i++) {
+            if (category === 'All' || person[i].getAttribute('data-category') === category) {
+                person[i].style.display = '';
+            } else {
+                person[i].style.display = 'none';
+            }
+        }
     }
 
-    function displayPage(page, data) {
-        const startIndex = (page - 1) * itemsPerPage;
-        const endIndex = startIndex + itemsPerPage;
-        const pageItems = data.slice(startIndex, endIndex);
-
-        const container = document.querySelector("#persons");
-        container.innerHTML = ''; // Clear previous content
-        pageItems.forEach((card) => {
-            container.innerHTML += createCard(card);
-        });
-    }
-
-    function updatePaginationControls(totalItems) {
-        const totalPages = Math.ceil(totalItems / itemsPerPage);
-        document.getElementById('currentPage').textContent = `Page ${currentPage} of ${totalPages}`;
-        
-        document.getElementById('prevPage').disabled = (currentPage === 1);
-        document.getElementById('nextPage').disabled = (currentPage === totalPages);
-    }
-
-    // Fetch and display data
+    // Hydrate the data to HTML.
     fetch("data.json")
         .then((response) => response.json())
         .then((data) => {
-            allData = sortData(data);
-            displayPage(currentPage, allData);
-            updatePaginationControls(allData.length);
+            const container = document.querySelector("#persons");
+            data.forEach((card) => {
+                container.innerHTML += createCard(card);
+            });
         })
         .catch((error) => console.error("Error fetching data:", error));
 
@@ -147,27 +129,4 @@ document.addEventListener("DOMContentLoaded", function() {
             button.classList.add('active');
         });
     });
-
-    // Event listeners for pagination buttons
-    document.getElementById('prevPage').addEventListener('click', () => {
-        if (currentPage > 1) {
-            currentPage--;
-            let activeCategory = document.querySelector('.buttons button.active').getAttribute('data-category');
-            let filteredData = activeCategory === 'All' ? allData : allData.filter(card => card.status === activeCategory);
-            displayPage(currentPage, filteredData);
-            updatePaginationControls(filteredData.length);
-        }
-    });
-
-    document.getElementById('nextPage').addEventListener('click', () => {
-        let activeCategory = document.querySelector('.buttons button.active').getAttribute('data-category');
-        let filteredData = activeCategory === 'All' ? allData : allData.filter(card => card.status === activeCategory);
-        const totalPages = Math.ceil(filteredData.length / itemsPerPage);
-        if (currentPage < totalPages) {
-            currentPage++;
-            displayPage(currentPage, filteredData);
-            updatePaginationControls(filteredData.length);
-        }
-    });
-
 });
