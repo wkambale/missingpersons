@@ -94,7 +94,7 @@
         "status": "Arrested",
         "last_known_location": "MUBS",
         "security_organ": "Joint Forces",
-        "holding_location": "MUBS Police Station",
+        "holding_location": "MUBS Police",
         "twitter": "@AtwineLinus",
         "gender": "Male"
     },
@@ -126,9 +126,109 @@
         "image": "img/hassan_katende.jpg",
         "status": "Arrested",
         "last_known_location": "City Centre",
-        "security_organ": "Joint Forces",
+        "security_organ": "Police",
         "holding_location": "Unknown",
         "twitter": "@AtwineLinus",
         "gender": "Male"
+    },
+    {
+        "id": 13,
+        "name": "Abel Mucunguzi",
+        "image": "img/abbel.jpg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 14,
+        "name": "Papa Were Salim",
+        "image": "img/papa_were.jpg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "@_papawere",
+        "gender": "Male"
+    },
+    {
+        "id": 15,
+        "name": "Grace Gift",
+        "image": "img/gift_grace.jpg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "@GiftGrace01",
+        "gender": "Female"
+    },
+    {
+        "id": 16,
+        "name": "Ashton Dumba",
+        "image": "img/ashton_dumba.jpg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Police",
+        "holding_location": "Kabalagala Police",
+        "twitter": "@28_ashtonn",
+        "gender": "Male"
+    },
+    {
+        "id": 17,
+        "name": "Speria Mollie",
+        "image": "img/ashton_dumba.jpg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "N/A",
+        "gender": "Female"
+    },
+    {
+        "id": 18,
+        "name": "Musiri David",
+        "image": "img/musiridavid.jpeg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "@MusiriDavid",
+        "gender": "Male"
+    },
+    {
+        "id": 19,
+        "name": "Sempijja Ivan",
+        "image": "img/ssempijja.jpg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 20,
+        "name": "Matovu Trevor",
+        "image": "img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 21,
+        "name": "King Melvin",
+        "image": "img/melvin.jpg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "@melvinnasasira",
+        "gender": "Male"
     }
+
 ]
