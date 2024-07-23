@@ -105,15 +105,120 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Hydrate the data to HTML.
-    fetch("data.json")
+    function fetchData() {
+        fetch("data.json")
         .then((response) => response.json())
         .then((data) => {
             const container = document.querySelector("#persons");
+            paginatedData = getPaginatedArray(data, 12)
+            data = getPage(pageNumber, paginatedData)
+
             data.forEach((card) => {
                 container.innerHTML += createCard(card);
             });
         })
         .catch((error) => console.error("Error fetching data:", error));
+    }
+
+    fetchData()
+
+    page1.addEventListener("click", e => {
+        const container = document.querySelector("#persons");
+        container.replaceChildren()
+        e.preventDefault()
+        pageNumber = 0;
+        
+        fetchData()
+    })
+
+
+    page2.addEventListener("click", e => {
+        const container = document.querySelector("#persons");
+        container.replaceChildren()
+        e.preventDefault()
+        pageNumber = 1;
+        fetchData()
+    })
+
+    page3.addEventListener("click", e => {
+        const container = document.querySelector("#persons");
+        container.replaceChildren()
+        e.preventDefault()
+        pageNumber = 2;
+        fetchData()
+    })
+
+    page4.addEventListener("click", e => {
+        const container = document.querySelector("#persons");
+        container.replaceChildren()
+        e.preventDefault()
+        pageNumber = 3;
+        fetchData()
+    })
+
+    page5.addEventListener("click", e => {
+        const container = document.querySelector("#persons");
+        container.replaceChildren()
+        e.preventDefault()
+        pageNumber = 4;
+        fetchData()
+    })
+
+    page6.addEventListener("click", e => {
+        const container = document.querySelector("#persons");
+        container.replaceChildren()
+        e.preventDefault()
+        pageNumber = 5;
+        fetchData()
+    })
+
+    page7.addEventListener("click", e => {
+        const container = document.querySelector("#persons");
+        container.replaceChildren()
+        e.preventDefault()
+        pageNumber = 5;
+        fetchData()
+    })
+
+    page8.addEventListener("click", e => {
+        const container = document.querySelector("#persons");
+        container.replaceChildren()
+        e.preventDefault()
+        pageNumber = 5;
+        fetchData()
+    })
+
+    page9.addEventListener("click", e => {
+        const container = document.querySelector("#persons");
+        container.replaceChildren()
+        e.preventDefault()
+        pageNumber = 5;
+        fetchData()
+    })
+
+    page10.addEventListener("click", e => {
+        const container = document.querySelector("#persons");
+        container.replaceChildren()
+        e.preventDefault()
+        pageNumber = 5;
+        fetchData()
+    })
+
+    page12.addEventListener("click", e => {
+        const container = document.querySelector("#persons");
+        container.replaceChildren()
+        e.preventDefault()
+        pageNumber = 5;
+        fetchData()
+    })
+
+    page12.addEventListener("click", e => {
+        const container = document.querySelector("#persons");
+        container.replaceChildren()
+        e.preventDefault()
+        pageNumber = 5;
+        fetchData()
+    })
 
     // Add event listeners to category buttons and manage active state
     let buttons = document.querySelectorAll('.buttons button');
@@ -129,4 +234,17 @@ document.addEventListener("DOMContentLoaded", function() {
             button.classList.add('active');
         });
     });
+
+    let paginationControls = document.querySelectorAll("a.paginator");
+    paginationControls.forEach(control => {
+        control.addEventListener('click', e => {
+            paginationControls.forEach(a => a.classList.remove('active'))
+            control.classList.add('active')
+        })
+    })
+
+    let firstOne = document.querySelector("a .paginator")
+    document.addEventListener('DOMContentLoaded', e=> {
+        firstOne.classList.add('active')
+    })
 });
