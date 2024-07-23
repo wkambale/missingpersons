@@ -64,10 +64,11 @@ document.addEventListener("DOMContentLoaded", function() {
                     <p class='card__office'>Taken by ${card.security_organ}</p>
                     <p class='card__time' title="${exactTime}">Time: ${takenTime}</p>
                     <p class='locations'>Last seen: ${card.last_known_location}</p>
-                    <p class='card-detained-at' data-station="${card.stationIdentifier ?? "Unknown"}>Detained at: ${card.detained_at}</p>
                     <p class='card__gender'>Gender: ${card.gender}</p>
                     <a class="card-twitter card-button" target='__blank' href="https://x.com/${card.twitter}">${twitterSvg}<span>${card.twitter || "--"}</span></a>
-                    <a class="card-location card-button" href="Loc:${card.holding_location}">${locationSvg}<span>Currently: ${card.holding_location || "--"}</span></a>
+                    <a class="card-location card-button" href="Loc:${card.holding_location}" data-station-identifier="${card.stationIdentifier}">
+                        ${locationSvg}<span>Currently: ${card.holding_location || "--"}</span>
+                    </a>
                 </div>
                 <button class="share-button twitter" onclick="shareCard(${card.id})">Share on X (Twitter)</button>
             </div>
@@ -135,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             const container = document.querySelector("#persons");
             data.forEach((card) => {
-                const policeStation = card.detained_at.replace(/\s+/g, '-').toLowerCase()
+                const policeStation = card.holding_location.replace(/\s+/g, '-').toLowerCase()
                 policeStations.add(policeStation);
 
                 card.stationIdentifier = policeStation;
@@ -158,6 +159,6 @@ document.addEventListener("DOMContentLoaded", function() {
         document.querySelectorAll('#persons .card').forEach(card => card.style.display = '');
         document.getElementById('searchInput').value = '';
         document.getElementById('category').value = 'all';
-        document.getElementById('police-station').value = 'all';
+        document.getElementById('detained-at').value = 'all';
     })
 });
