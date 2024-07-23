@@ -322,17 +322,6 @@
         "gender": "Male"
     },
     {
-        "id": 29,
-        "name": "Kirya UG",
-        "image": "img/kiryaug.jpg",
-        "status": "Arrested",
-        "last_known_location": "Kisekka Market",
-        "security_organ": "Police",
-        "holding_location": "Unknown",
-        "twitter": "@kirya_ug",
-        "gender": "Male"
-    },
-    {
         "id": 30,
         "name": "Kirya UG",
         "image": "img/kiryaug.jpg",
