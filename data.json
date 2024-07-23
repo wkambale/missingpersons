@@ -13,7 +13,7 @@
     {
         "id": 2,
         "name": "Faiza Fabz",
-        "image": "img/faiza.png",
+        "image": "img/faiza_fab.png",
         "status": "Arrested",
         "last_known_location": "Oasis Mall",
         "security_organ": "Police",
@@ -56,13 +56,35 @@
     },
     {
         "id": 6,
-        "name": "John Doe 3",
-        "image": "img/image_of_person.jpg",
-        "status": "Found",
-        "last_known_location": "Nansana",
-        "security_organ": "Police",
-        "holding_location": "Detention",
-        "twitter": "@x_handle_6",
+        "name": "Sylvia Namutyaba",
+        "image": "img/namutyaba.jpg",
+        "status": "Arrested",
+        "last_known_location": "Arua Park",
+        "security_organ": "Joint Forces",
+        "holding_location": "Unknown Location",
+        "twitter": "@Sylvia_Namutyab",
+        "gender": "Female"
+    },
+    {
+        "id": 7,
+        "name": "Habib Buwembo",
+        "image": "img/habib_buwembo.jpeg",
+        "status": "Arrested",
+        "last_known_location": "Arua Park",
+        "security_organ": "Joint Forces",
+        "holding_location": "Unknown Location",
+        "twitter": "@BuwemboHabib",
+        "gender": "Male"
+    },
+    {
+        "id": 8,
+        "name": "Sserunkuma John Bosco",
+        "image": "img/john_bosco.jpg",
+        "status": "Arrested",
+        "last_known_location": "Arua Park",
+        "security_organ": "Joint Forces",
+        "holding_location": "Unknown Location",
+        "twitter": "@Sserunkuumajb",
         "gender": "Male"
     }
 ]
