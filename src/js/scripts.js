@@ -129,9 +129,9 @@ document.addEventListener("DOMContentLoaded", function() {
 // pagination configuration
 const CONFIG = {
     url: `data.json`,
-    personsPerPage: 3,
+    personsPerPage: 12,
     scrollThreshold: 100,
-    scrollDelay: 2000,
+    scrollDelay: 1500,
 };
 
 // DOM elements

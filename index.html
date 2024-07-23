@@ -1,47 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Cookie Banner -->
-        <!-- Start cookieyes banner -->
-        <script id="cookieyes" type="text/javascript"
-            src="https://cdn-cookieyes.com/client_data/5ae40288320e48428eecee4b/script.js"></script>
-        <!-- End cookieyes banner -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Kidnappings & Missing Persons in Uganda</title>
-        <!-- Meta tags SEO -->
-        <meta name="description"
-            content="Find missing loved ones in Uganda. Report disappearances. View photos, descriptions. Get support resources. Help bring people home." />
-        <meta name="keywords"
-            content="missing persons Uganda, kidnapped Ugandans, abducted Ugandans" />
-        <meta name="author" content="Wes Kambale" />
-        <!-- Social Media Meta Tags -->
-        <meta property="og:title" content="Missing persons Uganda" />
-        <meta property="og:description"
-            content="Find missing loved ones in Uganda. Report disappearances. View photos, descriptions. Get support resources. Help bring people home." />
-        <meta property="og:image" content="./src/img/image_of_person.jpg" />
-        <meta property="og:url" content="https://missingpersonsug.org" />
-        <meta name="twitter:title" content="Missing Persons Uganda" />
-        <meta name="twitter:description"
-            content="Find missing loved ones in Uganda. Report disappearances. View photos, descriptions. Get support resources. Help bring people home." />
-        <meta name="twitter:image" content="./src/img/image_of_person.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <!-- Social Media Meta Tags End-->
 
-        <!--
+<head>
+    <!-- Cookie Banner -->
+    <!-- Start cookieyes banner -->
+    <script id="cookieyes" type="text/javascript"
+        src="https://cdn-cookieyes.com/client_data/5ae40288320e48428eecee4b/script.js"></script>
+    <!-- End cookieyes banner -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kidnappings & Missing Persons in Uganda</title>
+    <!-- Meta tags SEO -->
+    <meta name="description"
+        content="Find missing loved ones in Uganda. Report disappearances. View photos, descriptions. Get support resources. Help bring people home." />
+    <meta name="keywords" content="missing persons Uganda, kidnapped Ugandans, abducted Ugandans" />
+    <meta name="author" content="Wes Kambale" />
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Missing persons Uganda" />
+    <meta property="og:description"
+        content="Find missing loved ones in Uganda. Report disappearances. View photos, descriptions. Get support resources. Help bring people home." />
+    <meta property="og:image" content="./src/img/image_of_person.jpg" />
+    <meta property="og:url" content="https://missingpersonsug.org" />
+    <meta name="twitter:title" content="Missing Persons Uganda" />
+    <meta name="twitter:description"
+        content="Find missing loved ones in Uganda. Report disappearances. View photos, descriptions. Get support resources. Help bring people home." />
+    <meta name="twitter:image" content="./src/img/image_of_person.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Social Media Meta Tags End-->
+
+    <!--
         site.manifest provides metadata used when your web app is installed on a
         user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-        <link rel="manifest" href="./site.webmanifest" />
-        <!-- Manifest Ends -->
+    <link rel="manifest" href="./site.webmanifest" />
+    <!-- Manifest Ends -->
 
-        <!-- Favicon -->
-        <link rel="shortcut icon" href="./src/assets/favicon.ico"
-            type="image/x-icon" />
-        <link href="./src/assets/apple-touch-icon.png" rel="apple-touch-icon" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./src/assets/favicon.ico" type="image/x-icon" />
+    <link href="./src/assets/apple-touch-icon.png" rel="apple-touch-icon" />
 
-        <!-- Schema Markup data -->
-        <script type="application/ld+json">
+    <!-- Schema Markup data -->
+    <script type="application/ld+json">
     {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -57,67 +56,40 @@
         ]
     }
         </script>
-        <!-- Schema Markup data ends -->
+    <!-- Schema Markup data ends -->
 
-        <!-- Link to external CSS -->
-        <link rel="stylesheet" href="src/css/styles.css">
-    </head>
-    <body>
-        <header class="header">
-            <h1>Kidnappings & Missing Persons in Uganda</h1>
-            <h2>#March To Parliament - 23rd/July/2024</h2>
-        </header>
-        <section class="filters">
-            <span>Filter by:</span>
-            <div class="filter-and-search">
-                <div class="content__buttons buttons">
-                    <button data-category="All" class="active">All</button>
-                    <button data-category="Missing">Missing</button>
-                    <button data-category="Arrested">Arrested</button>
-                    <button data-category="Fallen">Fallen</button>
-                    <button data-category="Kidnapped">Kidnapped</button>
-                    <button data-category="Released">Released</button>
-                </div>
-                <input type="text" id="searchInput"
-                    placeholder="Search Person's Name...">
-            </div>
-        </section>
-        <section class="content">
-            <div id="persons" class="persons"></div>
-            <div id="loading" class="loading">
-                <div class="spinner"></div>
-            </div>
-        </section>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="src/css/styles.css">
+</head>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <nav class="footer-nav">
-                <a href="./privacy.html" title="Privacy Policy" rel="noopener" target="_blank">Privacy Policy</a>
-                <a href="./cookies.html" title="Cookie Policy" rel="noopener" target="_blank">Cookie Policy</a>
-                <a href="./analytics.html" title="Analytics " rel="noopener" target="_blank"> Analytics</a><br>
-            </nav>
-            <p class="copyright">
-                <span id="current-year"></span> &copy; Kidnappings & Missing Persons in Uganda. All rights reserved.
-            </p>
-            <p class="current-time" id="current-time"></p>
+<body>
+    <div class="header">
+        <h1>Kidnappings & Missing Persons in Uganda</h1>
+    </div>
+
+    <div class="content">
+        <span class="content__sort-by">Filter by:</span>
+        <div class="search-sort">
+            <div class="content__buttons buttons">
+                <button data-category="All" class="active">All</button>
+                <button data-category="Missing">Missing</button>
+                <button data-category="Arrested">Arrested</button>
+                <button data-category="Fallen">Fallen</button>
+                <button data-category="Kidnapped">Kidnapped</button>
+                <button data-category="Released">Released</button>
+            </div>
+            <input type="text" id="searchInput" placeholder="Search Person's Name...">
         </div>
-    </footer>
+        <div id="persons" class="persons"></div>
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+        </div>
+    </div>
 
     <script type="text/javascript" src="src/js/scripts.js"></script>
+    <div w3-include-html="src/partials/footer.html"></div>
+    <script src="./src/js/include.js"></script>
+    <script src="./src/js/time.js"></script>
+</body>
 
-    <script>
-        function updateDateTime() {
-            const now = new Date();
-            const year = now.getFullYear();
-            const time = now.toLocaleTimeString();
-            const date = now.toLocaleDateString();
-
-            document.getElementById('current-year').textContent = year;
-            document.getElementById('current-time').textContent = `${date} ${time}`;
-        }
-
-        updateDateTime();
-        setInterval(updateDateTime, 1000);
-    </script>
-    </body>
 </html>
