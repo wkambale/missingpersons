@@ -87,7 +87,6 @@
                 blog[i].style.display = 'none';
             }
         }
-        personCount();
     }
 
     // Function to filter persons based on category
@@ -110,7 +109,6 @@
         let persons = document.getElementById('persons');
         let visiblePersons = persons.getElementsByClassName('card');
         let visibleCount = 0;
-        
         for (let i = 0; i < visiblePersons.length; i++) {
             if (visiblePersons[i].style.display !== 'none') {
                 visibleCount++;
