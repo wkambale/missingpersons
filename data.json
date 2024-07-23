@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Reign Omusoyisoyi",
-        "image": "img/reign_maulana.jpg",
+        "image": "src/img/reign_maulana.jpg",
         "status": "Arrested",
         "last_known_location": "Mutundwe, Rubaga",
         "security_organ": "Police",
@@ -13,7 +13,7 @@
     {
         "id": 2,
         "name": "Faiza Fabz",
-        "image": "img/faiza_fab.jpg",
+        "image": "src/img/faiza_fab.jpg",
         "status": "Arrested",
         "last_known_location": "Oasis Mall",
         "security_organ": "Police",
@@ -25,7 +25,7 @@
     {
         "id": 3,
         "name": "Thomas Kanzira",
-        "image": "img/thomas_oweishemwe.png",
+        "image": "src/img/thomas_oweishemwe.png",
         "status": "Arrested",
         "last_known_location": "Oasis Mall",
         "security_organ": "Police",
@@ -37,7 +37,7 @@
     {
         "id": 4,
         "name": "Baron Edgar",
-        "image": "img/baron_edgar.jpg",
+        "image": "src/img/baron_edgar.jpg",
         "status": "Arrested",
         "last_known_location": "Oasis Mall",
         "security_organ": "Police",
@@ -49,7 +49,7 @@
     {
         "id": 5,
         "name": "Bernard Ewalu",
-        "image": "img/beewol.jpg",
+        "image": "src/img/beewol.jpg",
         "status": "Arrested",
         "last_known_location": "Oasis Mall",
         "security_organ": "Police",
@@ -61,7 +61,7 @@
     {
         "id": 6,
         "name": "Sylvia Namutyaba",
-        "image": "img/namutyaba.jpg",
+        "image": "src/img/namutyaba.jpg",
         "status": "Arrested",
         "last_known_location": "Arua Park",
         "security_organ": "Joint Forces",
@@ -72,7 +72,7 @@
     {
         "id": 7,
         "name": "Habib Buwembo",
-        "image": "img/habib_buwembo.jpeg",
+        "image": "src/img/habib_buwembo.jpeg",
         "status": "Arrested",
         "last_known_location": "Arua Park",
         "security_organ": "Joint Forces",
@@ -83,7 +83,7 @@
     {
         "id": 8,
         "name": "Sserunkuma JB",
-        "image": "img/john_bosco.jpeg",
+        "image": "src/img/john_bosco.jpeg",
         "status": "Arrested",
         "last_known_location": "Arua Park",
         "security_organ": "Joint Forces",
@@ -94,7 +94,7 @@
     {
         "id": 9,
         "name": "Linus Atwine",
-        "image": "img/linus.jpg",
+        "image": "src/img/linus.jpg",
         "status": "Released",
         "last_known_location": "MUBS",
         "security_organ": "Joint Forces",
@@ -105,7 +105,7 @@
     {
         "id": 10,
         "name": "Ivan Wafula",
-        "image": "img/wafula_ivan.jpeg",
+        "image": "src/img/wafula_ivan.jpeg",
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
@@ -116,7 +116,7 @@
     {
         "id":11,
         "name": "Hellen Namukwaya",
-        "image": "img/namukwaya.jpeg",
+        "image": "src/img/namukwaya.jpeg",
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
@@ -127,7 +127,7 @@
     {
         "id": 12,
         "name": "Hassan Katende",
-        "image": "img/hassan_katende.jpg",
+        "image": "src/img/hassan_katende.jpg",
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
@@ -138,7 +138,7 @@
     {
         "id": 13,
         "name": "Abel Mucunguzi",
-        "image": "img/abbel.jpg",
+        "image": "src/img/abbel.jpg",
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
@@ -149,7 +149,7 @@
     {
         "id": 14,
         "name": "Papa Were Salim",
-        "image": "img/papa_were.jpg",
+        "image": "src/img/papa_were.jpg",
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
@@ -160,7 +160,7 @@
     {
         "id": 15,
         "name": "Grace Gift Anita",
-        "image": "img/gift_grace.jpg",
+        "image": "src/img/gift_grace.jpg",
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
@@ -171,7 +171,7 @@
     {
         "id": 16,
         "name": "Ashton Dumba",
-        "image": "img/ashton_dumba.jpg",
+        "image": "src/img/ashton_dumba.jpg",
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
@@ -182,7 +182,7 @@
     {
         "id": 17,
         "name": "Speria Mollie",
-        "image": "img/speria_mollie.jpg",
+        "image": "src/img/speria_mollie.jpg",
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
@@ -193,7 +193,7 @@
     {
         "id": 18,
         "name": "Musiri David",
-        "image": "img/musiridavid.jpeg",
+        "image": "src/img/musiridavid.jpeg",
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
@@ -204,7 +204,7 @@
     {
         "id": 19,
         "name": "Sempijja Ivan",
-        "image": "img/ssempijja.jpg",
+        "image": "src/img/ssempijja.jpg",
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
@@ -215,7 +215,7 @@
     {
         "id": 20,
         "name": "Matovu Trevor",
-        "image": "img/image_of_person.jpg",
+        "image": "src/img/image_of_person.jpg",
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
@@ -226,7 +226,7 @@
     {
         "id": 21,
         "name": "King Melvin",
-        "image": "img/melvin.jpg",
+        "image": "src/img/melvin.jpg",
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
@@ -237,7 +237,7 @@
     {
         "id": 22,
         "name": "Kamoga Bruno",
-        "image": "img/kamogabruno.jpg",
+        "image": "src/img/kamogabruno.jpg",
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
@@ -248,7 +248,7 @@
     {
         "id": 23,
         "name": "Kennedy Makana",
-        "image": "img/makana_ken.jpeg",
+        "image": "src/img/makana_ken.jpeg",
         "status": "Arrested",
         "last_known_location": "Unknown",
         "security_organ": "Police",
@@ -259,7 +259,7 @@
     {
         "id": 24,
         "name": "Praise Aloikin",
-        "image": "img/praise_aloikin.jpg",
+        "image": "src/img/praise_aloikin.jpg",
         "status": "Arrested",
         "last_known_location": "Unknown",
         "security_organ": "Police",
@@ -270,7 +270,7 @@
     {
         "id": 25,
         "name": "Batte Baker Lule",
-        "image": "img/batter_lule.jpg",
+        "image": "src/img/batter_lule.jpg",
         "status": "Arrested",
         "last_known_location": "Parliamentary Avenue",
         "security_organ": "Police",
@@ -281,7 +281,7 @@
     {
         "id": 26,
         "name": "Mukwaya Innocent",
-        "image": "img/mukwaya_inno.jpeg",
+        "image": "src/img/mukwaya_inno.jpeg",
         "status": "Arrested",
         "last_known_location": "Kooki Tower",
         "security_organ": "Police",
@@ -292,7 +292,7 @@
     {
         "id": 27,
         "name": "George V. Otieno",
-        "image": "img/otieno_victor.jpg",
+        "image": "src/img/otieno_victor.jpg",
         "status": "Arrested",
         "last_known_location": "Unknown",
         "security_organ": "Police",
@@ -302,7 +302,7 @@
     },
     {"id": 28,
 		"name": "Peter Ateenyi",
-		"image": "img/peter_ateenyi.jpeg",
+		"image": "src/img/peter_ateenyi.jpeg",
 		"status": "Released",
 		"last_known_location": "Unknown",
 		"security_organ": "Police",
@@ -313,7 +313,7 @@
     {
         "id": 29,
         "name": "Tayebwa Jonathan",
-        "image": "img/tayebwajonathan.jpg",
+        "image": "src/img/tayebwajonathan.jpg",
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
@@ -324,7 +324,7 @@
     {
         "id": 30,
         "name": "Kirya UG",
-        "image": "img/kiryaug.jpg",
+        "image": "src/img/kiryaug.jpg",
         "status": "Arrested",
         "last_known_location": "Kisekka Market",
         "security_organ": "Police",
@@ -335,7 +335,7 @@
     {
         "id": 31,
         "name": "Shabiliz UG",
-        "image": "img/shabilzug.jpg",
+        "image": "src/img/shabilzug.jpg",
         "status": "Arrested",
         "last_known_location": "Ntinda",
         "security_organ": "Police",
@@ -346,7 +346,7 @@
     {
         "id": 32,
         "name": "Eriya Nawenuwe",
-        "image": "img/erianuwe.jpg",
+        "image": "src/img/erianuwe.jpg",
         "status": "Arrested",
         "last_known_location": "Unknown",
         "security_organ": "Police",
@@ -357,7 +357,7 @@
     {
         "id": 33,
         "name": "Mark Keron Wamala",
-        "image": "img/keron.jpg",
+        "image": "src/img/keron.jpg",
         "status": "Arrested",
         "last_known_location": "Unknown",
         "security_organ": "Police",
@@ -368,7 +368,7 @@
     {
         "id": 34,
         "name": "Byakutangaza Ezra",
-        "image": "img/ezra_byakutangaza.jpg",
+        "image": "src/img/ezra_byakutangaza.jpg",
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
@@ -379,7 +379,7 @@
     {
         "id": 35,
         "name": "Gideon Kwikiriza",
-        "image": "img/gideon_kwikiriza.jpg",
+        "image": "src/img/gideon_kwikiriza.jpg",
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
@@ -390,7 +390,7 @@
     {
         "id": 36,
         "name": "Jeremiah Kato",
-        "image": "img/jereme_kato.jpg",
+        "image": "src/img/jereme_kato.jpg",
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
@@ -401,7 +401,7 @@
     {
         "id": 37,
         "name": "Atuheibwe Victor",
-        "image": "img/image_of_person.jpg",
+        "image": "src/img/image_of_person.jpg",
         "status": "Kidnapped",
         "last_known_location": "Oasis Mall",
         "security_organ": "CMI/DIS",
@@ -412,7 +412,7 @@
     {
         "id": 38,
         "name": "Jolly Nyirambabazi",
-        "image": "img/nyirambazi.jpg",
+        "image": "src/img/nyirambazi.jpg",
         "status": "Arrested",
         "last_known_location": "Unknown",
         "security_organ": "Police",
@@ -423,7 +423,7 @@
     {
         "id": 39,
         "name": "Karungi Hamza",
-        "image": "img/image_of_person.jpg",
+        "image": "src/img/image_of_person.jpg",
         "status": "Arrested",
         "last_known_location": "Parliamentary Avenue",
         "security_organ": "Police",
