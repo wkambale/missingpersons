@@ -1,17 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cookies Policy</title>
-    <!-- Link to external CSS -->
-    <link rel="stylesheet" href="src/css/styles.css">
-    <style>
-        body {
-            padding: 20px
+    <head>
+        <!-- Cookie Banner -->
+        <!-- Start cookieyes banner -->
+        <script id="cookieyes" type="text/javascript"
+            src="https://cdn-cookieyes.com/client_data/5ae40288320e48428eecee4b/script.js"></script>
+        <!-- End cookieyes banner -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kidnappings & Missing Persons in Uganda</title>
+        <!-- Meta tags SEO -->
+        <meta name="description"
+            content="Find missing loved ones in Uganda. Report disappearances. View photos, descriptions. Get support resources. Help bring people home." />
+        <meta name="keywords" content="missing persons Uganda, kidnapped Ugandans, abducted Ugandans" />
+        <meta name="author" content="Wes Kambale" />
+        <!-- Social Media Meta Tags -->
+        <meta property="og:title" content="Missing persons Uganda" />
+        <meta property="og:description"
+            content="Find missing loved ones in Uganda. Report disappearances. View photos, descriptions. Get support resources. Help bring people home." />
+        <meta property="og:image" content="./src/img/image_of_person.jpg" />
+        <meta property="og:url" content="https://missingpersonsug.org" />
+        <meta name="twitter:title" content="Missing Persons Uganda" />
+        <meta name="twitter:description"
+            content="Find missing loved ones in Uganda. Report disappearances. View photos, descriptions. Get support resources. Help bring people home." />
+        <meta name="twitter:image" content="./src/img/image_of_person.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <!-- Social Media Meta Tags End-->
+    
+        <!--
+            site.manifest provides metadata used when your web app is installed on a
+            user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+        -->
+        <link rel="manifest" href="./site.webmanifest" />
+        <!-- Manifest Ends -->
+    
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="./src/assets/favicon.ico" type="image/x-icon" />
+        <link href="./src/assets/apple-touch-icon.png" rel="apple-touch-icon" />
+    
+        <!-- Schema Markup data -->
+        <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Missing Persons Uganda",
+        "url": "https://missingpersonsug.com",
+        "logo": "https://missingpersonsug.com/logo.webp",
+        "sameAs": [
+            "",
+            "",
+            "",
+            "",
+            ""
+            ]
         }
-    </style>
-</head>
+            </script>
+        <!-- Schema Markup data ends -->
+    
+        <!-- Link to external CSS -->
+        <link rel="stylesheet" href="src/css/styles.css">
+    </head>
 <body>
     <h1>COOKIE POLICY</h1>
     
@@ -125,20 +173,8 @@
     If you have any questions about our use of cookies or other technologies, please contact us at:
     
     Missing Persons Uganda
-
+    <div w3-include-html="src/partials/footer.html"></div>
+    <script src="./src/js/include.js"></script>
+    <script src="./src/js/time.js"></script>
 </body>
-<footer class="footer">
-    <div class="footer-content">
-        <nav class="footer-nav">
-            <a href="./privacy.html" title="Privacy Policy" rel="noopener" target="_blank">Privacy Policy</a>
-            <a href="./cookies.html" title="Cookie Policy" rel="noopener" target="_blank">Cookie Policy</a>
-            <a href="./analytics.html" title="Analytics " rel="noopener" target="_blank"> Analytics</a><br>
-        </nav>
-        <p class="copyright">
-            <span id="current-year"></span> &copy; Kidnappings & Missing Persons in Uganda. All rights reserved.
-        </p>
-        <p class="current-time" id="current-time"></p>
-    </div>
-</footer>
-<script src="./src/js/time.js"></script>
 </html>

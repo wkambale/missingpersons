@@ -77,6 +77,12 @@ button:hover {
     padding: 1rem 0;
 }
 
+.search-sort input {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+}
+
 .filter-and-search {
     flex:2;
     display: flex;
@@ -347,4 +353,8 @@ button:hover {
         font-size: 0.9rem;
         padding: 0.6rem 1rem;
     }
+}
+
+canvas {
+    max-height: 400px;
 }
