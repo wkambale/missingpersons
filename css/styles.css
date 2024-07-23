@@ -158,7 +158,7 @@ button {
     background-color: var(--lightergrey);
 }
 
-.card-status.found {
+.card-status.released {
     background-color: var(--green);
 }
 
