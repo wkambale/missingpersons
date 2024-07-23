@@ -13,7 +13,7 @@
     {
         "id": 2,
         "name": "Faiza Fabz",
-        "image": "img/faiza_fab.png",
+        "image": "img/faiza_fab.jpg",
         "status": "Arrested",
         "last_known_location": "Oasis Mall",
         "security_organ": "Police",
@@ -79,7 +79,7 @@
     {
         "id": 8,
         "name": "Sserunkuma John Bosco",
-        "image": "img/john_bosco.jpg",
+        "image": "img/john_bosco.jpeg",
         "status": "Arrested",
         "last_known_location": "Arua Park",
         "security_organ": "Joint Forces",
