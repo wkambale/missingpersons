@@ -64,5 +64,38 @@
         "holding_location": "Detention",
         "twitter": "@x_handle_6",
         "gender": "Male"
+    },
+    {
+        "id": 7,
+        "name": "Sylvia Namutyaba",
+        "image": "img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "Arua Park",
+        "security_organ": "Police",
+        "holding_location": "Arua Park Police Station",
+        "twitter": "unknown",
+        "gender": "Male"
+    },
+    {
+        "id": 8,
+        "name": "Habib Buwembo",
+        "image": "img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "Arua Park",
+        "security_organ": "Police",
+        "holding_location": "Arua Park Police Station",
+        "twitter": "unknown",
+        "gender": "Male"
+    },
+    {
+        "id": 9,
+        "name": "Sserunkuma John Bosco",
+        "image": "img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "Arua Park",
+        "security_organ": "Police",
+        "holding_location": "Arua Park Police Station",
+        "twitter": "unknown",
+        "gender": "Male"
     }
 ]
