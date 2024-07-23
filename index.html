@@ -58,14 +58,35 @@
         </script>
     <!-- Schema Markup data ends -->
 
-    <!-- Link to external CSS -->
-    <link rel="stylesheet" href="src/css/styles.css">
-</head>
-
-<body>
-    <div class="header">
-        <h1>Kidnappings & Missing Persons in Uganda</h1>
-    </div>
+        <!-- Link to external CSS -->
+        <link rel="stylesheet" href="src/css/styles.css">
+    </head>
+    <body>
+        <header class="header">
+            <h1>Kidnappings & Missing Persons in Uganda</h1>
+            <h2>#March To Parliament - 23rd/July/2024</h2>
+        </header>
+        <section class="filters">
+            <span>Filter by:</span>
+            <div class="filter-and-search">
+                <div class="content__buttons buttons">
+                    <button data-category="All" class="active">All</button>
+                    <button data-category="Missing">Missing</button>
+                    <button data-category="Arrested">Arrested</button>
+                    <button data-category="Fallen">Fallen</button>
+                    <button data-category="Kidnapped">Kidnapped</button>
+                    <button data-category="Released">Released</button>
+                </div>
+                <input type="text" id="searchInput"
+                    placeholder="Search Person's Name...">
+            </div>
+            <div id="persons" class="persons"></div>
+            <div id="pagination" class="pagination">
+                <button id="prevPage">Previous</button>
+                <span id="currentPage"></span>
+                <button id="nextPage">Next</button>
+            </div>
+        </div>
 
     <div class="content">
         <span class="content__sort-by">Filter by:</span>

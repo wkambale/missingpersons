@@ -267,6 +267,20 @@ button:hover {
     color: var(--white);
 }
 
+.pagination {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.pagination button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    color: var(--black);
+}
+
 @media screen and (max-width: 480px) {
     .footer-nav {
         flex-direction: column;
