@@ -155,12 +155,12 @@
     },
     {
         "id": 15,
-        "name": "Grace Gift",
+        "name": "Grace Gift Anita",
         "image": "img/gift_grace.jpg",
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
-        "holding_location": "Unknown",
+        "holding_location": "Kampala CPS",
         "twitter": "@GiftGrace01",
         "gender": "Female"
     },
@@ -226,7 +226,7 @@
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
-        "holding_location": "Unknown",
+        "holding_location": "Kampala CPS",
         "twitter": "@melvinnasasira",
         "gender": "Male"
     },
@@ -237,7 +237,7 @@
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
-        "holding_location": "Unknown",
+        "holding_location": "Kampala CPS",
         "twitter": "@kamogabruno5",
         "gender": "Male"
     },
@@ -262,6 +262,27 @@
         "holding_location": "Unknown",
         "twitter": "@AloikinOpoloje",
         "gender": "Female"
+    },
+    {
+        "id": 25,
+        "name": "Batte Baker Lule",
+        "image": "img/batter_lule.jpg",
+        "status": "Arrested",
+        "last_known_location": "Parliamentary Avenue",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "@BakerbatteLule",
+        "gender": "Male"
+    },
+    {
+        "id": 26,
+        "name": "Mukwaya Innocent",
+        "image": "img/mukwayo_inno.jepg",
+        "status": "Arrested",
+        "last_known_location": "Kooki Tower",
+        "security_organ": "Police",
+        "holding_location": "Parliamentary Avenue",
+        "twitter": "N/A",
+        "gender": "Male"
     }
-
 ]
