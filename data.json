@@ -551,5 +551,38 @@
         "holding_location": "Kampala CPS",
         "twitter": "N/A",
         "gender": "Female"
+    },
+    {
+        "id": 51,
+        "name": "Sabir Abdulmajid",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "Parliamentary Avenue",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 52,
+        "name": "Martha Kebirungi",
+        "image": "src/img/martha_kebirungi.jpg",
+        "status": "Arrested",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "@kebxrungi",
+        "gender": "Female"
+    },
+    {
+        "id": 53,
+        "name": "Anderson Onyango",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "N/A",
+        "gender": "Male"
     }
 ]
