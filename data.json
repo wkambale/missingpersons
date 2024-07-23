@@ -97,38 +97,5 @@
         "holding_location": "Arua Park Police Station",
         "twitter": "unknown",
         "gender": "Male"
-    },
-    {
-        "id": 10,
-        "name": "Baron Edgar",
-        "image": "img/baron_edgar.jpg",
-        "status": "Arrested",
-        "last_known_location": "Oasis Mall",
-        "security_organ": "Police",
-        "holding_location": "Jinja Road Police Station",
-        "twitter": "@baronedgar8",
-        "gender": "Male"
-    },
-    {
-        "id": 11,
-        "name": "Faiza Fabz",
-        "image": "img/faiza_fabz.jpg",
-        "status": "Arrested",
-        "last_known_location": "Oasis Mall",
-        "security_organ": "Police",
-        "holding_location": "Jinja Road Police Station",
-        "twitter": "@Faizafabz",
-        "gender": "Female"
-    },
-    {
-        "id": 12,
-        "name": "Beewol",
-        "image": "img/beewol.jpg",
-        "status": "Arrested",
-        "last_known_location": "Oasis Mall",
-        "security_organ": "Police",
-        "holding_location": "Jinja Road Police Station",
-        "twitter": "@beewol",
-        "gender": "Male"
     }
 ]
