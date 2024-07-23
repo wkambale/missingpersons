@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <h2 class='card__name'>${card.name}</h2>
                     <p class='card-status ${card.status.toLowerCase()}'>${card.status}</p>
                     <p class='card__office'>Taken by ${card.security_organ}</p>
-                    <p class='card__date'>Date: ${cardDate}</p>
+                    <p class='card__date'>On: ${cardDate}</p>
                     <p class='locations'>Last seen: ${card.last_known_location}</p>
                     <p class='card__gender'>Gender: ${card.gender}</p>
                     <a class="card-twitter card-button" target='__blank' href="https://x.com/${card.twitter}">${twitterSvg}<span>${card.twitter || "--"}</span></a>
