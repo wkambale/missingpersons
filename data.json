@@ -78,7 +78,7 @@
     },
     {
         "id": 8,
-        "name": "Sserunkuma JB",
+        "name": "Sserunkuma John Bosco",
         "image": "img/john_bosco.jpeg",
         "status": "Arrested",
         "last_known_location": "Arua Park",
@@ -129,6 +129,61 @@
         "security_organ": "Joint Forces",
         "holding_location": "Unknown",
         "twitter": "@AtwineLinus",
+        "gender": "Male"
+    },
+	{
+        "id": 13,
+        "name": "Ashton Dumba",
+        "image": "img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "Unknown",
+        "security_organ": "Unknown",
+        "holding_location": "Unknown",
+        "twitter": "Unknown",
+        "gender": "Male"
+    },
+	{
+        "id": 14,
+        "name": "Bruno Kamoga",
+        "image": "img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "Unknown",
+        "security_organ": "Unknown",
+        "holding_location": "Unknown",
+        "twitter": "Unknown",
+        "gender": "Male"
+    },
+	{
+        "id": 15,
+        "name": "Aloikin Praise Opoloje",
+        "image": "img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "Unknown",
+        "security_organ": "Unknown",
+        "holding_location": "Unknown",
+        "twitter": "@AloikinOpoloje",
+        "gender": "Male"
+    },
+	{
+        "id": 16,
+        "name": "Makana Kennedy",
+        "image": "img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "Unknown",
+        "security_organ": "Unknown",
+        "holding_location": "Unknown",
+        "twitter": "Unknown",
+        "gender": "Male"
+    },
+	{
+        "id": 17,
+        "name": "Gift Grace",
+        "image": "img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "Unknown",
+        "security_organ": "Unknown",
+        "holding_location": "Unknown",
+        "twitter": "Unknown",
         "gender": "Male"
     }
 ]
