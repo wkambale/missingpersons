@@ -86,5 +86,16 @@
         "holding_location": "Unknown Location",
         "twitter": "@Sserunkuumajb",
         "gender": "Male"
+    },
+    {
+        "id": 9,
+        "name": "Linus Atwine",
+        "image": "img/linus.jpg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Joint Forces",
+        "holding_location": "MUBS Police Station",
+        "twitter": "@AtwineLinus",
+        "gender": "Male"
     }
 ]
