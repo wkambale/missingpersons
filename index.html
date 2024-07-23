@@ -61,6 +61,30 @@
 
         <!-- Link to external CSS -->
         <link rel="stylesheet" href="src/css/styles.css">
+
+		<!-- Scroll to top button start -->
+        <style>
+            #scrollToTopBtn {
+                display: none;
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 99;
+                font-size: 18px;
+                border: none;
+                outline: none;
+                background-color: #a7a7a7;
+                color: white;
+                cursor: pointer;
+                padding: 16px;
+                border-radius: 99px;
+            }
+    
+            #scrollToTopBtn:hover {
+                background-color: #4d4d4d;
+            }
+        </style>
+		<!-- Scroll to top button styling end -->
     </head>
     <body>
         <header class="header">
@@ -117,5 +141,31 @@
         updateDateTime();
         setInterval(updateDateTime, 1000);
     </script>
+
+		<!-- Scroll to top button functionality start -->
+		<button id="scrollToTopBtn" title="Go to top">Top</button>
+
+    <script>
+        // Get the button
+        var mybutton = document.getElementById("scrollToTopBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.onclick = function() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+		<!-- Scroll to top button functionality end -->
     </body>
 </html>
