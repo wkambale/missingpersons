@@ -7,6 +7,3 @@ function updateDateTime() {
     document.getElementById('current-year').textContent = year;
     document.getElementById('current-time').textContent = `${date} ${time}`;
 }
-
-updateDateTime();
-setInterval(updateDateTime, 1000)

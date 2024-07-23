@@ -334,3 +334,7 @@ button:hover {
         padding: 0.6rem 1rem;
     }
 }
+
+canvas {
+    max-height: 400px;
+}
