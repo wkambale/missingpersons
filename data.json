@@ -17,6 +17,7 @@
         "status": "Arrested",
         "last_known_location": "Oasis Mall",
         "security_organ": "Police",
+		"taken_time": "10:46 23-07-2024", 
         "holding_location": "Jinja Road Police",
         "twitter": "@Faizafabz",
         "gender": "Female"
@@ -28,6 +29,7 @@
         "status": "Arrested",
         "last_known_location": "Oasis Mall",
         "security_organ": "Police",
+		"taken_time": "10:46 23-07-2024",
         "holding_location": "Jinja Road Police",
         "twitter": "@Owishemwe",
         "gender": "Male"
@@ -39,6 +41,7 @@
         "status": "Arrested",
         "last_known_location": "Oasis Mall",
         "security_organ": "Police",
+		"taken_time": "10:46 23-07-2024",
         "holding_location": "Jinja Road Police",
         "twitter": "@4baronedgar8",
         "gender": "Male"
@@ -50,6 +53,7 @@
         "status": "Arrested",
         "last_known_location": "Oasis Mall",
         "security_organ": "Police",
+		"taken_time": "10:46 23-07-2024",
         "holding_location": "Jinja Road Police",
         "twitter": "@beewol",
         "gender": "Male"
