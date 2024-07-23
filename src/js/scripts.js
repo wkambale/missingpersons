@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <p class='locations'>Last seen: ${card.last_known_location}</p>
                     <p class='card__gender'>Gender: ${card.gender}</p>
                     <a class="card-twitter card-button" target='__blank' href="https://x.com/${card.twitter}">${twitterSvg}<span>${card.twitter || "--"}</span></a><br><br>
-                    <a class="card-location card-button" href="Loc:${card.holding_location}">${locationSvg}<span>Currently Located: ${card.holding_location || "--"}</span></a>
+                    <a class="card-location card-button" href="Loc:${card.holding_location}">${locationSvg}<span>Held at: ${card.holding_location || "--"}</span></a>
                 </div>
                 <button class="share-button twitter" onclick="shareCard(${card.id})">Share on X (Twitter)</button>
             </div>
