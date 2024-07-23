@@ -1,19 +1,4 @@
- // Define the shareCard function globally
- function shareCard(id) {
-    fetch("data.json")
-        .then((response) => response.json())
-        .then((data) => {
-            const card = data.find((item) => item.id === id);
-            const text = `NOTICE! This is a missing person: ${card.name}, status: ${card.status}, last seen at ${card.last_known_location}. #March2Parliament`;
-            const url = `https://x.com/intent/tweet?text=${encodeURIComponent(text)}`;
-            window.open(url, "_blank");
-        })
-        .catch((error) => console.error("Error fetching data:", error));
-}
-
 document.addEventListener("DOMContentLoaded", function() {
-
-    // onkeyup event, call searchFunction
     document.getElementById('searchInput').addEventListener('keyup', searchFunction);
 
     function createCard(card) {
@@ -37,38 +22,66 @@ document.addEventListener("DOMContentLoaded", function() {
         `;
     }
 
-    // Function to filter persons based on search input
     function searchFunction() {
         let input = document.getElementById('searchInput');
         let filter = input.value.toLowerCase();
         let persons = document.getElementById('persons');
-        let blog = persons.getElementsByClassName('card');
+        let cards = persons.getElementsByClassName('card');
 
-        for (let i = 0; i < blog.length; i++) {
-            let txtValue = blog[i].textContent || blog[i].innerText;
+        for (let i = 0; i < cards.length; i++) {
+            let txtValue = cards[i].textContent || cards[i].innerText;
             if (txtValue.toLowerCase().indexOf(filter) > -1) {
-                blog[i].style.display = '';
+                cards[i].style.display = '';
             } else {
-                blog[i].style.display = 'none';
+                cards[i].style.display = 'none';
             }
         }
+
+        updateCounters();
     }
 
-    // Function to filter persons based on category
     function filterCategory(category) {
         let persons = document.getElementById('persons');
-        let person = persons.getElementsByClassName('card');
+        let cards = persons.getElementsByClassName('card');
 
-        for (let i = 0; i < person.length; i++) {
-            if (category === 'All' || person[i].getAttribute('data-category') === category) {
-                person[i].style.display = '';
+        for (let i = 0; i < cards.length; i++) {
+            if (category === 'All' || cards[i].getAttribute('data-category') === category) {
+                cards[i].style.display = '';
             } else {
-                person[i].style.display = 'none';
+                cards[i].style.display = 'none';
             }
         }
+
+        updateCounters();
     }
 
-    // Hydrate the data to HTML.
+    function updateCounters() {
+        let persons = document.getElementById('persons');
+        let cards = persons.getElementsByClassName('card');
+
+        let counts = {
+            All: 0,
+            Missing: 0,
+            Arrested: 0,
+            Fallen: 0,
+            Kidnapped: 0,
+            Found: 0
+        };
+
+        for (let i = 0; i < cards.length; i++) {
+            let category = cards[i].getAttribute('data-category');
+            counts[category]++;
+            counts['All']++;
+        }
+
+        document.getElementById('all-count').textContent = counts['All'];
+        document.getElementById('missing-count').textContent = counts['Missing'];
+        document.getElementById('arrested-count').textContent = counts['Arrested'];
+        document.getElementById('fallen-count').textContent = counts['Fallen'];
+        document.getElementById('kidnapped-count').textContent = counts['Kidnapped'];
+        document.getElementById('found-count').textContent = counts['Found'];
+    }
+
     fetch("data.json")
         .then((response) => response.json())
         .then((data) => {
@@ -76,20 +89,17 @@ document.addEventListener("DOMContentLoaded", function() {
             data.forEach((card) => {
                 container.innerHTML += createCard(card);
             });
+            updateCounters(); // Update counters after data is loaded
         })
         .catch((error) => console.error("Error fetching data:", error));
 
-    // Add event listeners to category buttons and manage active state
     let buttons = document.querySelectorAll('.buttons button');
     buttons.forEach(button => {
         button.addEventListener('click', () => {
             let category = button.getAttribute('data-category');
             filterCategory(category);
 
-            // Remove 'active' class from all buttons
             buttons.forEach(btn => btn.classList.remove('active'));
-
-            // Add 'active' class to the clicked button
             button.classList.add('active');
         });
     });

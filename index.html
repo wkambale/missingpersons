@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <!-- Cookie Banner -->
-        <!-- Start cookieyes banner -->
-        <script id="cookieyes" type="text/javascript"
-            src="https://cdn-cookieyes.com/client_data/5ae40288320e48428eecee4b/script.js"></script>
-        <!-- End cookieyes banner -->
+    <!-- Start cookieyes banner -->
+    <script id="cookieyes" type="text/javascript"
+        src="https://cdn-cookieyes.com/client_data/5ae40288320e48428eecee4b/script.js"></script>
+    <!-- End cookieyes banner -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kidnappings & Missing Persons in Uganda</title>
@@ -24,10 +24,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <!-- Social Media Meta Tags End-->
     
-    <!--
-        site.manifest provides metadata used when your web app is installed on a
-        user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+    <!-- site.manifest provides metadata used when your web app is installed on a user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/ -->
     <link rel="manifest" href="./site.webmanifest" />
     <!-- Manifest Ends -->
     
@@ -51,7 +48,7 @@
         ""
         ]
     }
-        </script>
+    </script>
     <!-- Schema Markup data ends -->
     
     <!-- Link to external CSS -->
@@ -61,20 +58,20 @@
     <div class="header">
         <h1>Kidnappings & Missing Persons in Uganda</h1>
     </div>
-    
+	 <!-- Adding a counter number on the sorters -->
     <div class="content">
         <span class="content__sort-by">Sort by:</span>
-		<div class="search-sort">
-			<div class="content__buttons buttons">
-				<button data-category="All" class="active">All</button>
-                <button data-category="Missing">Missing</button>
-				<button data-category="Arrested">Arrested</button>
-				<button data-category="Fallen">Fallen</button>
-				<button data-category="Kidnapped">Kidnapped</button>
-                <button data-category="Found">Found</button>
-			</div>
-			<input type="text" id="searchInput" placeholder="Search Person's Name...">
-		</div>
+        <div class="search-sort">
+            <div class="content__buttons buttons">
+                <button data-category="All" class="active">All <span id="all-count"></span></button>
+                <button data-category="Missing">Missing <span id="missing-count"></span></button>
+                <button data-category="Arrested">Arrested <span id="arrested-count"></span></button>
+                <button data-category="Fallen">Fallen <span id="fallen-count"></span></button>
+                <button data-category="Kidnapped">Kidnapped <span id="kidnapped-count"></span></button>
+                <button data-category="Found">Found <span id="found-count"></span></button>
+            </div>
+            <input type="text" id="searchInput" placeholder="Search Person's Name...">
+        </div>
         <div id="persons" class="persons"></div>
     </div>
     
@@ -82,6 +79,8 @@
         <p>2024 &copy; Kidnappings & Missing Persons in Uganda. All rights reserved.</p>
     </div>
 
-    <script type="text/javascript" src="js/scripts.js" ></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
 </body>
 </html>
+
+
