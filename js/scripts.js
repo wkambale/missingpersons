@@ -20,6 +20,16 @@ document.addEventListener("DOMContentLoaded", function() {
         const twitterSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>`;
         const locationSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-location"><path d="M12 2a10 10 0 0 1 10 10c0 5.5-10 12-10 12S2 17.5 2 12A10 10 0 0 1 12 2z"/><circle cx="12" cy="12" r="3"/></svg>`;
 
+        let cardDate = 'N/A';
+        if (card.date){
+            cardDate = new Date(card.date).toLocaleDateString(undefined, {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+            });
+        }
+
         return `
             <div class="card" data-category="${card.status}">
                 <div class="card-inner">
@@ -27,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <h2 class='card__name'>${card.name}</h2>
                     <p class='card-status ${card.status.toLowerCase()}'>${card.status}</p>
                     <p class='card__office'>Taken by ${card.security_organ}</p>
+                    <p class='card__date'>Date: ${cardDate}</p>
                     <p class='locations'>Last seen: ${card.last_known_location}</p>
                     <p class='card__gender'>Gender: ${card.gender}</p>
                     <a class="card-twitter card-button" target='__blank' href="https://x.com/${card.twitter}">${twitterSvg}<span>${card.twitter || "--"}</span></a>
