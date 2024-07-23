@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function() {
     Pagination functionality
 */
 
-// configuration
+// pagination configuration
 const CONFIG = {
     url: `data.json`,
     personsPerPage: 3,
@@ -115,6 +115,7 @@ const elements = {
     loading: document.getElementById('loading')
 };
 
+// states
 let state = {
     currentIndex: 1,
     isLoading: false,
@@ -198,7 +199,6 @@ function loadPersons(){
     }
 }
 
-
 // Handle scroll event
 function handleScroll() {
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight - CONFIG.scrollThreshold) {
@@ -209,6 +209,7 @@ function handleScroll() {
     }
 }
 
+// run pagination 
 async function initPaginate(){
     state.personsData = await fetchData();
     loadPersons();
