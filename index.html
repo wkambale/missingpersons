@@ -63,11 +63,11 @@
         <link rel="stylesheet" href="src/css/styles.css">
     </head>
     <body>
-        <div class="header">
+        <header class="header">
             <h1>Kidnappings & Missing Persons in Uganda</h1>
-        </div>
+        </header>
 
-        <div class="content">
+        <section class="content">
             <span class="content__sort-by">Filter by:</span>
             <div class="search-sort">
                 <div class="content__buttons buttons">
@@ -82,10 +82,8 @@
                     placeholder="Search Person's Name...">
             </div>
             <div id="persons" class="persons"></div>
-        </div>
+        </section>
 
-        <script type="text/javascript" src="src/js/scripts.js"></script>
-    </body>
     <footer class="footer">
         <div class="footer-content">
             <nav class="footer-nav">
@@ -99,6 +97,7 @@
         </div>
     </footer>
 
+    <script type="text/javascript" src="src/js/scripts.js"></script>
 
     <script>
         function updateDateTime() {
@@ -114,4 +113,5 @@
         updateDateTime();
         setInterval(updateDateTime, 1000);
     </script>
+    </body>
 </html>
