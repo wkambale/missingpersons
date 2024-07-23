@@ -23,7 +23,7 @@
     },
     {
         "id": 3,
-        "name": "Thomas Oweishemwe",
+        "name": "Thomas Kanzira",
         "image": "img/thomas_oweishemwe.png",
         "status": "Arrested",
         "last_known_location": "Oasis Mall",
@@ -34,25 +34,25 @@
     },
     {
         "id": 4,
-        "name": "Jane Doe 2",
-        "image": "img/image_of_person.jpg",
+        "name": "Baron Edgar",
+        "image": "img/baron_edgar.jpg",
         "status": "Arrested",
-        "last_known_location": "Banda",
+        "last_known_location": "Oasis Mall",
         "security_organ": "Police",
-        "holding_location": "Detention",
-        "twitter": "@x_handle_4",
-        "gender": "Female"
+        "holding_location": "Jinja Road Police",
+        "twitter": "@4baronedgar8",
+        "gender": "Male"
     },
     {
         "id": 5,
-        "name": "Jane Doe 3",
-        "image": "img/image_of_person.jpg",
-        "status": "Kidnapped",
-        "last_known_location": "Nansana",
+        "name": "Bernard Ewalu Olupot",
+        "image": "img/beewol.jpg",
+        "status": "Arrested",
+        "last_known_location": "Oasis Mall",
         "security_organ": "Police",
-        "holding_location": "Detention",
-        "twitter": "@x_handle_5",
-        "gender": "Female"
+        "holding_location": "Jinja Road Police",
+        "twitter": "@beewol",
+        "gender": "Male"
     },
     {
         "id": 6,
