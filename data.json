@@ -430,5 +430,159 @@
         "holding_location": "Unknown",
         "twitter": "N/A",
         "gender": "Male"
+    },
+    {
+        "id": 40,
+        "name": "Isaac Mukiibi",
+        "image": "src/img/isaac_mukiibi.jpg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Police",
+        "holding_location": "Luzira",
+        "twitter": "@isaac_Mukiibi01",
+        "gender": "Male"
+    },
+    {
+        "id": 41,
+        "name": "Ssentongo Muhammed",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Police",
+        "holding_location": "Kampala CPS",
+        "twitter": "@SsentongoMoham1",
+        "gender": "Male"
+    },
+    {
+        "id": 42,
+        "name": "Tamale Nelson",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Police",
+        "holding_location": "Kampala CPS",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 43,
+        "name": "David Mugisha",
+        "image": "src/img/david_mugisha.jpeg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Police",
+        "holding_location": "Kampala CPS",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 44,
+        "name": "Robert Kiwanda",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Police",
+        "holding_location": "Kampala CPS",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 45,
+        "name": "Peter Ssegwanyi",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Police",
+        "holding_location": "Kampala CPS",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 46,
+        "name": "Galen Nambule",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Police",
+        "holding_location": "Kampala CPS",
+        "twitter": "N/A",
+        "gender": "Female"
+    },
+    {
+        "id": 47,
+        "name": "Alex Twikirize",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Police",
+        "holding_location": "Kampala CPS",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 48,
+        "name": "Edward Lutaya",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Police",
+        "holding_location": "Kampala CPS",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 49,
+        "name": "Benjamin Akiso",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Police",
+        "holding_location": "Kampala CPS",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 50,
+        "name": "Kemittoma Nyina'Nkyenzibo",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Police",
+        "holding_location": "Kampala CPS",
+        "twitter": "N/A",
+        "gender": "Female"
+    },
+    {
+        "id": 51,
+        "name": "Sabir Abdulmajid",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "Parliamentary Avenue",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 52,
+        "name": "Martha Kebirungi",
+        "image": "src/img/martha_kebirungi.jpeg",
+        "status": "Arrested",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "@kebxrungi",
+        "gender": "Female"
+    },
+    {
+        "id": 53,
+        "name": "Anderson Onyango",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "N/A",
+        "gender": "Male"
     }
 ]
