@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cookies Policy</title>
     <!-- Link to external CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="src/css/styles.css">
     <style>
         body {
             padding: 20px
@@ -125,11 +125,20 @@
     If you have any questions about our use of cookies or other technologies, please contact us at:
     
     Missing Persons Uganda
-    
-</body>
-<footer>
-    <div class="footer"><p>2024 &copy; Kidnappings & Missing Persons in Uganda. All rights reserved.</p>
-    </div>
 
+</body>
+<footer class="footer">
+    <div class="footer-content">
+        <nav class="footer-nav">
+            <a href="./privacy.html" title="Privacy Policy" rel="noopener" target="_blank">Privacy Policy</a>
+            <a href="./cookies.html" title="Cookie Policy" rel="noopener" target="_blank">Cookie Policy</a>
+            <a href="./analytics.html" title="Analytics " rel="noopener" target="_blank"> Analytics</a><br>
+        </nav>
+        <p class="copyright">
+            <span id="current-year"></span> &copy; Kidnappings & Missing Persons in Uganda. All rights reserved.
+        </p>
+        <p class="current-time" id="current-time"></p>
+    </div>
 </footer>
+<script src="./src/js/time.js"></script>
 </html>

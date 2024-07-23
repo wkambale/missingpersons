@@ -8683,7 +8683,7 @@
                                                                                                                                                                                 <title>Privacy policy</title>
     
     <!--Termly privacy policy code ends-->                                                                                                                                                                            <!-- Link to external CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="src/css/styles.css">
     <style>
         body {
             padding:20px;
@@ -8695,9 +8695,18 @@
 <body>
     
 </body>
-<footer>
-    <div class="footer">
-        <p>2024 &copy; Kidnappings & Missing Persons in Uganda. All rights reserved.</p>
+<footer class="footer">
+    <div class="footer-content">
+        <nav class="footer-nav">
+            <a href="./privacy.html" title="Privacy Policy" rel="noopener" target="_blank">Privacy Policy</a>
+            <a href="./cookies.html" title="Cookie Policy" rel="noopener" target="_blank">Cookie Policy</a>
+            <a href="./analytics.html" title="Analytics " rel="noopener" target="_blank"> Analytics</a><br>
+        </nav>
+        <p class="copyright">
+            <span id="current-year"></span> &copy; Kidnappings & Missing Persons in Uganda. All rights reserved.
+        </p>
+        <p class="current-time" id="current-time"></p>
     </div>
 </footer>
+<script src="./src/js/time.js"></script>
 </html>

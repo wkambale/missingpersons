@@ -50,6 +50,31 @@ document.addEventListener("DOMContentLoaded", function() {
     // onkeyup event, call searchFunction
     document.getElementById('searchInput').addEventListener('keyup', searchFunction);
 
+    function createCard(card) {
+        const twitterSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>`;
+        const locationSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-location"><path d="M12 2a10 10 0 0 1 10 10c0 5.5-10 12-10 12S2 17.5 2 12A10 10 0 0 1 12 2z"/><circle cx="12" cy="12" r="3"/></svg>`;
+
+		const takenTime = card.taken_time ? getRelativeTime(parseCustomDateFormat(card.taken_time)) : 'Unknown';
+		const exactTime = card.taken_time ? parseCustomDateFormat(card.taken_time).toLocaleString('en-US', { month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true }) : 'Unknown';
+
+        return `
+            <div class="card" data-category="${card.status}">
+                <div class="card-inner">
+                    <img class='card-img' src="${card.image}" alt="${card.name}">
+                    <h2 class='card__name'>${card.name}</h2>
+                    <p class='card-status ${card.status.toLowerCase()}'>${card.status}</p>
+                    <p class='card__office'>Taken by ${card.security_organ}</p>
+                    <p class='card__time' title="${exactTime}">Time: ${takenTime}</p>
+                    <p class='locations'>Last seen: ${card.last_known_location}</p>
+                    <p class='card__gender'>Gender: ${card.gender}</p>
+                    <a class="card-twitter card-button" target='__blank' href="https://x.com/${card.twitter}">${twitterSvg}<span>${card.twitter || "--"}</span></a><br><br>
+                    <a class="card-location card-button" href="Loc:${card.holding_location}">${locationSvg}<span>Held at: ${card.holding_location || "--"}</span></a>
+                </div>
+                <button class="share-button twitter" onclick="shareCard(${card.id})">Share on X (Twitter)</button>
+            </div>
+        `;
+    }
+
     // Function to filter persons based on search input
     function searchFunction() {
         let input = document.getElementById('searchInput');
@@ -178,7 +203,7 @@ function loadPersons(){
     if(state.isLoading || state.currentIndex > state.personsData.length) return;
     
     state.isLoading = true;
-    elements.loading.style.display = 'block';
+    elements.loading.style.display = 'flex';
 
     const fragment = document.createDocumentFragment();
     const endIndex = Math.min((state.currentIndex + CONFIG.personsPerPage), state.personsData.length)
@@ -192,7 +217,7 @@ function loadPersons(){
     state.currentIndex = endIndex;
 
     state.isLoading = false;
-    elements.loading.style.display = 'none';
+    elements.loading.style.display = 'flex';
 
     if(state.currentIndex >= state.personsData.length){
         state.canLoadMore  = false
@@ -202,7 +227,7 @@ function loadPersons(){
 // Handle scroll event
 function handleScroll() {
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight - CONFIG.scrollThreshold) {
-        elements.loading.style.display = 'block';
+        elements.loading.style.display = 'flex';
         setTimeout(()=>{
             loadPersons();
         }, CONFIG.scrollDelay)
