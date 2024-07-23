@@ -4,6 +4,11 @@ This project lists Ugandans who might get arrested, detained, kidnapped, or go m
 
 ![Kidnappings & Missing Persons Uganda](screenshot.png)
 
+Join the Slack Workspace to collaborate with other developers.
+
+[![slack](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white)](https://join.slack.com/t/marchtoparliamentug/shared_invite/zt-2n63veudi-TjcscMIMsO31AqN7rGV7ZQ)
+
+
 ## How to Contribute?
 
 To contribute, you can edit `data.json` with correct details of the person that's been reported or presumed missing, arrested, or detained, and then send a Pull Request (PR).
