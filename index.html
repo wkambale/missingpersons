@@ -65,16 +65,22 @@
     <div class="content">
         <span class="content__sort-by">Sort by:</span>
 		<div class="search-sort">
-			<div class="content__buttons buttons">
-				<button data-category="All" class="active">All</button>
-                <button data-category="Missing">Missing</button>
-				<button data-category="Arrested">Arrested</button>
-				<button data-category="Fallen">Fallen</button>
-				<button data-category="Kidnapped">Kidnapped</button>
-                <button data-category="Found">Found</button>
-			</div>
+            <label for="category">Category: </label>
+            <select name="category" id="category">
+                <option value="all">All</option>
+                <option value="missing">Missing</option>
+                <option value="arrested">Arrested</option>
+                <option value="fallen">Fallen</option>
+                <option value="kidnapped">Kidnapped</option>
+                <option value="found">Found</option>
+            </select>
+            <label for="detained-at">Detained At: </label>
+            <select name="detained-at" id="detained-at">
+                <option value="all">All</option>
+            </select>
 			<input type="text" id="searchInput" placeholder="Search Person's Name...">
 		</div>
+        <button id="clear-filters">Clear Filters</button>
         <div id="persons" class="persons"></div>
     </div>
     

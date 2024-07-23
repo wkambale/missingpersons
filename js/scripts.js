@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		const takenTime = card.taken_time ? getRelativeTime(parseCustomDateFormat(card.taken_time)) : 'Unknown';
 		const exactTime = card.taken_time ? parseCustomDateFormat(card.taken_time).toLocaleString('en-US', { month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true }) : 'Unknown';
-
+        
         return `
             <div class="card" data-category="${card.status}">
                 <div class="card-inner">
@@ -64,6 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <p class='card__office'>Taken by ${card.security_organ}</p>
                     <p class='card__time' title="${exactTime}">Time: ${takenTime}</p>
                     <p class='locations'>Last seen: ${card.last_known_location}</p>
+                    <p class='card-detained-at' data-station="${card.stationIdentifier ?? "Unknown"}>Detained at: ${card.detained_at}</p>
                     <p class='card__gender'>Gender: ${card.gender}</p>
                     <a class="card-twitter card-button" target='__blank' href="https://x.com/${card.twitter}">${twitterSvg}<span>${card.twitter || "--"}</span></a>
                     <a class="card-location card-button" href="Loc:${card.holding_location}">${locationSvg}<span>Currently: ${card.holding_location || "--"}</span></a>
@@ -90,43 +91,73 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Function to filter persons based on category
-    function filterCategory(category) {
-        let persons = document.getElementById('persons');
-        let person = persons.getElementsByClassName('card');
+    const selectedCategory = document.getElementById('category');
+    selectedCategory.addEventListener('change', (event) => {
+        const category = event.target.value;
+        filterCategory(category);
+    });
 
-        for (let i = 0; i < person.length; i++) {
-            if (category === 'All' || person[i].getAttribute('data-category') === category) {
-                person[i].style.display = '';
-            } else {
-                person[i].style.display = 'none';
+    function filterCategory(category) {
+        const cards = document.querySelectorAll('#persons .card');
+
+        cards.forEach((card) => {
+            if (card.dataset.category.toLowerCase() !== category) {
+                card.style.display = 'none';
             }
-        }
+        })
+    }
+
+    // Filter by detaining police stations
+
+    const selectedPoliceStation = document.getElementById('police-station');
+    selectedPoliceStation.addEventListener('change', (event) => {
+        const policeStation = event.target.value;
+        filterPoliceStation(policeStation);
+     })
+
+    function filterPoliceStation(policeStation) {
+        const cards = document.querySelectorAll('#persons .card');
+         if (policeStation === 'all'){
+            return
+         }
+         cards.forEach((card) => {
+            if (card.querySelector('.card-detained-at').dataset.stationIdentifier !== policeStation) {
+                card.style.display = 'none';
+            }
+         })
     }
 
     // Hydrate the data to HTML.
     fetch("data.json")
         .then((response) => response.json())
         .then((data) => {
+            const policeStations = new Set()
+
             const container = document.querySelector("#persons");
             data.forEach((card) => {
+                const policeStation = card.detained_at.replace(/\s+/g, '-').toLowerCase()
+                policeStations.add(policeStation);
+
+                card.stationIdentifier = policeStation;
                 container.innerHTML += createCard(card);
+            });
+
+            // Populate the police stations selectList
+            const policeStationSelect = document.getElementById('detained-at');
+            policeStations.forEach(station => {
+                const option = document.createElement('option');
+                option.value = station;
+                option.textContent = station.replace(/(^\w|-\w)/g, (match) => ' ' + match.replace('-', '').toUpperCase()).trim();
+                policeStationSelect.appendChild(option);
             });
         })
         .catch((error) => console.error("Error fetching data:", error));
 
-    // Add event listeners to category buttons and manage active state
-    let buttons = document.querySelectorAll('.buttons button');
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            let category = button.getAttribute('data-category');
-            filterCategory(category);
-
-            // Remove 'active' class from all buttons
-            buttons.forEach(btn => btn.classList.remove('active'));
-
-            // Add 'active' class to the clicked button
-            button.classList.add('active');
-        });
-    });
+    const clearButton = document.getElementById('clear-filters');
+    clearButton.addEventListener('click', () => {
+        document.querySelectorAll('#persons .card').forEach(card => card.style.display = '');
+        document.getElementById('searchInput').value = '';
+        document.getElementById('category').value = 'all';
+        document.getElementById('police-station').value = 'all';
+    })
 });

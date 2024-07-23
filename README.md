@@ -41,6 +41,7 @@ Example entry in `data.json`:
 		"taken_time": "15:46 23-07-2024", // Format for the date "hour:minutes dd-mm-yyyy"
         "holding_location": "Held at Police Station, Prison, Unknown Location",
         "security_organ": "Taken by Police, Army, Intelligence",
+        "detained_at": "Jinja Road", 
         "status": "Missing",
         "twitter": "@handle_of_person",
         "sex": "male"
