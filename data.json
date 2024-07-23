@@ -309,5 +309,137 @@
 		"holding_location": "Unknown",
 		"twitter": "@PeterAteenyi",
 		"gender": "Male"
-}
+    },
+    {
+        "id": 29,
+        "name": "Tayebwa Jonathan",
+        "image": "img/tayebwajonathan.jpg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Police",
+        "holding_location": "Kampala CPS",
+        "twitter": "@TayebwaJonatha3",
+        "gender": "Male"
+    },
+    {
+        "id": 29,
+        "name": "Kirya UG",
+        "image": "img/kiryaug.jpg",
+        "status": "Arrested",
+        "last_known_location": "Kisekka Market",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "@kirya_ug",
+        "gender": "Male"
+    },
+    {
+        "id": 30,
+        "name": "Kirya UG",
+        "image": "img/kiryaug.jpg",
+        "status": "Arrested",
+        "last_known_location": "Kisekka Market",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "@kirya_ug",
+        "gender": "Male"
+    },
+    {
+        "id": 31,
+        "name": "Shabiliz UG",
+        "image": "img/shabilzug.jpg",
+        "status": "Arrested",
+        "last_known_location": "Ntinda",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "@ShabilzsUg",
+        "gender": "Male"
+    },
+    {
+        "id": 32,
+        "name": "Eriya Nawenuwe",
+        "image": "img/erianuwe.jpg",
+        "status": "Arrested",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Kampala CPS",
+        "twitter": "@EriyaNawenuwe",
+        "gender": "Male"
+    },
+    {
+        "id": 33,
+        "name": "Mark Keron Wamala",
+        "image": "img/keron.jpg",
+        "status": "Arrested",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "@mark_keron",
+        "gender": "Male"
+    },
+    {
+        "id": 34,
+        "name": "Byakutangaza Ezra",
+        "image": "img/ezra_byakutangaza.jpg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Police",
+        "holding_location": "Kampala CPS",
+        "twitter": "@byakutangazaE",
+        "gender": "Male"
+    },
+    {
+        "id": 35,
+        "name": "Gideon Kwikiriza",
+        "image": "img/gideon_kwikiriza.jpg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Police",
+        "holding_location": "Kampala CPS",
+        "twitter": "@KwikirizaNova",
+        "gender": "Male"
+    },
+    {
+        "id": 36,
+        "name": "Jeremiah Kato",
+        "image": "img/jereme_kato.jpg",
+        "status": "Arrested",
+        "last_known_location": "City Centre",
+        "security_organ": "Police",
+        "holding_location": "Kampala CPS",
+        "twitter": "@Jeremayakato",
+        "gender": "Male"
+    },
+    {
+        "id": 37,
+        "name": "Atuheibwe Victor",
+        "image": "img/image_of_person.jpg",
+        "status": "Kidnapped",
+        "last_known_location": "Oasis Mall",
+        "security_organ": "CMI/DIS",
+        "holding_location": "Unknown",
+        "twitter": "@KwikirizaNova",
+        "gender": "Male"
+    },
+    {
+        "id": 38,
+        "name": "Jolly Nyirambabazi",
+        "image": "img/nyirambazi.jpg",
+        "status": "Arrested",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "@peel_pamper",
+        "gender": "Female"
+    },
+    {
+        "id": 39,
+        "name": "Karungi Hamza",
+        "image": "img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "Parliamentary Avenue",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "N/A",
+        "gender": "Male"
+    }
 ]
