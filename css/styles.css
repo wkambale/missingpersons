@@ -203,10 +203,30 @@ button {
 .footer p, .hashtag {
     margin: 0;
 }
+footer ul  {
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+	text-decoration: none;
+	
+}
+footer a {
+	padding: 20px;
+	text-decoration: none;
+}
+
+.rights {
+	text-align: left;
+	padding: 5px;
+	
+}
 
 .hashtag {
 	font-size: 20px;
 	margin: 0 10px;
+}
+a:hover {
+	color: var(--blue);
 }
 
 @media screen and (max-width: 790px) {
