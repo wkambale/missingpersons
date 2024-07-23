@@ -91,7 +91,7 @@
         "id": 9,
         "name": "Linus Atwine",
         "image": "img/linus.jpg",
-        "status": "Arrested",
+        "status": "Found",
         "last_known_location": "MUBS",
         "security_organ": "Joint Forces",
         "holding_location": "MUBS Police",
@@ -277,7 +277,7 @@
     {
         "id": 26,
         "name": "Mukwaya Innocent",
-        "image": "img/mukwayo_inno.jpeg",
+        "image": "img/mukwaya_inno.jpeg",
         "status": "Arrested",
         "last_known_location": "Kooki Tower",
         "security_organ": "Police",
@@ -288,7 +288,7 @@
     {
         "id": 27,
         "name": "George V. Otieno",
-        "image": "img/otieno_victor.jpeg",
+        "image": "img/otieno_victor.jpg",
         "status": "Arrested",
         "last_known_location": "Unknown",
         "security_organ": "Police",
