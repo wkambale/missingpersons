@@ -295,5 +295,16 @@
         "holding_location": "Unknown",
         "twitter": "@OtienoGV",
         "gender": "Male"
+    },
+    {
+        "id": 28,
+        "name": "Kirya UG",
+        "image": "img/kirya_ug.jpg",
+        "status": "Arrested",
+        "last_known_location": "Kiseka market",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "@kirya_ug",
+        "gender": "Male"
     }
 ]
