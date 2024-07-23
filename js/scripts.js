@@ -43,8 +43,7 @@
 	 return `${years} years ago`;
  }
 
-document.addEventListener("DOMContentLoaded", function() {
-
+ document.addEventListener("DOMContentLoaded", function() {
     // onkeyup event, call searchFunction
     document.getElementById('searchInput').addEventListener('keyup', searchFunction);
 
@@ -52,8 +51,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const twitterSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>`;
         const locationSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-location"><path d="M12 2a10 10 0 0 1 10 10c0 5.5-10 12-10 12S2 17.5 2 12A10 10 0 0 1 12 2z"/><circle cx="12" cy="12" r="3"/></svg>`;
 
-		const takenTime = card.taken_time ? getRelativeTime(parseCustomDateFormat(card.taken_time)) : 'Unknown';
-		const exactTime = card.taken_time ? parseCustomDateFormat(card.taken_time).toLocaleString('en-US', { month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true }) : 'Unknown';
+        const takenTime = card.taken_time ? getRelativeTime(parseCustomDateFormat(card.taken_time)) : 'Unknown';
+        const exactTime = card.taken_time ? parseCustomDateFormat(card.taken_time).toLocaleString('en-US', { month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true }) : 'Unknown';
 
         return `
             <div class="card" data-category="${card.status}">
@@ -88,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 blog[i].style.display = 'none';
             }
         }
+        personCount();
     }
 
     // Function to filter persons based on category
@@ -102,6 +102,23 @@ document.addEventListener("DOMContentLoaded", function() {
                 person[i].style.display = 'none';
             }
         }
+        personCount();
+    }
+
+    // Function to update person count
+    function personCount() {
+        let persons = document.getElementById('persons');
+        let visiblePersons = persons.getElementsByClassName('card');
+        let visibleCount = 0;
+        
+        for (let i = 0; i < visiblePersons.length; i++) {
+            if (visiblePersons[i].style.display !== 'none') {
+                visibleCount++;
+            }
+        }
+
+        const statElement = document.querySelector("#person-count .stat");
+        statElement.innerText = `${visibleCount}`;
     }
 
     // Hydrate the data to HTML.
@@ -112,6 +129,7 @@ document.addEventListener("DOMContentLoaded", function() {
             data.forEach((card) => {
                 container.innerHTML += createCard(card);
             });
+            personCount(); // Update count after initial load
         })
         .catch((error) => console.error("Error fetching data:", error));
 

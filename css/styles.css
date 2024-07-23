@@ -200,6 +200,52 @@ button {
     margin-top: 20px;
 }
 
+#person-count {
+    display: flex;
+    border: 1px;
+    border-radius: 15px;
+    padding: 5px 5px;
+    background-color: var(--lightergrey);
+    align-items: center;
+}
+
+#person-count .stat-icon {
+    height: auto; 
+    width: auto; 
+    max-width: 100px; 
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#person-count .stat-icon img {
+    max-height: 100%; 
+    max-width: 100%; 
+    object-fit: contain;
+}
+
+#person-count .stat {
+    flex: 3;
+    text-align: right;
+    font-size: 15px;
+    color: var(--white);
+}
+
+@media screen and (max-width: 790px) {
+	#person-count {
+		padding: 10px;
+	}
+    #person-count .stat-icon img {
+        max-width: 30px; 
+    }
+
+    #person-count .stat {
+        font-size: 14px; 
+    }
+}
+
+
 .footer p, .hashtag {
     margin: 0;
 }
