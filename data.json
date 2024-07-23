@@ -178,7 +178,7 @@
     {
         "id": 17,
         "name": "Speria Mollie",
-        "image": "img/ashton_dumba.jpg",
+        "image": "img/speria_mollie.jpg",
         "status": "Arrested",
         "last_known_location": "City Centre",
         "security_organ": "Police",
@@ -238,8 +238,30 @@
         "last_known_location": "City Centre",
         "security_organ": "Police",
         "holding_location": "Unknown",
-        "twitter": "@KAMOGABRUNO5",
+        "twitter": "@kamogabruno5",
         "gender": "Male"
+    },
+    {
+        "id": 23,
+        "name": "Kennedy Makana",
+        "image": "img/makana_ken.jpeg",
+        "status": "Arrested",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "@Makana_Kennedy",
+        "gender": "Male"
+    },
+    {
+        "id": 24,
+        "name": "Praise Aloikin",
+        "image": "img/praise_aloikin.jpg",
+        "status": "Arrested",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "@AloikinOpoloje",
+        "gender": "Female"
     }
 
 ]
