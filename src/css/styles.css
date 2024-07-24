@@ -78,6 +78,13 @@ button:hover {
     padding: 1rem 0;
 }
 
+.search-sort {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
 .search-sort input {
     margin: 1rem 0;
     font-size: 0.9rem;
@@ -304,7 +311,16 @@ button:hover {
     }
 }
 
+@media screen and (max-width: 1080px) {
+
+	.search-sort {
+		display: flex;
+		flex-flow: column;
+	}
+}
+
 @media screen and (max-width: 768px) {
+
     .persons {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
