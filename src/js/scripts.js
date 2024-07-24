@@ -71,36 +71,52 @@ document.addEventListener("DOMContentLoaded", function() {
     initPaginate();
 
     // onkeyup event, call searchFunction
-    document.getElementById('searchInput').addEventListener('keyup', searchFunction);
+    document.getElementById('searchInput').addEventListener('input', searchFunction);
 
     // Function to filter persons based on search input
     function searchFunction() {
         let input = document.getElementById('searchInput');
-        let filter = input.value.toLowerCase();
-        let persons = document.getElementById('persons');
-        let blog = persons.getElementsByClassName('card');
+        state.searchQuery = input.value.toLowerCase().trim();
+        
+        console.log('Search query:', state.searchQuery);
+        console.log('Persons data length:', state.personsData.length);
+        // Reset pagination
+        state.currentIndex = 0;
+        state.allDataLoaded = false;
+        elements.personsList.innerHTML = '';
+        // Filter the data based on the search query
+        if (state.searchQuery === ''){
+            state.personsData = [...originalPersonsData];
+        } else {
+        state.personsData = originalPersonsData.filter(person =>  person.name.toLowerCase().includes(state.searchQuery))
+    }
 
-        for (let i = 0; i < blog.length; i++) {
-            let txtValue = blog[i].textContent || blog[i].innerText;
-            if (txtValue.toLowerCase().indexOf(filter) > -1) {
-                blog[i].style.display = '';
-            } else {
-                blog[i].style.display = 'none';
-            }
+        loadPersons();
+
+        if (state.personsData.length === 0) {
+            showNoResultsMessage();
         }
     }
 
     // Function to filter persons based on category
     function filterCategory(category) {
-        let persons = document.getElementById('persons');
-        let person = persons.getElementsByClassName('card');
+        state.currentIndex = 0;
+        state.allPersonsLoaded = false;
+        elements.personsList.innerHTML = '';
+        
+        let filteredData = originalPersonsData;
+    
+        if (category !== 'All') {
+            filteredData = filteredData.filter(person => person.status === category);
+        }
+        
+        state.personsData = filteredData;
+        
+        loadPersons();
 
-        for (let i = 0; i < person.length; i++) {
-            if (category === 'All' || person[i].getAttribute('data-category') === category) {
-                person[i].style.display = '';
-            } else {
-                person[i].style.display = 'none';
-            }
+        // Show a message if no results found
+        if (state.personsData.length === 0) {
+            showNoResultsMessage();
         }
     }
 
@@ -143,8 +159,12 @@ let state = {
     currentIndex: 1,
     isLoading: false,
     personsData: [],
-    canLoadMore : false
+    canLoadMore : false,
+    allPersonsLoaded: false,
+    searchQuery: '',
 };
+
+let originalPersonsData = [];
 
 // Fetch the persons data from date.json file
 async function fetchData(){
@@ -195,7 +215,10 @@ function createPersonElement(person){
 
 // load persons
 function loadPersons(){
-    if(state.isLoading || state.currentIndex > state.personsData.length) return;
+    // if search query is empty, check if all persons are loaded, coz then we want infinte scroll otw we don't want it.
+    if(state.searchQuery === ''){
+        if(state.isLoading || state.allPersonsLoaded) return;
+    }
     
     state.isLoading = true;
     elements.loading.style.display = 'flex';
@@ -212,26 +235,50 @@ function loadPersons(){
     state.currentIndex = endIndex;
 
     state.isLoading = false;
-    elements.loading.style.display = 'flex';
+    elements.loading.style.display = 'none';
 
     if(state.currentIndex >= state.personsData.length){
-        state.canLoadMore  = false
+        state.allPersonsLoaded = true;
+        showNoMoreItemsMessage();
+    } else {
+        state.allPersonsLoaded = false;
     }
+}
+
+// Show no more items message
+function showNoMoreItemsMessage() {
+    const messageElement = document.createElement('p');
+    messageElement.textContent = '';
+    messageElement.style.textAlign = 'center';
+    messageElement.style.marginTop = '20px';
+    elements.personsList.appendChild(messageElement);
+}
+
+function showNoResultsMessage() {
+    const messageElement = document.createElement('p');
+    messageElement.textContent = 'No results found';
+    messageElement.style.textAlign = 'center';
+    messageElement.style.marginTop = '20px';
+    elements.personsList.appendChild(messageElement);
 }
 
 // Handle scroll event
 function handleScroll() {
+    if (document.getElementById('searchInput').value.trim() !== '') return;
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight - CONFIG.scrollThreshold) {
+        if(!state.allPersonsLoaded){
         elements.loading.style.display = 'flex';
         setTimeout(()=>{
             loadPersons();
         }, CONFIG.scrollDelay)
     }
+    }
 }
 
 // run pagination 
 async function initPaginate(){
-    state.personsData = await fetchData();
+    originalPersonsData = await fetchData();
+    state.personsData = [...originalPersonsData];
     loadPersons();
     window.addEventListener("scroll", handleScroll);
 }
