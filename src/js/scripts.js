@@ -78,8 +78,6 @@ document.addEventListener("DOMContentLoaded", function() {
         let input = document.getElementById('searchInput');
         state.searchQuery = input.value.toLowerCase().trim();
         
-        console.log('Search query:', state.searchQuery);
-        console.log('Persons data length:', state.personsData.length);
         // Reset pagination
         state.currentIndex = 0;
         state.allDataLoaded = false;
