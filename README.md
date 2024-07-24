@@ -15,7 +15,10 @@ We welcome contributions from everyone. Here's how you can help:
 ### Reporting Issues
 
 1. **Search Existing Issues**: Before opening a new issue, please check if the issue already exists.
-2. **Open a New Issue**: If your issue is new, [open a new issue](https://github.com/wkambale/missingpersons/issues) and provide detailed information about the problem.
+2. **Open a New Issue**: If your issue is new, [open a new issue](https://github.com/wkambale/missingpersons/issues/new/choose) and provide detailed information about the problem.
+	- You can choose from different issue templates:
+		- [Bug Report](https://github.com/wkambale/missingpersons/issues/new?template=bug_report.md)
+		- [Feature Request](https://github.com/wkambale/missingpersons/issues/new?template=feature_request.md)
 
 ### Expressing Interest / Assignment of Issues
 
@@ -79,13 +82,14 @@ We welcome contributions from everyone. Here's how you can help:
 	- Go to the original repository on GitHub.
 	- Click the 'New Pull Request' button.
 	- Select your feature branch and create the pull request.
+	- Use the [Pull Request Template](https://github.com/wkambale/missingpersons/blob/main/.github/PULL_REQUEST_TEMPLATE.md) to ensure all necessary information is included.
 
 ### Reviewing Pull Requests
 
 We use Pull Requests (PRs) for code review. Here's how to review:
 
 1. **Review the Code**: Check for code quality, functionality, and style.
-2. **Review the Code**: Test the code locally where possible to check for any breaking changes.
+2. **Test the Code**: Test the code locally where possible to check for any breaking changes.
 3. **Provide Feedback**: Leave comments on the PR for any changes or improvements needed.
 4. **Approve the PR**: If the changes are satisfactory, approve the PR.
 
