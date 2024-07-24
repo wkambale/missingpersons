@@ -70,12 +70,24 @@ button:hover {
     padding: 1rem 0;
 }
 
+.search-input {
+	margin: 20px;
+	border-radius: 24px;
+}
+
 .content {
     flex-grow: 1;
     max-width: 1400px;
     width: 95%;
     margin: 2rem auto;
     padding: 1rem 0;
+}
+
+.search-sort {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .search-sort input {
@@ -303,7 +315,16 @@ button:hover {
     }
 }
 
+@media screen and (max-width: 1080px) {
+
+	.search-sort {
+		display: flex;
+		flex-flow: column;
+	}
+}
+
 @media screen and (max-width: 768px) {
+
     .persons {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
