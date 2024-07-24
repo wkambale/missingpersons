@@ -129,7 +129,7 @@ const CONFIG = {
     url: `data.json`,
     personsPerPage: 12,
     scrollThreshold: 100,
-    scrollDelay: 1500,
+    scrollDelay: 500,
 };
 
 // DOM elements
