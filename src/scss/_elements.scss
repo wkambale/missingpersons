@@ -1,0 +1,39 @@
+/**
+ * General elements from the project.
+ */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', Arial, sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+	position: relative;
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+	
+	&:hover {
+		color: var(--purple);
+	}
+}
+
+button {
+    cursor: pointer;
+    color: var(--white);
+    transition: background-color 0.3s ease, transform 0.1s ease;
+	
+	&:hover {
+		transform: translateY(-2px);
+	}
+}
+
+canvas {
+    max-height: 400px;
+}

@@ -1,0 +1,87 @@
+/**
+ * Search and Filter component styles.
+ */
+@import '../variables.scss';
+
+.search-sort {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: flex-end;
+	width: 95%;
+	margin: 40px auto 0px;
+	
+	&__by {
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	input {
+		// margin: 1rem 0;
+		font-size: 0.9rem;
+		padding: 0.6rem 1rem;
+	}
+}
+
+.search-input {
+	margin: 0;
+	border-radius: 24px;
+}
+
+// .filter-and-search {
+//     flex:2;
+//     display: flex;
+//     flex-wrap: wrap;
+//     gap: 1rem;
+//     /* margin-bottom: 2rem; */
+	
+// 	input {
+// 		flex: 1;
+// 		min-width: 250px;
+// 		padding: 0.75rem;
+// 		border-radius: 24px;
+// 		border: none;
+// 		font-size: 1rem;
+// 	}
+// }
+
+.search-sort__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+	
+	button {
+		padding: 0.75rem 1.5rem;
+		font-size: 1rem;
+		border-radius: 24px;
+		border: none;
+		background-color: var(--lightergrey);
+		color: var(--white);
+		transition: background-color 0.3s ease, transform 0.1s ease;
+		
+		&.active {
+			background-color: var(--blue);
+		}
+		
+		&:hover {
+			background-color: var(--blue);
+			transform: translateY(-2px);
+		}
+	}
+}
+
+@media screen and (max-width: 1080px) {
+	.search-sort {
+		display: flex;
+		flex-flow: column;
+	}
+}
+
+
+@media screen and (max-width: $breakpoints_mobile) {
+    .search-sort input,
+    .search-sort__buttons button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+}

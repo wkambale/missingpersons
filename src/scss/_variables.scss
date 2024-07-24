@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap");
+
+:root {
+    --red: #cb2929;
+    --blue: #007bff;
+    --green: #28a745;
+    --lightergrey: #444;
+    --lightgrey: #333;
+    --white: #fff;
+    --black: #000000;
+    --yellow: #ffb224;
+    --purple: #8e4ec6;
+    --darkred: #800000;
+    --card-bg: #0a0a0a;
+    --card-hover-bg: #1a1a1a;
+}
+
+// Breakpoints
+$breakpoints_mobile  : 520px;
+$breakpoints_tablet  : 768px;

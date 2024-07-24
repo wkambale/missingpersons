@@ -66,29 +66,31 @@
     <div class="header">
         <h1>Kidnappings & Missing Persons in Uganda</h1>
     </div>
+	<div class="search-sort">
+		<div class="search-sort__container">
+			<span class="search-sort__by">Filter by:</span>
+			<div class="search-sort__buttons buttons">
+				<button data-category="All" class="active">All</button>
+				<button data-category="Missing">Missing</button>
+				<button data-category="Arrested">Arrested</button>
+				<button data-category="Fallen">Fallen</button>
+				<button data-category="Kidnapped">Kidnapped</button>
+				<button data-category="Released">Released</button>
+				<button data-category="Remanded">Remanded</button>
+			</div>
+		</div>
+		<input type="text" class="search-input" id="searchInput" placeholder="Search Person's Name...">
+	</div>
 
     <div class="content">
-        <span class="content__sort-by">Filter by:</span>
-        <div class="search-sort">
-            <div class="content__buttons buttons">
-                <button data-category="All" class="active">All</button>
-                <button data-category="Missing">Missing</button>
-                <button data-category="Arrested">Arrested</button>
-                <button data-category="Fallen">Fallen</button>
-                <button data-category="Kidnapped">Kidnapped</button>
-                <button data-category="Released">Released</button>
-                <button data-category="Remanded">Remanded</button>
-            </div>
-            <input type="text" class="search-input" id="searchInput" placeholder="Search Person's Name...">
-        </div>
         <div id="persons" class="persons"></div>
         <div id="loading" class="loading">
             <div class="spinner"></div>
         </div>
     </div>
 
+    <footer class="footer" w3-include-html="src/partials/footer.html"></footer>
     <script type="text/javascript" src="src/js/scripts.js"></script>
-    <div w3-include-html="src/partials/footer.html"></div>
     <script src="./src/js/include.js"></script>
     <script src="./src/js/time.js"></script>
 </body>

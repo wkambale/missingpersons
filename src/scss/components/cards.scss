@@ -1,0 +1,123 @@
+/**
+ * Cards styles.
+ */
+
+@import '../variables.scss';
+
+.card {
+	display: flex;
+    flex-direction: column;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 1.25rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+	span {
+		display: block;
+		margin: 0.5rem 0;
+		text-align: center;
+	}
+}
+
+.card:hover {
+    background-color: var(--card-hover-bg);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card__img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 1rem auto;
+    object-fit: cover;
+    border: 2px solid var(--white);
+}
+
+.card__name {
+    font-size: 1.2rem;
+    margin: 0.2rem 0;
+    font-weight: 700;
+    text-align: center;
+}
+
+span.card__status {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--white);
+    background-color: var(--purple);
+    border-radius: 12px;
+    padding: 0.3rem 1rem;
+	margin: 0.4rem auto;
+	text-align: center;
+	width: max-content;
+}
+
+.card__status.missing { background-color: var(--yellow); color: var(--black); }
+.card__status.fallen { background-color: var(--red); }
+.card__status.kidnapped { background-color: var(--lightergrey); }
+.card__status.released { background-color: var(--green); }
+.card__status.remanded { background-color: var(--darkred); }
+
+.card__info {
+    margin-bottom: 1rem;
+}
+
+.card__office, .card__locations, .card__gender {
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+}
+
+.card__location {
+	display: block;
+	margin-bottom: 0.6rem;
+}
+
+.card__button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+
+	svg {
+		width: 18px;
+		height: 18px;
+	}
+}
+
+.card__twitter {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    word-break: break-all;
+}
+
+.card__currently {
+    font-size: 0.9rem;
+	margin-bottom: 0.6rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.card__currently-status {
+    font-weight: normal;
+    display: block;
+    margin-top: 0.3rem;
+}
+
+.card__share-button {
+	display: block;
+	margin-top: 10px;
+	background-color: var(--blue);
+    border: none;
+    color: var(--white);
+    padding: 0.7rem;
+    cursor: pointer;
+    border-radius: 20px;
+    width: 100%;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.card__share-button:hover {
+    background-color: #0056b3;
+}

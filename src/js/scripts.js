@@ -59,18 +59,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
         return `
             <div class="card" data-category="${card.status}">
-                <div class="card-inner">
-                    <img class='card-img' src="${card.image}" alt="${card.name}">
-                    <h2 class='card__name'>${card.name}</h2>
-                    <p class='card-status ${card.status.toLowerCase()}'>${card.status}</p>
-                    <p class='card__office'>Taken by ${card.security_organ}</p>
-                    <p class='card__time' title="${exactTime}">Time: ${takenTime}</p>
-                    <p class='locations'>Last seen: ${card.last_known_location}</p>
-                    <p class='card__gender'>Gender: ${card.gender}</p>
-                    <a class="card-twitter card-button" target='__blank' href="https://x.com/${card.twitter}">${twitterSvg}<span>${card.twitter || "--"}</span></a><br><br>
-                    <a class="card-location card-button" href="Loc:${card.holding_location}">${locationSvg}<span>Held at: ${card.holding_location || "--"}</span></a>
-                </div>
-                <button class="share-button twitter" onclick="shareCard(${card.id})">Share on X (Twitter)</button>
+				<img class="card__img" src="${person.image}" alt="${person.name}">
+				<h2 class='card__name'>${person.name}</h2>
+				<span class='card__status ${person.status.toLowerCase()}'>${person.status}</span>
+				<span class='card__office'>Taken by ${person.security_organ}</span>
+				<span class='card__time' title="${exactTime}">Time: ${takenTime}</span>
+				<span class='card__locations'>Last seen: ${person.last_known_location}</span>
+				<span class='card__gender'>Gender: ${person.gender}</span>
+				<a class="card-twitter card__button" target='__blank' href="https://x.com/${person.twitter}">${twitterSvg}<span>${person.twitter || "--"}</span></a>
+				<a class="card-location card__button" href="Loc:${person.holding_location}">${locationSvg}<span class='card__location-holding'>Currently: ${person.holding_location || "--"}</span></a>
+				<button class="card__share-button twitter" onclick="shareCard(${person.id})">Share on X (Twitter)</button>
             </div>
         `;
     }
@@ -181,20 +179,17 @@ function createPersonElement(person){
 
     personElement.innerHTML = `
         <div class="card" data-category="${person.status}">
-            <div class="card-inner">
-                <img class="card-img" src="${person.image}" alt="${person.name}">
-                <h2 class='card__name'>${person.name}</h2>
-                <p class='card-status ${person.status.toLowerCase()}'>${person.status}</p>
-                <p class='card__office'>Taken by ${person.security_organ}</p>
-                <p class='card__time' title="${exactTime}">Time: ${takenTime}</p>
-                <p class='locations'>Last seen: ${person.last_known_location}</p>
-                <p class='card__gender'>Gender: ${person.gender}</p>
-                <a class="card-twitter card-button" target='__blank' href="https://x.com/${person.twitter}">${twitterSvg}<span>${person.twitter || "--"}</span></a>
-                <a class="card-location card-button" href="Loc:${person.holding_location}">${locationSvg}<span>Currently: ${person.holding_location || "--"}</span></a>
-            </div>
-            <button class="share-button twitter" onclick="shareCard(${person.id})">Share on X (Twitter)</button>
-        </div>
-    `;
+			<img class="card__img" src="${person.image}" alt="${person.name}">
+			<h2 class='card__name'>${person.name}</h2>
+			<span class='card__status ${person.status.toLowerCase()}'>${person.status}</span>
+			<span class='card__office'>Taken by ${person.security_organ}</span>
+			<span class='card__time' title="${exactTime}">Time: ${takenTime}</span>
+			<span class='card__locations'>Last seen: ${person.last_known_location}</span>
+			<span class='card__gender'>Gender: ${person.gender}</span>
+			<a class="card-twitter card__button" target='__blank' href="https://x.com/${person.twitter}">${twitterSvg}<span>${person.twitter || "--"}</span></a>
+			<a class="card-location card__button" href="Loc:${person.holding_location}">${locationSvg}<span class='card__location-holding'>Currently: ${person.holding_location || "--"}</span></a>
+            <button class="card__share-button twitter" onclick="shareCard(${person.id})">Share on X (Twitter)</button>
+        </div>`;
     return personElement
 }
 

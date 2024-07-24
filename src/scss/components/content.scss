@@ -1,0 +1,15 @@
+/**
+ * General Content section styles.
+ */
+@import '../variables.scss';
+
+.persons {
+	display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+    width: 95%;
+    max-width: calc(100% - 40px);
+    margin: 2rem auto;
+    padding: 1rem 0;
+}

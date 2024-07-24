@@ -1,0 +1,32 @@
+@import "variables";
+@import "elements";
+@import "components/header";
+@import "components/search-filter";
+@import "components/content";
+@import "components/cards";
+@import "components/footer";
+
+@media screen and (max-width: $breakpoints_mobile) {
+    .footer-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .copyright, .current-time {
+        font-size: 0.8rem;
+    }
+}
+
+
+// @media screen and (max-width: 1400px) {
+//     .persons {
+//         grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+//     }
+// }
+
+// @media screen and (max-width: 1200px) {
+//     .persons {
+//         grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+//     }
+// }
