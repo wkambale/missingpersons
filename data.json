@@ -1036,7 +1036,7 @@
     {
         "id": 92,
         "name": "Ruth Nalunkuma",
-        "image": "src/img/image_of_person.jpg",
+        "image": "src/img/ruth_nalunkuma.jpeg",
         "status": "Remanded",
         "last_known_location": "Eliana Hotel",
         "security_organ": "Police",
@@ -1047,7 +1047,7 @@
     {
         "id": 93,
         "name": "Abigail Kalenda",
-        "image": "src/img/image_of_person.jpg",
+        "image": "src/img/abigail_kalenda.jpeg",
         "status": "Remanded",
         "last_known_location": "Eliana Hotel",
         "security_organ": "Police",

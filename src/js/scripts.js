@@ -202,7 +202,7 @@ function createPersonElement(person){
                 <p class='card__time' title="${exactTime}">Time: ${takenTime}</p>
                 <p class='locations'>Last seen: ${person.last_known_location}</p>
                 <p class='card__gender'>Gender: ${person.gender}</p>
-                <p class='card__twitter'>X (Twitter): <a target='_blank' href="https://x.com/${person.twitter}">${person.twitter || "--"}</a></p>
+                <p class='card__twitter'>X: <a target='_blank' href="https://x.com/${person.twitter}">${person.twitter || "--"}</a></p>
                 <p class='.card__currently'>Currently: ${person.holding_location || "--"}</p>
             </div>
             <button class="share-button twitter" onclick="shareCard(${person.id})">Share on X</button>
