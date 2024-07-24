@@ -89,7 +89,7 @@ We welcome contributions from everyone. Here's how you can help:
 We use Pull Requests (PRs) for code review. Here's how to review:
 
 1. **Review the Code**: Check for code quality, functionality, and style.
-2. **Review the Code**: Test the code locally where possible to check for any breaking changes.
+2. **Test the Code**: Test the code locally where possible to check for any breaking changes.
 3. **Provide Feedback**: Leave comments on the PR for any changes or improvements needed.
 4. **Approve the PR**: If the changes are satisfactory, approve the PR.
 
