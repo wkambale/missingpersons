@@ -1,12 +1,12 @@
 [
     {
         "id": 1,
-        "name": "Reign Omusoyisoyi",
+        "name": "Reign Kasozi",
         "image": "src/img/reign_maulana.jpg",
         "status": "Arrested",
         "last_known_location": "Mutundwe, Rubaga",
         "security_organ": "Police",
-        "holding_location": "Unknown Location",
+        "holding_location": "Unknown",
 		"taken_time": "09:30 23-07-2024", 
         "twitter": "@maulanareign256",
         "gender": "Male"
@@ -37,7 +37,7 @@
     },
     {
         "id": 4,
-        "name": "Edgar Hamala Barlow",
+        "name": "Edgar Hamala",
         "image": "src/img/baron_edgar.jpg",
         "status": "Remanded",
         "last_known_location": "Oasis Mall",
@@ -358,7 +358,7 @@
     },
     {
         "id": 31,
-        "name": "Shabiliz UG",
+        "name": "Shabil Byaruhanga",
         "image": "src/img/shabilzug.jpg",
         "status": "Released",
         "last_known_location": "Ntinda",
@@ -871,7 +871,7 @@
     },
     {
         "id": 77,
-        "name": "Comedian Sammy",
+        "name": "Sammy Okanya",
         "image": "src/img/image_of_person.jpg",
         "status": "Arrested",
         "last_known_location": "Unknown",
@@ -949,6 +949,94 @@
     {
         "id": 84,
         "name": "Keith Kakama",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 85,
+        "name": "Esther Tabamubi",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "N/A",
+        "gender": "Female"
+    },
+    {
+        "id": 86,
+        "name": "Innocent LUbega",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Remanded",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Luzira",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 87,
+        "name": "Robert Tumuhaise",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Remanded",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Luzira",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 88,
+        "name": "John Kalema",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Remanded",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Luzira",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 89,
+        "name": "Shamim Naluyima",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "N/A",
+        "gender": "Female"
+    },
+    {
+        "id": 90,
+        "name": "Peter Wambi",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 91,
+        "name": "Stephen Nuwagaba",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Natete PS",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 92,
+        "name": "Rolando (Influencer)",
         "image": "src/img/image_of_person.jpg",
         "status": "Arrested",
         "last_known_location": "Unknown",
