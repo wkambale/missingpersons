@@ -175,11 +175,10 @@ button:hover {
     padding: 0.3rem 1rem;
 }
 
-.card-status.missing { background-color: var(--yellow); color: var(--black); }
+.card-status.remanded { background-color: var(--yellow); color: var(--black); }
 .card-status.fallen { background-color: var(--red); }
 .card-status.kidnapped { background-color: var(--lightergrey); }
 .card-status.released { background-color: var(--green); }
-.card-status.remanded { background-color: var(--darkred); }
 
 .card__info {
     margin-bottom: 1rem;
