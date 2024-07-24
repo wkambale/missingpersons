@@ -46,50 +46,21 @@ button:hover {
     transform: translateY(-2px);
 }
 
-header {
+.header {
     background-color: var(--lightgrey);
     padding: 2rem;
-    display: flex;
-	align-items: center;
-	justify-content: space-between;
+    text-align: center;
 }
 
-header h1 {
+.header h1 {
     margin: 0;
     font-size: 2.5rem;
     font-weight: 700;
 }
 
-header h2 {
+.header h2 {
     font-size: 1.3rem;
     font-weight: 400;
-}
-
-#contribute {
-	display: grid;
-	grid-auto-flow: column;
-	gap: 0.5rem;
-	align-items: center;
-	text-decoration: none;
-	color: var(--blue);
-}
-
-#contribute svg {
-	width: 2rem;
-	height: 2rem;
-	fill: var(--blue);
-}
-
-#contribute:hover {
-	color: var(--white);
-}
-
-#contribute svg path {
-    transition: fill 0.3s ease;
-}
-
-#contribute:hover svg path {
-	fill: var(--white);
 }
 
 .filters {
@@ -358,7 +329,7 @@ header h2 {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
 
-    header h1 {
+    .header h1 {
         font-size: 2rem;
     }
 }
