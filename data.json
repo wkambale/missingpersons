@@ -1044,5 +1044,28 @@
         "holding_location": "Unknown",
         "twitter": "N/A",
         "gender": "Male"
+    }, 
+    {
+        "id": 93,
+        "name": "Ruth Nalunkuma",
+        "image": "src/img/ruth_nalunkuma.jpg",
+        "status": "Arrested",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "N/A",
+        "gender": "Female"
+    }, 
+
+    {
+        "id": 94,
+        "name": "Abigail Kalenda",
+        "image": "src/img/abigail_kalenda.jpg",
+        "status": "Arrested",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "N/A",
+        "gender": "Female"
     }
 ]
