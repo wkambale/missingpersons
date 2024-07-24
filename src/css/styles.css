@@ -70,6 +70,11 @@ button:hover {
     padding: 1rem 0;
 }
 
+.search-input {
+	margin: 20px;
+	border-radius: 24px;
+}
+
 .content {
     flex-grow: 1;
     max-width: 1400px;
