@@ -67,14 +67,13 @@ document.addEventListener("DOMContentLoaded", function() {
                     <p class='card__time' title="${exactTime}">Time: ${takenTime}</p>
                     <p class='locations'>Last seen: ${card.last_known_location}</p>
                     <p class='card__gender'>Gender: ${card.gender}</p>
-                    <a class="card-twitter card-button" target='__blank' href="https://x.com/${card.twitter}">${twitterSvg}<span>${card.twitter || "--"}</span></a><br><br>
-                    <a class="card-location card-button" href="Loc:${card.holding_location}">${locationSvg}<span>Held at: ${card.holding_location || "--"}</span></a>
+                    <p class='card__twitter'>Twitter: <a target='_blank' href="https://x.com/${card.twitter}">${card.twitter || "--"}</a></p>
+                    <p class='.card__currently'>Currently: ${card.holding_location || "--"}</p>
                 </div>
                 <button class="share-button twitter" onclick="shareCard(${card.id})">Share on X (Twitter)</button>
             </div>
         `;
     }
-
     // Function to filter persons based on search input
     function searchFunction() {
         let input = document.getElementById('searchInput');
