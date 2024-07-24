@@ -34,10 +34,10 @@
                 <p class='card__time' title="${exactTime}">Time: ${takenTime}</p>
                 <p class='locations'>Last seen: ${card.last_known_location}</p>
                 <p class='card__gender'>Gender: ${card.gender}</p>
-                <p class='card__twitter'>X (Twitter): <a target='_blank' href="https://x.com/${card.twitter}">${card.twitter || "--"}</a></p>
+                <p class='card__twitter'>X: <a target='_blank' href="https://x.com/${card.twitter}">${card.twitter || "--"}</a></p>
                 <p class='.card__currently'>Currently: ${card.holding_location || "--"}</p>
             </div>
-            <button class="share-button twitter" onclick="shareCard(${card.id})">Share on X (Twitter)</button>
+            <button class="share-button twitter" onclick="shareCard(${card.id})">Share on X</button>
         </div>
     `;
 }
@@ -127,9 +127,9 @@ document.addEventListener("DOMContentLoaded", function() {
 // pagination configuration
 const CONFIG = {
     url: `data.json`,
-    personsPerPage: 12,
+    personsPerPage: 18,
     scrollThreshold: 100,
-    scrollDelay: 500,
+    scrollDelay: 200,
 };
 
 // DOM elements
@@ -140,7 +140,7 @@ const elements = {
 
 // states
 let state = {
-    currentIndex: 1,
+    currentIndex: 0,
     isLoading: false,
     personsData: [],
     canLoadMore : false
@@ -187,7 +187,7 @@ function createPersonElement(person){
                 <p class='card__twitter'>X (Twitter): <a target='_blank' href="https://x.com/${person.twitter}">${person.twitter || "--"}</a></p>
                 <p class='.card__currently'>Currently: ${person.holding_location || "--"}</p>
             </div>
-            <button class="share-button twitter" onclick="shareCard(${person.id})">Share on X (Twitter)</button>
+            <button class="share-button twitter" onclick="shareCard(${person.id})">Share on X</button>
         </div>
     `;
     return personElement
