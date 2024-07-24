@@ -19,6 +19,29 @@
 	 return parsedDate;
  }
 
+ // Function to create the cards
+ function createCard(card) {
+    const takenTime = card.taken_time ? getRelativeTime(parseCustomDateFormat(card.taken_time)) : 'Unknown';
+    const exactTime = card.taken_time ? parseCustomDateFormat(card.taken_time).toLocaleString('en-US', { month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true }) : 'Unknown';
+
+    return `
+        <div class="card" data-category="${card.status}">
+            <div class="card-inner">
+                <img class='card-img' src="${card.image}" alt="${card.name}">
+                <h2 class='card__name'>${card.name}</h2>
+                <p class='card-status ${card.status.toLowerCase()}'>${card.status}</p>
+                <p class='card__office'>Taken by ${card.security_organ}</p>
+                <p class='card__time' title="${exactTime}">Time: ${takenTime}</p>
+                <p class='locations'>Last seen: ${card.last_known_location}</p>
+                <p class='card__gender'>Gender: ${card.gender}</p>
+                <p class='card__twitter'>X (Twitter): <a target='_blank' href="https://x.com/${card.twitter}">${card.twitter || "--"}</a></p>
+                <p class='.card__currently'>Currently: ${card.holding_location || "--"}</p>
+            </div>
+            <button class="share-button twitter" onclick="shareCard(${card.id})">Share on X (Twitter)</button>
+        </div>
+    `;
+}
+
  /**
   * Returns a relative time string based on the time a person was taken.
   *
@@ -50,30 +73,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // onkeyup event, call searchFunction
     document.getElementById('searchInput').addEventListener('keyup', searchFunction);
 
-    function createCard(card) {
-        const twitterSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>`;
-        const locationSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-location"><path d="M12 2a10 10 0 0 1 10 10c0 5.5-10 12-10 12S2 17.5 2 12A10 10 0 0 1 12 2z"/><circle cx="12" cy="12" r="3"/></svg>`;
-
-		const takenTime = card.taken_time ? getRelativeTime(parseCustomDateFormat(card.taken_time)) : 'Unknown';
-		const exactTime = card.taken_time ? parseCustomDateFormat(card.taken_time).toLocaleString('en-US', { month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true }) : 'Unknown';
-
-        return `
-            <div class="card" data-category="${card.status}">
-                <div class="card-inner">
-                    <img class='card-img' src="${card.image}" alt="${card.name}">
-                    <h2 class='card__name'>${card.name}</h2>
-                    <p class='card-status ${card.status.toLowerCase()}'>${card.status}</p>
-                    <p class='card__office'>Taken by ${card.security_organ}</p>
-                    <p class='card__time' title="${exactTime}">Time: ${takenTime}</p>
-                    <p class='locations'>Last seen: ${card.last_known_location}</p>
-                    <p class='card__gender'>Gender: ${card.gender}</p>
-                    <p class='card__twitter'>Twitter: <a target='_blank' href="https://x.com/${card.twitter}">${card.twitter || "--"}</a></p>
-                    <p class='.card__currently'>Currently: ${card.holding_location || "--"}</p>
-                </div>
-                <button class="share-button twitter" onclick="shareCard(${card.id})">Share on X (Twitter)</button>
-            </div>
-        `;
-    }
     // Function to filter persons based on search input
     function searchFunction() {
         let input = document.getElementById('searchInput');
@@ -175,9 +174,6 @@ function createPersonElement(person){
     const takenTime = person.taken_time ? getRelativeTime(parseCustomDateFormat(person.taken_time)) : 'Unknown';
     const exactTime = person.taken_time ? parseCustomDateFormat(person.taken_time).toLocaleString('en-US', { month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true }) : 'Unknown';
 
-    const twitterSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>`;
-    const locationSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-location"><path d="M12 2a10 10 0 0 1 10 10c0 5.5-10 12-10 12S2 17.5 2 12A10 10 0 0 1 12 2z"/><circle cx="12" cy="12" r="3"/></svg>`;
-
     personElement.innerHTML = `
         <div class="card" data-category="${person.status}">
             <div class="card-inner">
@@ -188,8 +184,8 @@ function createPersonElement(person){
                 <p class='card__time' title="${exactTime}">Time: ${takenTime}</p>
                 <p class='locations'>Last seen: ${person.last_known_location}</p>
                 <p class='card__gender'>Gender: ${person.gender}</p>
-                <a class="card-twitter card-button" target='__blank' href="https://x.com/${person.twitter}">${twitterSvg}<span>${person.twitter || "--"}</span></a>
-                <a class="card-location card-button" href="Loc:${person.holding_location}">${locationSvg}<span>Currently: ${person.holding_location || "--"}</span></a>
+                <p class='card__twitter'>X (Twitter): <a target='_blank' href="https://x.com/${person.twitter}">${person.twitter || "--"}</a></p>
+                <p class='.card__currently'>Currently: ${person.holding_location || "--"}</p>
             </div>
             <button class="share-button twitter" onclick="shareCard(${person.id})">Share on X (Twitter)</button>
         </div>
