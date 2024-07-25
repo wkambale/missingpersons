@@ -100,6 +100,43 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+    // Function to add counter to categories
+    function categoryCounters() {
+        return fetch(CONFIG.url)
+            .then(response => response.json())
+            .then(data => {
+                const counts = {
+                    All: data.length,
+                    Arrested: 0,
+                    Remanded: 0,
+                    Released: 0,
+                    Missing: 0,
+                    Fallen: 0
+                };
+
+                data.forEach(person => {
+                    if (counts[person.status] !== undefined) {
+                        counts[person.status]++;
+                    }
+                });
+
+                //countsData = counts;
+                return counts;
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                return null;
+            });
+    }
+
+    // Function to update the button texts with counts
+    function updateButtons(counts) {
+        document.querySelectorAll('.content__buttons button').forEach(button => {
+            const category = button.getAttribute('data-category');
+            button.innerHTML = `${category} <span class="badge">${counts[category]}</span>`;
+        });
+    }
+
     // Function to filter persons based on category
     function filterCategory(category) {
         state.currentIndex = 0;
@@ -125,8 +162,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // Add event listeners to category buttons and manage active state
     let buttons = document.querySelectorAll('.buttons button');
     buttons.forEach(button => {
+
+        let category = button.getAttribute('data-category');
+
         button.addEventListener('click', () => {
-            let category = button.getAttribute('data-category');
             filterCategory(category);
 
             // Remove 'active' class from all buttons
@@ -135,6 +174,16 @@ document.addEventListener("DOMContentLoaded", function() {
             // Add 'active' class to the clicked button
             button.classList.add('active');
         });
+
+        // Add extra functionality to add counters to each button
+        categoryCounters().then(counts => {
+            if (counts) {
+                updateButtons(counts);
+            } else {
+                console.log('Failed to fetch data.');
+            }
+        });
+        
     });
 });
 

@@ -3,11 +3,9 @@
         "id": 1,
         "name": "Reign Kasozi",
         "image": "src/img/reign_maulana.jpg",
-        "status": "Arrested",
+        "status": "Released",
         "last_known_location": "Mutundwe, Rubaga",
-        "security_organ": "Police",
-        "holding_location": "Unknown",
-		"taken_time": "09:30 23-07-2024", 
+        "security_organ": "Police", 
         "twitter": "@maulanareign256",
         "gender": "Male"
     },
@@ -331,7 +329,7 @@
     },
     {
         "id": 29,
-        "name": "Kirya Samson",
+        "name": "Kirya Messach",
         "image": "src/img/kiryaug.jpg",
         "status": "Released",
         "last_known_location": "Kisekka Market",
@@ -581,10 +579,9 @@
         "id": 51,
         "name": "Martha Kebirungi",
         "image": "src/img/martha_kebirungi.jpeg",
-        "status": "Arrested",
+        "status": "Released",
         "last_known_location": "Kooki Towers",
         "security_organ": "Police",
-        "holding_location": "Kampala CPS",
         "twitter": "@kebxrungi",
         "gender": "Female"
     },
@@ -778,10 +775,9 @@
         "id": 69,
         "name": "Liam Namanya",
         "image": "src/img/image_of_person.jpg",
-        "status": "Arrested",
+        "status": "Released",
         "last_known_location": "Unknown",
         "security_organ": "Police",
-        "holding_location": "Kampala CPS",
         "twitter": "N/A",
         "gender": "Male"
     },
@@ -1015,10 +1011,9 @@
         "id": 91,
         "name": "Denis Pato",
         "image": "src/img/image_of_person.jpg",
-        "status": "Remanded",
+        "status": "Released",
         "last_known_location": "Eliana Hotel",
         "security_organ": "Police",
-        "holding_location": "Luzira",
         "twitter": "N/A",
         "gender": "Male"
     },
@@ -1026,10 +1021,9 @@
         "id": 92,
         "name": "Ruth Nalunkuma",
         "image": "src/img/ruth_nalunkuma.jpeg",
-        "status": "Remanded",
+        "status": "Released",
         "last_known_location": "Eliana Hotel",
         "security_organ": "Police",
-        "holding_location": "Luzira",
         "twitter": "N/A",
         "gender": "Female"
     },
@@ -1037,10 +1031,9 @@
         "id": 93,
         "name": "Abigail Kalenda",
         "image": "src/img/abigail_kalenda.jpeg",
-        "status": "Remanded",
+        "status": "Released",
         "last_known_location": "Eliana Hotel",
         "security_organ": "Police",
-        "holding_location": "Luzira",
         "twitter": "N/A",
         "gender": "Female"
     },
@@ -1048,10 +1041,9 @@
         "id": 94,
         "name": "Sumaiya Muamala",
         "image": "src/img/image_of_person.jpg",
-        "status": "Arrested",
+        "status": "Released",
         "last_known_location": "Buganda Rd",
         "security_organ": "Police",
-        "holding_location": "Kampala CPS",
         "twitter": "N/A",
         "gender": "Female"
     },
@@ -1145,17 +1137,6 @@
     },
     {
         "id": 103,
-        "name": "Rashid Nyombi",
-        "image": "src/img/rashid_nyombi.JPG",
-        "status": "Missing",
-        "last_known_location": "Unknown",
-        "security_organ": "Police",
-        "holding_location": "Unknown",
-        "twitter": "N/A",
-        "gender": "Male"
-    },
-    {
-        "id": 104,
         "name": "Eddy Kiyaga",
         "image": "src/img/image_of_person.jpg",
         "status": "Remanded",
@@ -1166,7 +1147,7 @@
         "gender": "Male"
     },
     {
-        "id": 105,
+        "id": 104,
         "name": "Brian Magala",
         "image": "src/img/image_of_person.jpg",
         "status": "Remanded",
@@ -1177,7 +1158,7 @@
         "gender": "Male"
     },
     {
-        "id": 106,
+        "id": 105,
         "name": "Sadat Mugweri",
         "image": "src/img/image_of_person.jpg",
         "status": "Remanded",
@@ -1188,7 +1169,7 @@
         "gender": "Male"
     },
     {
-        "id": 107,
+        "id": 106,
         "name": "Joseph Owino",
         "image": "src/img/image_of_person.jpg",
         "status": "Remanded",
@@ -1199,7 +1180,7 @@
         "gender": "Male"
     },
     {
-        "id": 108,
+        "id": 107,
         "name": "Eric Nyaru Muhwezi",
         "image": "src/img/image_of_person.jpg",
         "status": "Remanded",
@@ -1210,8 +1191,195 @@
         "gender": "Male"
     },
     {
-        "id": 109,
+        "id": 108,
         "name": "Hussein Lubega",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Remanded",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Luzira",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 109,
+        "name": "Simon Wandukwa",
+        "image": "src/img/wandukwa.jpeg",
+        "status": "Remanded",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Luzira",
+        "twitter": "@wandukwa_simon",
+        "gender": "Male"
+    },
+    {
+        "id": 110,
+        "name": "Kirya Samson",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Remanded",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Luzira",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 111,
+        "name": "Isaac Otule",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Remanded",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Luzira",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 112,
+        "name": "Margaret Nattabi",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Remanded",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Luzira",
+        "twitter": "N/A",
+        "gender": "Female"
+    },
+    {
+        "id": 113,
+        "name": "Brian Mooli",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Remanded",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Luzira",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 114,
+        "name": "Gerald Wenani",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 115,
+        "name": "Nana Mwa Afrika",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Remanded",
+        "last_known_location": "Rail Way",
+        "security_organ": "Police",
+        "holding_location": "Luzira",
+        "twitter": "N/A",
+        "gender": "Female"
+    },
+    {
+        "id": 116,
+        "name": "Yunus Lubega",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Kampala CPS",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 117,
+        "name": "Denis Yub",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Remanded",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Luzira",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 118,
+        "name": "Ronald Batabaale",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Remanded",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Luzira",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 119,
+        "name": "Jared Opio",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Remanded",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Luzira",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 120,
+        "name": "Charles Tumwebaze",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Remanded",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Luzira",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 121,
+        "name": "Maktum Kajubi",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Remanded",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Luzira",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 122,
+        "name": "Humphrey Kikwikyakare",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Remanded",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Luzira",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 123,
+        "name": "Paul Oburu",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Remanded",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Luzira",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 124,
+        "name": "Abdul Aziz Bweete",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Remanded",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Luzira",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 125,
+        "name": "Peter Arinaitwe",
         "image": "src/img/image_of_person.jpg",
         "status": "Remanded",
         "last_known_location": "Unknown",
