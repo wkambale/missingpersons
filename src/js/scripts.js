@@ -104,7 +104,8 @@ document.addEventListener("DOMContentLoaded", function() {
     function categoryCounters() {
         return fetch(CONFIG.url)
             .then(response => response.json())
-            .then(data => {
+            .then(responseBody => {
+                const {data} = responseBody;
                 const counts = {
                     All: data.length,
                     Arrested: 0,
