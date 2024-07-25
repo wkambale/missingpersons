@@ -581,10 +581,9 @@
         "id": 51,
         "name": "Martha Kebirungi",
         "image": "src/img/martha_kebirungi.jpeg",
-        "status": "Arrested",
+        "status": "Released",
         "last_known_location": "Kooki Towers",
         "security_organ": "Police",
-        "holding_location": "Kampala CPS",
         "twitter": "@kebxrungi",
         "gender": "Female"
     },
@@ -1264,6 +1263,17 @@
     {
         "id": 114,
         "name": "Brian Mooli",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "N/A",
+        "gender": "Male"
+    },
+    {
+        "id": 115,
+        "name": "Gerald Wenani",
         "image": "src/img/image_of_person.jpg",
         "status": "Arrested",
         "last_known_location": "Unknown",
