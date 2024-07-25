@@ -191,8 +191,8 @@ document.addEventListener("DOMContentLoaded", function() {
 // pagination configuration
 const CONFIG = {
     url: API_URL,
-    personsPerPage: 15,
-    scrollThreshold: 15,
+    personsPerPage: 18,
+    scrollThreshold: 100,
     scrollDelay: 200,
 };
 
