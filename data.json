@@ -1141,17 +1141,6 @@
     },
     {
         "id": 103,
-        "name": "Rashid Nyombi",
-        "image": "src/img/rashid_nyombi.JPG",
-        "status": "Missing",
-        "last_known_location": "Unknown",
-        "security_organ": "Police",
-        "holding_location": "Unknown",
-        "twitter": "N/A",
-        "gender": "Male"
-    },
-    {
-        "id": 104,
         "name": "Eddy Kiyaga",
         "image": "src/img/image_of_person.jpg",
         "status": "Remanded",
@@ -1162,7 +1151,7 @@
         "gender": "Male"
     },
     {
-        "id": 105,
+        "id": 104,
         "name": "Brian Magala",
         "image": "src/img/image_of_person.jpg",
         "status": "Remanded",
@@ -1173,7 +1162,7 @@
         "gender": "Male"
     },
     {
-        "id": 106,
+        "id": 105,
         "name": "Sadat Mugweri",
         "image": "src/img/image_of_person.jpg",
         "status": "Remanded",
@@ -1184,7 +1173,7 @@
         "gender": "Male"
     },
     {
-        "id": 107,
+        "id": 106,
         "name": "Joseph Owino",
         "image": "src/img/image_of_person.jpg",
         "status": "Remanded",
@@ -1195,7 +1184,7 @@
         "gender": "Male"
     },
     {
-        "id": 108,
+        "id": 107,
         "name": "Eric Nyaru Muhwezi",
         "image": "src/img/image_of_person.jpg",
         "status": "Remanded",
@@ -1206,7 +1195,7 @@
         "gender": "Male"
     },
     {
-        "id": 109,
+        "id": 108,
         "name": "Hussein Lubega",
         "image": "src/img/image_of_person.jpg",
         "status": "Remanded",
@@ -1217,7 +1206,7 @@
         "gender": "Male"
     },
     {
-        "id": 110,
+        "id": 109,
         "name": "Simon Wandukwa",
         "image": "src/img/wandukwa.jpeg",
         "status": "Arrested",
@@ -1228,7 +1217,7 @@
         "gender": "Male"
     },
     {
-        "id": 111,
+        "id": 110,
         "name": "Kirya Samson",
         "image": "src/img/image_of_person.jpg",
         "status": "Remanded",
@@ -1239,7 +1228,7 @@
         "gender": "Male"
     },
     {
-        "id": 112,
+        "id": 111,
         "name": "Isaac Otule",
         "image": "src/img/image_of_person.jpg",
         "status": "Arrested",
@@ -1250,7 +1239,7 @@
         "gender": "Male"
     },
     {
-        "id": 113,
+        "id": 112,
         "name": "Margaret Natabbi",
         "image": "src/img/image_of_person.jpg",
         "status": "Arrested",
@@ -1261,7 +1250,7 @@
         "gender": "Female"
     },
     {
-        "id": 114,
+        "id": 113,
         "name": "Brian Mooli",
         "image": "src/img/image_of_person.jpg",
         "status": "Arrested",
@@ -1272,7 +1261,7 @@
         "gender": "Male"
     },
     {
-        "id": 115,
+        "id": 114,
         "name": "Gerald Wenani",
         "image": "src/img/image_of_person.jpg",
         "status": "Arrested",
@@ -1281,5 +1270,16 @@
         "holding_location": "Unknown",
         "twitter": "N/A",
         "gender": "Male"
+    },
+    {
+        "id": 115,
+        "name": "Nana Mwa Afrika",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Buganda Rd Court",
+        "twitter": "N/A",
+        "gender": "Female"
     }
 ]
