@@ -1,10 +1,12 @@
  // Define the shareCard function globally
+
+ const API_URL = `https://dashboard.missingpersonsug.org/api/victims`
  function shareCard(id) {
-    fetch("data.json")
+    fetch(API_URL)
         .then((response) => response.json())
-        .then((data) => {
-            const card = data.find((item) => item.id === id);
-            const text = `NOTICE! This is a missing person: ${card.name}, status: ${card.status}, last seen at ${card.last_known_location}. #March2Parliament`;
+        .then(responseBody => {
+            const card = responseBody.data.find((item) => item.id === id);
+            const text = `NOTICE! This is a missing person: ${card.name}, status: ${card.status}, last seen at ${card.holding_location?card.holding_location: 'Unkown'}. #March2Parliament`;
             const url = `https://x.com/intent/tweet?text=${encodeURIComponent(text)}`;
             window.open(url, "_blank");
         })
@@ -21,8 +23,10 @@
 
  // Function to create the cards
  function createCard(card) {
-    const takenTime = card.taken_time ? getRelativeTime(parseCustomDateFormat(card.taken_time)) : 'Unknown';
-    const exactTime = card.taken_time ? parseCustomDateFormat(card.taken_time).toLocaleString('en-US', { month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true }) : 'Unknown';
+    const takenTime = card.time_taken ? getRelativeTime(parseCustomDateFormat(card.time_taken)) : 'Unknown';
+    const exactTime = card.time_taken_formatted ? parseCustomDateFormat(card.time_taken_formatted).toLocaleString('en-US', { month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true }) : 'Unknown';
+  
+
 
     return `
         <div class="card" data-category="${card.status}">
@@ -140,9 +144,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // pagination configuration
 const CONFIG = {
-    url: `data.json`,
-    personsPerPage: 18,
-    scrollThreshold: 100,
+    url: API_URL,
+    personsPerPage: 15,
+    scrollThreshold: 15,
     scrollDelay: 200,
 };
 
@@ -160,18 +164,27 @@ let state = {
     canLoadMore : false,
     allPersonsLoaded: false,
     searchQuery: '',
+    first: '',
+    next: '',
+    prev: '',
+    last: ''
+
 };
 
 let originalPersonsData = [];
 
 // Fetch the persons data from date.json file
-async function fetchData(){
+async function fetchData(url){
     try{
-        const response = await fetch(CONFIG.url);
+        const response = await fetch(url);
         if(!response.ok){
             throw new error(`HTTP error! status: ${response.status}`);
         }
-        return await response.json();
+        return await response.json().then(body => {
+            const {links, data} = body;
+            state = {...state, ...links}
+            return data
+        });
     }catch(error){
         state.isLoading = false;
         console.error("Error fetching data.", error);
@@ -189,20 +202,23 @@ function createPersonElement(person){
     const personElement = document.createElement('div');
     personElement.classList.add('person');
 
-    const takenTime = person.taken_time ? getRelativeTime(parseCustomDateFormat(person.taken_time)) : 'Unknown';
-    const exactTime = person.taken_time ? parseCustomDateFormat(person.taken_time).toLocaleString('en-US', { month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true }) : 'Unknown';
+    const takenTime = person.time_taken ? getRelativeTime(parseCustomDateFormat(person.time_taken)) : 'Unknown';
+    const exactTime = person.time_taken_formatted ? person.time_taken_formatted : 'Unknown';
+    const taken_by = person.security_organ? person.security_organ: 'Police';
+    const holding_location = person.holding_location? person.holding_location: 'Unknown'
+
 
     personElement.innerHTML = `
         <div class="card" data-category="${person.status}">
             <div class="card-inner">
-                <img class="card-img" src="${person.image}" alt="${person.name}">
+                <img class="card-img" src="${person.photo_url}" alt="${person.name}">
                 <h2 class='card__name'>${person.name}</h2>
                 <p class='card-status ${person.status.toLowerCase()}'>${person.status}</p>
-                <p class='card__office'>Taken by ${person.security_organ}</p>
+                <p class='card__office'>Taken by ${taken_by}</p>
                 <p class='card__time' title="${exactTime}">Time: ${takenTime}</p>
-                <p class='locations'>Last seen: ${person.last_known_location}</p>
+                <p class='locations'>Last seen: ${holding_location}</p>
                 <p class='card__gender'>Gender: ${person.gender}</p>
-                <p class='card__twitter'>X: <a target='_blank' href="https://x.com/${person.twitter}">${person.twitter || "--"}</a></p>
+                <p class='card__twitter'>X: <a target='_blank' href="${person.x_handle_full}">${person.x_handle || "--"}</a></p>
                 <p class='.card__currently'>Currently: ${person.holding_location || "--"}</p>
             </div>
             <button class="share-button twitter" onclick="shareCard(${person.id})">Share on X</button>
@@ -275,7 +291,7 @@ function handleScroll() {
 
 // run pagination 
 async function initPaginate(){
-    originalPersonsData = await fetchData();
+    originalPersonsData = await fetchData(CONFIG.url);
     state.personsData = [...originalPersonsData];
     loadPersons();
     window.addEventListener("scroll", handleScroll);
