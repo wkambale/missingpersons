@@ -189,7 +189,7 @@ button:hover {
 
 .card-status.remanded { background-color: var(--yellow); color: var(--black); }
 .card-status.fallen { background-color: var(--red); }
-.card-status.kidnapped { background-color: var(--lightergrey); }
+.card-status.missing { background-color: var(--blue); }
 .card-status.released { background-color: var(--green); }
 
 .card__info {
