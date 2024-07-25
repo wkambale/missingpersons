@@ -1,6 +1,7 @@
  
  // Fetch data from JSON file
- fetch('data.json')
+ const BACKEND_URL = `https://dashboard.missingpersonsug.org/api/victim-statistics`
+ fetch(BACKEND_URL)
      .then(response => {
          if (!response.ok) {
              throw new Error('Network response was not ok');
@@ -8,25 +9,16 @@
          return response.json();
      })
      .then(records => {
-         // Initialize counters
-         const genderCounter = new Counter();
-         const statusCounter = new Counter();
-         const holdingLocationCounter = new Counter();
          const lastKnownLocation = new Counter();
 
          // Iterate through the records and update counters
-         records.forEach(record => {
-             genderCounter.increment(record.gender);
-             statusCounter.increment(record.status);
-             holdingLocationCounter.increment(record.holding_location);
-             lastKnownLocation.increment(record.last_known_location);
-         });
+         const {data} = records;
 
          // Create charts with the data
-         createChart('genderChart', 'pie', genderCounter.counts, 'Gender Distribution');
-         createChart('statusChart', 'pie', statusCounter.counts, 'Status Distribution');
-         createChart('holdingLocationChart', 'pie', holdingLocationCounter.counts, 'Holding Location Distribution');
-         createChart('lastKnownLocationChart', 'pie', lastKnownLocation.counts, 'Holding Location Distribution');
+         createChart('genderChart', 'pie', data.gender, 'Gender Distribution');
+         createChart('statusChart', 'pie', data.status, 'Status Distribution');
+         createChart('holdingLocationChart', 'pie', data.holding_locations, 'Holding Location Distribution');
+         createChart('lastKnownLocationChart', 'pie', data.last_known_location, 'Holding Location Distribution');
      })
      .catch(error => console.error('Error fetching JSON data:', error));
 
