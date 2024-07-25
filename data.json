@@ -1219,5 +1219,16 @@
         "holding_location": "Luzira",
         "twitter": "N/A",
         "gender": "Male"
+    },
+    {
+        "id": 110,
+        "name": "Simon Wandukwa",
+        "image": "src/img/wandukwa.jpeg",
+        "status": "Remanded",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "@wandukwa_simon",
+        "gender": "Male"
     }
 ]
