@@ -205,7 +205,6 @@ function createPersonElement(person){
     const takenTime = person.time_taken ? getRelativeTime(parseCustomDateFormat(person.time_taken)) : 'Unknown';
     const exactTime = person.time_taken_formatted ? person.time_taken_formatted : 'Unknown';
     const taken_by = person.security_organ? person.security_organ: 'Police';
-    const holding_location = person.holding_location? person.holding_location: 'Unknown'
 
 
     personElement.innerHTML = `
@@ -216,7 +215,7 @@ function createPersonElement(person){
                 <p class='card-status ${person.status.toLowerCase()}'>${person.status}</p>
                 <p class='card__office'>Taken by ${taken_by}</p>
                 <p class='card__time' title="${exactTime}">Time: ${takenTime}</p>
-                <p class='locations'>Last seen: ${holding_location}</p>
+                <p class='locations'>Last seen: ${person.last_known_location}</p>
                 <p class='card__gender'>Gender: ${person.gender}</p>
                 <p class='card__twitter'>X: <a target='_blank' href="${person.x_handle_full}">${person.x_handle || "--"}</a></p>
                 <p class='.card__currently'>Currently: ${person.holding_location || "--"}</p>
