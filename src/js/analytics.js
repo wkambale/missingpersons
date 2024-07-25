@@ -39,6 +39,55 @@
 
  function createChart(elementId, chartType, data, label) {
      const ctx = document.getElementById(elementId).getContext('2d');
+
+      // Define color schemes for different charts
+    const colorSchemes = {
+        genderChart: [
+            "rgba(54, 162, 235, 1)",
+            "rgba(255, 99, 132, 1)",
+            "rgba(255, 206, 86, 1)",
+        ],
+        statusChart: [
+            "rgba(75, 192, 192, 1)",
+            "rgba(153, 102, 255, 1)",
+            "rgba(255, 159, 64, 1)",
+            "rgba(199, 199, 199, 1)",
+        ],
+        holdingLocationChart: [
+        "rgba(255, 69, 58, 1)", // Bright red
+        "rgba(10, 132, 255, 1)",   // Vivid blue
+        "rgba(255, 214, 10, 1)",   // Bright yellow
+        "rgba(48, 209, 88, 1)",    // Lime green
+        "rgba(191, 90, 242, 1)",   // Vibrant purple
+        "rgba(255, 159, 10, 1)",   // Bright orange
+        "rgba(0, 199, 190, 1)",    // Teal
+        "rgba(255, 55, 95, 1)",    // Hot pink
+        "rgba(64, 200, 224, 1)",   // Sky blue
+        "rgba(100, 210, 80, 1)",   // Green
+        ],
+        lastKnownLocationChart: [
+            "rgba(255, 159, 64, 1)",
+            "rgba(199, 199, 199, 1)",
+            "rgba(83, 102, 255, 1)",
+            "rgba(40, 159, 64, 1)",
+            "rgba(210, 199, 199, 1)",
+        ],
+    };
+
+    // Choose the appropriate color scheme based on the elementId
+    const backgroundColor = colorSchemes[elementId] || [
+       "rgba(255, 69, 58, 1)", // Bright red
+        "rgba(10, 132, 255, 1)",   // Vivid blue
+        "rgba(255, 214, 10, 1)",   // Bright yellow
+        "rgba(48, 209, 88, 1)",    // Lime green
+        "rgba(191, 90, 242, 1)",   // Vibrant purple
+        "rgba(255, 159, 10, 1)",   // Bright orange
+        "rgba(0, 199, 190, 1)",    // Teal
+        "rgba(255, 55, 95, 1)",    // Hot pink
+        "rgba(64, 200, 224, 1)",   // Sky blue
+        "rgba(100, 210, 80, 1)",   // Green
+    ];
+
      new Chart(ctx, {
          type: chartType,
          data: {
@@ -47,22 +96,8 @@
                  label: label,
                  data: Object.values(data),
                  borderWidth: 1,
-                 backgroundColor: [
-                     'rgba(255, 99, 132, 0.2)',
-                     'rgba(54, 162, 235, 0.2)',
-                     'rgba(255, 206, 86, 0.2)',
-                     'rgba(75, 192, 192, 0.2)',
-                     'rgba(153, 102, 255, 0.2)',
-                     'rgba(255, 159, 64, 0.2)'
-                 ],
-                 borderColor: [
-                     'rgba(255, 99, 132, 1)',
-                     'rgba(54, 162, 235, 1)',
-                     'rgba(255, 206, 86, 1)',
-                     'rgba(75, 192, 192, 1)',
-                     'rgba(153, 102, 255, 1)',
-                     'rgba(255, 159, 64, 1)'
-                 ],
+                backgroundColor: backgroundColor,
+                borderColor: backgroundColor.map(color => color.replace("0.8", "1")),
              }]
          },
          options: {
