@@ -1260,5 +1260,16 @@
         "holding_location": "Unknown",
         "twitter": "N/A",
         "gender": "Female"
+    },
+    {
+        "id": 114,
+        "name": "Brian Mooli",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "holding_location": "Unknown",
+        "twitter": "N/A",
+        "gender": "Male"
     }
 ]
