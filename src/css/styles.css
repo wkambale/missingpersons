@@ -138,6 +138,17 @@ button:hover {
     transform: translateY(-2px);
 }
 
+.content__buttons button .badge {
+    background-color: #fff;
+    border-radius: 12px;
+    color: var(--black);
+    padding: 2px 8px;
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
+
 .persons {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
