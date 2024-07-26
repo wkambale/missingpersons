@@ -1444,5 +1444,15 @@
         "security_organ": "Police",
         "twitter": "N/A",
         "gender": "Male"
+    },
+    {
+        "id": 131,
+        "name": "Kivumbi",
+        "image": "src/img/image_of_person.jpg",
+        "status": "Arrested",
+        "last_known_location": "Unknown",
+        "security_organ": "Police",
+        "twitter": "N/A",
+        "gender": "Male"
     }
 ]
