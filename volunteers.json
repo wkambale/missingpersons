@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "Name": "John Kintu",
+        "Category": "Medical",
+        "Profession": "Doctor",
+        "Contact": "0772123123",
+        "Location": "Central Hospital",
+        "Twitter": "john_kintu"
+    },
+    {
+        "id": 2,
+        "Name": "Jane Akello",
+        "Category": "Legal",
+        "Profession": "Lawyer",
+        "Contact": "0751123123",
+        "Location": "City Court",
+        "Twitter": "jane_akello"
+    },
+    {
+        "id": 3,
+        "Name": "Robert Opio",
+        "Category": "Other",
+        "Profession": "Counselor",
+        "Contact": "0789456789",
+        "Location": "Community Center",
+        "Twitter": "robert_opio"
+    }
+]
