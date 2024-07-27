@@ -39,7 +39,7 @@
                 <p class='locations'>Last seen: ${card.last_known_location}</p>
                 <p class='card__gender'>Gender: ${card.gender}</p>
                 <p class='card__twitter'>X: <a target='_blank' href="https://x.com/${card.twitter}">${card.twitter || "--"}</a></p>
-                <p class='.card__currently' data-station-identifier="${card.stationIdentifier}">Currently: ${card.holding_location || "--"}</p>
+                <p class='.card__currently'>Currently: ${card.holding_location || "--"}</p>
             </div>
             <button class="share-button twitter" onclick="shareCard(${card.id})">Share on X</button>
         </div>
