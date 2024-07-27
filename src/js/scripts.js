@@ -405,7 +405,8 @@ function setFilterOption(filter){
         stations.style.display = 'block'; 
 
         // reset category filter
-        document.getElementById('category').value = 'All';
+        buttons.forEach(btn => btn.classList.remove('active'));
+        buttons.querySelector('[data-category="${value}"]').classList.add('active');
     }
   
 }
