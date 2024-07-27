@@ -68,16 +68,25 @@
     </div>
 
     <div class="content">
-        <span class="content__sort-by">Filter by:</span>
+        <label for="filter-options" class="content__sort-by">Filter by:</label>
+        <select name="filter-options" id="filter-options">
+            <option value="category">Category</option>
+            <option value="stations">Holding Location / Police Station</option>
+        </select>
         <div class="search-sort">
-            <div class="content__buttons buttons">
+            <div class="content__buttons buttons" id="category">
                 <button data-category="All" class="active">All</button>
                 <button data-category="Arrested">Arrested</button>
                 <button data-category="Remanded">Remanded</button>
                 <button data-category="Released">Released</button>
                 <button data-category="Missing">Missing</button>
                 <button data-category="Fallen">Fallen</button>
-
+            </div>
+            <div id="stations" style="display: none;">
+                <!-- <label for="detained-at">Detained At: </label> -->
+                <select name="detained-at" id="detained_at">
+                    <option value="All">Any Station</option>
+                </select>
             </div>
             <input type="text" class="search-input" id="searchInput" placeholder="Search Person's Name...">
         </div>

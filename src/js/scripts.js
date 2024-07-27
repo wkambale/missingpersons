@@ -39,7 +39,7 @@
                 <p class='locations'>Last seen: ${card.last_known_location}</p>
                 <p class='card__gender'>Gender: ${card.gender}</p>
                 <p class='card__twitter'>X: <a target='_blank' href="https://x.com/${card.twitter}">${card.twitter || "--"}</a></p>
-                <p class='.card__currently'>Currently: ${card.holding_location || "--"}</p>
+                <p class='.card__currently' data-station-identifier="${card.stationIdentifier}">Currently: ${card.holding_location || "--"}</p>
             </div>
             <button class="share-button twitter" onclick="shareCard(${card.id})">Share on X</button>
         </div>
@@ -88,10 +88,9 @@ document.addEventListener("DOMContentLoaded", function() {
         elements.personsList.innerHTML = '';
         // Filter the data based on the search query
         if (state.searchQuery === ''){
-            state.personsData = [...originalPersonsData];
-        } else {
-        state.personsData = originalPersonsData.filter(person =>  person.name.toLowerCase().includes(state.searchQuery))
-    }
+            return
+        } 
+        state.personsData = state.personsData.filter(person =>  person.name.toLowerCase().includes(state.searchQuery))
 
         loadPersons();
 
@@ -332,6 +331,83 @@ function handleScroll() {
         }, CONFIG.scrollDelay)
     }
     }
+}
+
+function generatePoliceStations(){
+    const stations = [...new Set(
+        originalPersonsData
+            .filter(person => person.holding_location) 
+            .map(person => person.holding_location) 
+    )];
+    const select = document.getElementById('detained_at');
+    stations.forEach(station => {
+        const option = document.createElement('option');
+        option.value = station.replace(/\s+/g, '-').toLowerCase();
+        option.textContent = station;
+        select.appendChild(option);
+    });
+}
+// Filter by detaining police stations
+
+const selectedPoliceStation = document.getElementById('detained_at');
+selectedPoliceStation.addEventListener('change', (event) => {        
+    const policeStation = event.target.value;
+    filterPoliceStation(policeStation);
+})
+
+function filterPoliceStation(holding_location) {
+    console.log(holding_location);
+    state.currentIndex = 0;
+    state.allPersonsLoaded = false;
+    elements.personsList.innerHTML = '';
+
+    if (holding_location === 'All'){
+        state.personsData = [...originalPersonsData];
+    } else {
+    state.personsData = [...originalPersonsData.filter(
+        person => person.holding_location?.replace(/\s+/g, '-').toLowerCase() === holding_location
+    )];
+    }
+    
+    loadPersons();
+}
+
+const selectedFilter = document.getElementById('filter-options');
+selectedFilter.addEventListener('change', (event) => {
+    state.personsData = [...originalPersonsData];
+    state.currentIndex = 0;
+    state.allPersonsLoaded = false;
+
+    elements.personsList.innerHTML = '';
+    
+    loadPersons();
+
+    setFilterOption(event.target.value);
+});
+
+function setFilterOption(filter){
+    const stations = document.getElementById('stations');
+    const category = document.getElementById('category');
+    if (filter === "category"){
+        category.style.display = 'block';
+        stations.style.display = 'none'; 
+
+        
+        document.getElementById('detained_at').value = 'All';
+    } 
+    else if (filter === "stations") {
+        // on first select, the stations dropdown needs to be generated
+        const loadedStations = document.getElementById('detained_at').children.length;
+        if (loadedStations <= 1){
+            generatePoliceStations();
+        }
+        category.style.display = 'none'; 
+        stations.style.display = 'block'; 
+
+        // reset category filter
+        document.getElementById('category').value = 'All';
+    }
+  
 }
 
 // run pagination 

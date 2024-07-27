@@ -90,7 +90,7 @@ button:hover {
 	align-items: center;
 }
 
-.search-sort input {
+.search-sort input, select {
     margin: 1rem 0;
     font-size: 0.9rem;
     padding: 0.6rem 1rem;
