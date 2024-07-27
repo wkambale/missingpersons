@@ -68,11 +68,12 @@
     </div>
 
     <div class="content">
-        <label for="filter-options" class="content__sort-by">Filter by:</label>
-        <select name="filter-options" id="filter-options">
-            <option value="category">Category</option>
-            <option value="stations">Holding Location / Police Station</option>
-        </select>
+        <span class="content__sort-by">Filter by:</span>
+        <input type="radio" name="filter-options" value="category" checked>
+        <label for="category">Category</label>
+        <input type="radio" name="filter-options" value="stations">
+        <label for="stations">Holding Location / Police Station</label>
+
         <div class="search-sort">
             <div class="content__buttons buttons" id="category">
                 <button data-category="All" class="active">All</button>

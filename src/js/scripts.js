@@ -372,18 +372,20 @@ function filterPoliceStation(holding_location) {
     loadPersons();
 }
 
-const selectedFilter = document.getElementById('filter-options');
-selectedFilter.addEventListener('change', (event) => {
-    state.personsData = [...originalPersonsData];
-    state.currentIndex = 0;
-    state.allPersonsLoaded = false;
-
-    elements.personsList.innerHTML = '';
+const radioButtons = document.querySelectorAll('input[name="filter-options"]');
+radioButtons.forEach(radio => {
+    radio.addEventListener('click', (event) => {
+        state.personsData = [...originalPersonsData];
+        state.currentIndex = 0;
+        state.allPersonsLoaded = false;
     
-    loadPersons();
-
-    setFilterOption(event.target.value);
-});
+        elements.personsList.innerHTML = '';
+        
+        loadPersons();
+    
+        setFilterOption(event.target.value);
+    });
+})
 
 function setFilterOption(filter){
     const stations = document.getElementById('stations');
