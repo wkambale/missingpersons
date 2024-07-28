@@ -26,8 +26,6 @@
     const takenTime = card.time_taken ? getRelativeTime(parseCustomDateFormat(card.time_taken)) : 'Unknown';
     const exactTime = card.time_taken_formatted ? parseCustomDateFormat(card.time_taken_formatted).toLocaleString('en-US', { month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true }) : 'Unknown';
   
-
-
     return `
         <div class="card" data-category="${card.status}">
             <div class="card-inner">
