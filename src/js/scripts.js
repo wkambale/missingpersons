@@ -1,12 +1,18 @@
  // Define the shareCard function globally
 
- const API_URL = `https://dashboard.missingpersonsug.org/api/victims?per_page=1000`;
- function shareCard(id) {
+function shareCard(id) {
     fetch(API_URL)
         .then((response) => response.json())
         .then(responseBody => {
             const card = responseBody.data.find((item) => item.id === id);
-            const text = `NOTICE! This is a missing person: ${card.name}, status: ${card.status}, last seen at ${card.holding_location?card.holding_location: 'Unkown'}. #March2Parliament`;
+            let text;
+
+            if (card.status.toLowerCase() === "released") {
+                text = `GOOD NEWS🖐!!!! ${card.name}, who was previously missing, has been released. They were last held at ${card.last_known_location || 'Unknown'}. #March2Parliament`;
+            } else {
+                text = `NOTICE! This is a missing person: ${card.name}, status: ${card.status}, last seen at ${card.last_known_location || 'Unknown'}. #March2Parliament`;
+            }
+
             const url = `https://x.com/intent/tweet?text=${encodeURIComponent(text)}`;
             window.open(url, "_blank");
         })
