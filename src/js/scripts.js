@@ -1,6 +1,9 @@
- // Define the shareCard function globally
 
-function shareCard(id) {
+const API_URL = `https://dashboard.missingpersonsug.org/api/victims?per_page=1000`;
+
+
+// Define the shareCard function globally
+ function shareCard(id) {
     fetch(API_URL)
         .then((response) => response.json())
         .then(responseBody => {
