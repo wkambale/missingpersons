@@ -95,10 +95,9 @@ document.addEventListener("DOMContentLoaded", function() {
         elements.personsList.innerHTML = '';
         // Filter the data based on the search query
         if (state.searchQuery === ''){
-            state.personsData = [...originalPersonsData];
-        } else {
-        state.personsData = originalPersonsData.filter(person =>  person.name.toLowerCase().includes(state.searchQuery))
-    }
+            return
+        } 
+        state.personsData = state.personsData.filter(person =>  person.name.toLowerCase().includes(state.searchQuery))
 
         loadPersons();
 
@@ -339,6 +338,86 @@ function handleScroll() {
         }, CONFIG.scrollDelay)
     }
     }
+}
+
+function generatePoliceStations(){
+    const stations = [...new Set(
+        originalPersonsData
+            .filter(person => person.holding_location) 
+            .map(person => person.holding_location) 
+    )];
+    const select = document.getElementById('detained_at');
+    stations.forEach(station => {
+        const option = document.createElement('option');
+        option.value = station.replace(/\s+/g, '-').toLowerCase();
+        option.textContent = station;
+        select.appendChild(option);
+    });
+}
+// Filter by detaining police stations
+
+const selectedPoliceStation = document.getElementById('detained_at');
+selectedPoliceStation.addEventListener('change', (event) => {        
+    const policeStation = event.target.value;
+    filterPoliceStation(policeStation);
+})
+
+function filterPoliceStation(holding_location) {
+    console.log(holding_location);
+    state.currentIndex = 0;
+    state.allPersonsLoaded = false;
+    elements.personsList.innerHTML = '';
+
+    if (holding_location === 'All'){
+        state.personsData = [...originalPersonsData];
+    } else {
+    state.personsData = [...originalPersonsData.filter(
+        person => person.holding_location?.replace(/\s+/g, '-').toLowerCase() === holding_location
+    )];
+    }
+    
+    loadPersons();
+}
+
+const radioButtons = document.querySelectorAll('input[name="filter-options"]');
+radioButtons.forEach(radio => {
+    radio.addEventListener('click', (event) => {
+        state.personsData = [...originalPersonsData];
+        state.currentIndex = 0;
+        state.allPersonsLoaded = false;
+    
+        elements.personsList.innerHTML = '';
+        
+        loadPersons();
+    
+        setFilterOption(event.target.value);
+    });
+})
+
+function setFilterOption(filter){
+    const stations = document.getElementById('stations');
+    const category = document.getElementById('category');
+    if (filter === "category"){
+        category.style.display = 'block';
+        stations.style.display = 'none'; 
+
+        
+        document.getElementById('detained_at').value = 'All';
+    } 
+    else if (filter === "stations") {
+        // on first select, the stations dropdown needs to be generated
+        const loadedStations = document.getElementById('detained_at').children.length;
+        if (loadedStations <= 1){
+            generatePoliceStations();
+        }
+        category.style.display = 'none'; 
+        stations.style.display = 'block'; 
+
+        // reset category filter
+        buttons.forEach(btn => btn.classList.remove('active'));
+        buttons.querySelector('[data-category="${value}"]').classList.add('active');
+    }
+  
 }
 
 // run pagination 
