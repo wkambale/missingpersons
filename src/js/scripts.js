@@ -1,27 +1,6 @@
 
 const API_URL = `https://dashboard.missingpersonsug.org/api/victims?per_page=1000`;
 
-
-// Define the shareCard function globally
- function shareCard(id) {
-    fetch(API_URL)
-        .then((response) => response.json())
-        .then(responseBody => {
-            const card = responseBody.data.find((item) => item.id === id);
-            let text;
-
-            if (card.status.toLowerCase() === "released") {
-                text = `GOOD NEWS🖐!!!! ${card.name}, who was previously missing, has been released. They were last held at ${card.last_known_location || 'Unknown'}. #March2Parliament`;
-            } else {
-                text = `NOTICE! This is a missing person: ${card.name}, status: ${card.status}, last seen at ${card.last_known_location || 'Unknown'}. #March2Parliament`;
-            }
-
-            const url = `https://x.com/intent/tweet?text=${encodeURIComponent(text)}`;
-            window.open(url, "_blank");
-        })
-        .catch((error) => console.error("Error fetching data:", error));
-}
-
  function parseCustomDateFormat(dateString) {
 	 const [time, date] = dateString.split(' ');
 	 const [hours, minutes] = time.split(':').map(Number);
@@ -29,29 +8,6 @@ const API_URL = `https://dashboard.missingpersonsug.org/api/victims?per_page=100
 	 const parsedDate = new Date(year, month - 1, day, hours, minutes);
 	 return parsedDate;
  }
-
- // Function to create the cards
- function createCard(card) {
-    const takenTime = card.time_taken ? getRelativeTime(parseCustomDateFormat(card.time_taken)) : 'Unknown';
-    const exactTime = card.time_taken_formatted ? parseCustomDateFormat(card.time_taken_formatted).toLocaleString('en-US', { month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true }) : 'Unknown';
-  
-    return `
-        <div class="card" data-category="${card.status}">
-            <div class="card-inner">
-                <img class='card-img' src="${card.image}" alt="${card.name}">
-                <h2 class='card__name'>${card.name}</h2>
-                <p class='card-status ${card.status.toLowerCase()}'>${card.status}</p>
-                <p class='card__office'>Taken by ${card.security_organ}</p>
-                <p class='card__time' title="${exactTime}">Time: ${takenTime}</p>
-                <p class='locations'>Last seen: ${card.last_known_location}</p>
-                <p class='card__gender'>Gender: ${card.gender}</p>
-                <p class='card__twitter'>X: <a target='_blank' href="https://x.com/${card.twitter}">${card.twitter || "--"}</a></p>
-                <p class='.card__currently'>Currently: ${card.holding_location || "--"}</p>
-            </div>
-            <button class="share-button twitter" onclick="shareCard(${card.id})">Share on X</button>
-        </div>
-    `;
-}
 
  /**
   * Returns a relative time string based on the time a person was taken.
@@ -76,7 +32,28 @@ const API_URL = `https://dashboard.missingpersonsug.org/api/victims?per_page=100
 	 if (months < 12) return `${months} months ago`;
 	 return `${years} years ago`;
  }
-
+ function createPersonElement(person) {
+    const personElement = document.createElement('person-card');
+    const takenTime = person.time_taken ? getRelativeTime(parseCustomDateFormat(person.time_taken)) : 'Unknown';
+    
+    personElement.setAttribute('name', person.name);
+    personElement.setAttribute('status', person.status);
+    personElement.setAttribute('photo-url', person.photo_url);
+    personElement.setAttribute('twitter-handle', person.x_handle || '--');
+    personElement.setAttribute('id', person.id);
+  
+    // Set slot content
+    personElement.innerHTML = `
+      <span slot="security-organ">${person.security_organ || 'Police'}</span>
+      <span slot="time-taken">${takenTime}</span>
+      <span slot="last-known-location">${person.last_known_location || 'Unknown'}</span>
+      <span slot="gender">${person.gender || 'Unknown'}</span>
+      <span slot="holding-location">${person.holding_location || '--'}</span>
+    `;
+  
+    return personElement;
+  }
+  
 document.addEventListener("DOMContentLoaded", function() {
     // init pagination
     initPaginate();
@@ -244,39 +221,6 @@ async function fetchData(url){
         loadingElement.textContent = "An error occured while fetching persons";
         throw error;
     }
-}
-
-/**
- * Returns a person's element object
- *
- * @param {person} object - data.json object 
- */
-function createPersonElement(person){
-    const personElement = document.createElement('div');
-    personElement.classList.add('person');
-
-    const takenTime = person.time_taken ? getRelativeTime(parseCustomDateFormat(person.time_taken)) : 'Unknown';
-    const exactTime = person.time_taken_formatted ? person.time_taken_formatted : 'Unknown';
-    const taken_by = person.security_organ? person.security_organ: 'Police';
-
-
-    personElement.innerHTML = `
-        <div class="card" data-category="${person.status}">
-            <div class="card-inner">
-                <img class="card-img" src="${person.photo_url}" alt="${person.name}">
-                <h2 class='card__name'>${person.name}</h2>
-                <p class='card-status ${person.status.toLowerCase()}'>${person.status}</p>
-                <p class='card__office'>Taken by ${taken_by}</p>
-                <p class='card__time' title="${exactTime}">Time: ${takenTime}</p>
-                <p class='locations'>Last seen: ${person.last_known_location}</p>
-                <p class='card__gender'>Gender: ${person.gender}</p>
-                <p class='card__twitter'>X: <a target='_blank' href="${person.x_handle_full}">${person.x_handle || "--"}</a></p>
-                <p class='.card__currently'>Currently: ${person.holding_location || "--"}</p>
-            </div>
-            <button class="share-button twitter" onclick="shareCard(${person.id})">Share on X</button>
-        </div>
-    `;
-    return personElement
 }
 
 // load persons
