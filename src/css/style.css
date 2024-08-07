@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --dark-grey: #1a1a1a;
+    --light-grey: #333333;
+    --blue: #007bff;
+    --green: #28a745;
+    --yellow: #ffb224;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background-color: var(--light-grey);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.content {
+    padding: 2rem 0;
+}
+
+.search-sort {
+    margin-bottom: 2rem;
+}
+
+.content__sort-by {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.filter-and-search {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+#searchInput {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 24px;
+    font-size: 1rem;
+    background-color: var(--light-grey);
+    color: var(--white);
+    transition: background-color 0.3s ease;
+}
+
+#searchInput:focus {
+    outline: none;
+    background-color: var(--dark-grey);
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.buttons button {
+    background-color: var(--light-grey);
+    color: var(--white);
+    border: none;
+    border-radius: 24px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.buttons button:hover,
+.buttons button.active {
+    background-color: var(--blue);
+    transform: translateY(-2px);
+}
+
+.buttons button .badge {
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 12px;
+    padding: 2px 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+.volunteers {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--dark-grey);
+    border-radius: 15px;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card__name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.card-status {
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.card-status.medical { background-color: var(--blue); }
+.card-status.legal { background-color: var(--green); }
+.card-status.other { background-color: var(--yellow); color: var(--black); }
+
+.card__profession,
+.card__contact,
+.card__location,
+.card__twitter {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+#loading {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--light-grey);
+    border-top: 5px solid var(--white);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media screen and (min-width: 768px) {
+    .filter-and-search {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #searchInput {
+        max-width: 300px;
+    }
+
+    .buttons {
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .volunteers {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .volunteers {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .buttons button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .card__name {
+        font-size: 1.1rem;
+    }
+
+    .card-status,
+    .card__profession,
+    .card__contact,
+    .card__location,
+    .card__twitter {
+        font-size: 0.85rem;
+    }
+}

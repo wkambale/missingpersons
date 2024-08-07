@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#March2Parliament Volunteers</title>
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>#March2Parliament Volunteers</h1>
+        </div>
+    </header>
+    <main class="content">
+        <div class="container">
+            <section class="search-sort">
+                <div class="content__sort-by">Filter by:</div>
+                <div class="filter-and-search">
+                    <input type="text" id="searchInput" placeholder="Search volunteers...">
+                    <div class="buttons">
+                        <button data-category="All">All <span class="badge">0</span></button>
+                        <button data-category="Medical">Medical <span class="badge">0</span></button>
+                        <button data-category="Legal">Legal <span class="badge">0</span></button>
+                        <button data-category="Other">Other <span class="badge">0</span></button>
+                    </div>
+                </div>
+            </section>
+            <section class="volunteers" id="volunteers">
+                <!-- Volunteer cards will be dynamically created here -->
+            </section>
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 #March2Parliament. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="src/js/volunteers.js"></script>
+</body>
+</html>
